@@ -1,4 +1,4 @@
-<!-- v2024.12.23 -->
+<!-- v2025.01.05 -->
 <!-- 本卡组永久免费更新，且只在以下链接发布，其余均为盗版 -->
 <!-- https://ankiweb.net/shared/info/832276382   -->
 <!-- https://github.com/5mdld/anki-jlpt-decks    -->
@@ -153,7 +153,9 @@ function hideFrontElements() {
 
 function hideFurigana() {
   const rt = document.querySelector('.VocabKanji rt')
-  rt.style.display = document.getElementById('BackSide') ? 'block' : 'none'
+    if (rt) {
+    rt.style.visibility = document.getElementById('BackSide') ? 'visible' : 'hidden'
+  }
 }
 
 function hideKanji() {
@@ -368,7 +370,7 @@ setAnkiWebAudio()
 </script>
 
 {{/Alt1}}
-<!-- v2024.12.23 -->
+<!-- v2025.01.05 -->
 <!-- 本卡组永久免费更新，且只在以下链接发布，其余均为盗版 -->
 <!-- https://ankiweb.net/shared/info/832276382   -->
 <!-- https://github.com/5mdld/anki-jlpt-decks    -->
