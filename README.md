@@ -6,15 +6,11 @@
 
 - **本卡组永久免费更新！如果您觉得做得不错，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) 上点个赞，或在 [GitHub](https://github.com/5mdld/anki-jlpt-decks) 上点个 Star，谢谢！**
 
-- 请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) 页面找到 **`Download`** 按钮，或在 [GitHub](https://github.com/5mdld/anki-jlpt-decks) 下载本卡组：  
+- 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新版的卡组，或点击以下链接进行下载：
 
-  AnkiWeb：
-  ![AnkiWeb 下载图片](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206oQZSWl.png)
-  GitHub：
-
-  下载地址 1： [点此下载](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)  
-  下载地址 2： [点此下载](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)（为中国大陆加速）  
-
+  - 下载地址 1： [点此下载](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)  
+  - 下载地址 2： [点此下载](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)（为中国大陆加速）  
+  
 - 不定期进行错误修复和功能更新，重新下载卡组并导入即可更新。
 
   - 注意：新导入的卡组将覆盖用户对当前卡组的所有修改（学习进度不受影响）。请谨慎更新，更新前**务必备份**！
@@ -25,11 +21,10 @@
 
 - 如有任何关于本卡组的问题，请通过以下方式反馈：
 
-  - 在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) 的评论区留言。
-  - 在 [GitHub](https://github.com/5mdld/anki-jlpt-decks) 提 Issues 或参与 Discussions。
+  - 提 [Issues](https://github.com/5mdld/anki-jlpt-decks/issues) 或在 [Discussions](https://github.com/5mdld/anki-jlpt-decks/discussions) 发帖。
   - 加入 Telegram 交流群：[点此链接](https://t.me/+tvTl5zf3auRlNDM9) （入群答案：`apkg`  ）。
-  - 点击卡片右上角的 `反馈` 按钮，或 [AnkiWeb](https://ankiweb.net/shared/info/832276382) 上的 `Contact Author` 按钮，或 [点此链接](https://ncn8ci2h7v0y.feishu.cn/share/base/form/shrcnTh5DRxtrGWtiWTkdBlSWze?hide_NoteID=1&hide_Note+ID=1) 填写反馈问卷（匿名）。  
-- 我的全部卡组和插件： [点此链接 ](https://ankiweb.net/shared/by-author/842333142)
+  - 点击卡片右上角的 `反馈` 按钮，或 [点此链接](https://ncn8ci2h7v0y.feishu.cn/share/base/form/shrcnTh5DRxtrGWtiWTkdBlSWze?hide_NoteID=1&hide_Note+ID=1) 填写反馈问卷（匿名）。  
+- 我的全部卡组和插件： [点此链接](https://ankiweb.net/shared/by-author/842333142)
 
 ---
 
@@ -49,8 +44,7 @@
   - 已变形的单词仅高亮词干部分。
 - 单词和例句均配有语音。
   - 绝大多数单词配有真人语音。
-  - N3～N5 的例句配有经过校对的 TTS（机器）语音。  
-  - N1～N2 例句由于 Anki 对单个卡组的大小限制，暂无经过校对的本地语音，使用在线 TTS 语音作为替代（紫色按钮）。因实时生成，故**不保证准确性，请勿反馈此类错误**。  
+  - 例句配有 TTS（机器）语音。其中 N3～N5 的语音已进行校对，N1～N2 的语音暂未进行校对，如有错误请反馈。  
   - 更多高级语音设置请参考下面的“高级选项”。
 
 ---
@@ -59,7 +53,6 @@
 
 <details>
 <summary>点击展开/折叠 FAQ</summary>
-
 ### Q. 卡组导入后不能正常显示
 
 A. 本卡组仅保证兼容**最新版的 [官方版本 Anki](https://apps.ankiweb.net/)**，不保证兼容其他第三方或旧版 Anki（e.g. AnkiApp、AnkiPro）。  
@@ -103,13 +96,13 @@ A. 如果您的 IP 地址在 24 小时内下载超过 25 个卡组，则会收�
 
 在卡片**正面模板**的 `CONFIG` 函数里内置了一些可修改的设置：
 
-### *切换简体/繁体显示（暂不可用）
+### * 切换简体/繁体显示（暂不可用）
 
 ```html
 lang: 'zh-Hans',      // 显示语言: 'zh-Hans' 为简体中文；'zh-Hant' 为繁体中文
 ```
 
-### *根据不同平台修改“🔍”跳转的链接
+### * 根据不同平台修改“🔍”跳转的链接
 
 ```html
 dict: {
@@ -139,7 +132,7 @@ const dictOptions = {
 }
 ```
 
-### *音频高级设置
+### * 音频高级设置
 
 - 正面自动发音 + 背面自动播放单词和例句发音：
   1. `牌组选项` → `音频` → 关闭 `不要自动播放音频` 
@@ -170,7 +163,7 @@ const dictOptions = {
 playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'force' 为强制只播放单词音频
 ```
 
-### *使用 `hint:` 隐藏指定字段
+### * 使用 `hint:` 隐藏指定字段
 
 例如，要在卡片正面隐藏 `VocabKanji`，请在正面模板中进行以下修改：
 
@@ -180,12 +173,12 @@ playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'
 
 请在背面模板的最后一个 `<script></script>` 标签内添加 `showHint()`，以在背面显示该内容。
 
-### *需要正面单词不显示 Furigana / Kanji
+### * 需要正面单词不显示 Furigana / Kanji
 
 - **不显示 Furigana**：请在正面模板最后的 `<script></script>` 内添加 `hideFurigana()`。
 - **不显示 Kanji**：请在正面模板最后的 `<script></script>` 内添加 `hideKanji()`。
 
-### *在线 TTS 高级设置
+### * 在线 TTS 高级设置
 
 - 在 `domain: ''` 内填写自定义部署的域名即可使用自定义的在线 TTS 。  
 
@@ -217,7 +210,7 @@ tts: {
     }
 ```
 
-### *修改卡片字体
+### * 修改卡片字体
 
 1. 在卡片模板中找到卡片样式部分。
 2. 如果要改成系统中已有的字体，只需在以下代码中，将字体名称添加到每个语言字体 `font-family` 的首位即可。
@@ -269,13 +262,13 @@ tts: {
 }
 ```
 
-### *开启/关闭正面为中文，背面为日语的卡片
+### * 开启/关闭正面为中文，背面为日语的卡片
 
 预览图：  
 
 ![正面效果图](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206jTsBpV.png)  
 
-#### 开启正面为中文，背面为日语的卡片
+#### ** 开启正面为中文，背面为日语的卡片
 
 1. 在卡片模板中找到卡片类型部分。
 2. 在卡片类型里选择“2：中-日……”。
@@ -284,7 +277,7 @@ tts: {
 
   ![操作方法](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206vC6C4m.png)
 
-####  关闭（删除）正面为中文，背面为日语的卡片
+####  ** 关闭（删除）正面为中文，背面为日语的卡片
 
 1. **分别**将正面模板和背面模板中的 `{{ ^Alt2 }} `修改为 `{{ #Alt2 }}` 然后保存（如上图所示）。
 2. 点击 Anki 的 `工具` → `空白卡片` → `删除`（如下图所示）。  
