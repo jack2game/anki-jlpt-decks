@@ -51,7 +51,7 @@
   - 绝大多数单词配有真人语音。
   - N3～N5 的例句配有经过校对的 TTS（机器）语音。  
   - N1～N2 例句由于 Anki 对单个卡组的大小限制，暂无经过校对的本地语音，使用在线 TTS 语音作为替代（紫色按钮）。因实时生成，故**不保证准确性，请勿反馈此类错误**。  
-  - 更多高级语音设置请参考 [此链接](https://anki-blog.pages.dev/docs/ankijp/new_jlpt_adv/#%e4%bd%bf%e7%94%a8%e8%87%aa%e5%ae%9a%e4%b9%89%e7%9a%84%e5%9c%a8%e7%ba%bf-tts-%e8%af%ad%e9%9f%b3%e6%9c%8d%e5%8a%a1)
+  - 更多高级语音设置请参考下面的“高级选项”。
 
 ---
 
@@ -80,7 +80,7 @@ A. 在 Anki 设置中，将“显示驱动程序”改为“软件/ Software ”
 
 A. 只对“常用汉字”范围外（即 JLPT 范围外）以及仅凭假名无法判断读音的词汇添加“ふりがな”，不是所有词汇都有，无需关闭。  
 
-如想关闭，请参考 [此链接](https://anki-blog.pages.dev/docs/ankijp/new_jlpt_adv/#%e9%9c%80%e8%a6%81%e6%ad%a3%e9%9d%a2%e5%8d%95%e8%af%8d%e4%b8%8d%e6%98%be%e7%a4%ba-furigana--kanji)
+如想关闭，请参考下面的“高级选项”。
 
 ### Q. 下载的时候提示 “Daily limit exceeded; please try again tomorrow.”
 
