@@ -12,8 +12,8 @@
   ![AnkiWeb 下载图片](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206oQZSWl.png)
   GitHub：
 
-  下载地址1： [点此下载](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)  
-  下载地址2： [点此下载](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)（为中国大陆加速）  
+  下载地址 1： [点此下载](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)  
+  下载地址 2： [点此下载](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)（为中国大陆加速）  
 
 - 不定期进行错误修复和功能更新，重新下载卡组并导入即可更新。
 
@@ -74,7 +74,7 @@ A. 请检查媒体文件是否**完全同步到云端**，首次同步可能超�
 
 ### Q. Windows 上出现卡片切换延迟的问题
 
-A. 在 Anki 设置中，将“显示驱动程序”改为“软件/ Software ”。
+A. 在 Anki 设置中，将“显示驱动程序”改为“软件/ Software”。
 
 ### Q. 为什么有的卡片正面带有”ふりがな“（假名），我可以关掉吗
 
