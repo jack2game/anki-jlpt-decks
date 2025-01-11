@@ -65,7 +65,7 @@
 ## FAQ
 
 <details>
-<summary>点击展开/折叠常见问题与解决方法</summary>
+<summary>点击展开/折叠FAQ</summary>
 
 ### Q. 卡组导入后不能正常显示
 
@@ -97,6 +97,9 @@ A. 如果您的 IP 地址在 24 小时内下载超过 25 个卡组，则会收�
 </details>
 
 ## 高级选项
+
+<details>
+<summary>点击展开/折叠高级选项</summary>
 
 以下为高级选项，需具备一定编程知识。请参考以下内容自行研究，或 [点此链接 ](https://t.me/+tvTl5zf3auRlNDM9) 加入 Telegram 群进行讨论。  
 
@@ -295,6 +298,7 @@ tts: {
   ![删除空白卡片](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206aUZkfD.png)
 
 ---
+</details>
 
 ## 友情链接
 
