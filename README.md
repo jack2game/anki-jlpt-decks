@@ -87,7 +87,7 @@ A. 如果您的 IP 地址在 24 小时内下载超过 25 个卡组，则会收�
 ## 高级选项
 
 <details>
-<summary>点击展开/折叠高级选项</summary>   
+<summary>点击展开/折叠高级选项</summary><br>
 
 以下为高级选项，需具备一定编程知识。请参考以下内容自行研究，或 [点此链接 ](https://t.me/+tvTl5zf3auRlNDM9) 加入 Telegram 群进行讨论。  
 
