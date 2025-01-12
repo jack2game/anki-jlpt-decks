@@ -2,29 +2,44 @@
 
 ## 前言
 
-- **CHINESE ↔ JAPANESE ONLY, NO ENGLISH!**
+### 这是什么？
 
-- **本卡组永久免费更新！如果您觉得做得不错，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) 上点个赞，或在 [GitHub](https://github.com/5mdld/anki-jlpt-decks) 上点个 Star，谢谢！**
+- 这是一个适用于 [Anki](https://apps.ankiweb.net/) 的日语单词卡组，涵盖 JLPT N1～N5 级别及补充词汇。
 
-- 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新版的卡组，或点击以下链接进行下载：
+- Anki 的使用方法请参考 Anki 手册：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
 
-  - 下载地址 1： [点此下载](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)  
-  - 下载地址 2： [点此下载](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)（为中国大陆加速）  
-  
+- **如果您觉得卡组做得还不错，请在 [GitHub](https://github.com/5mdld/anki-jlpt-decks) 上点个 Star，或在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) 上点个赞，谢谢！**
+
+- 我的其他卡组和插件： [点此链接](https://ankiweb.net/shared/by-author/842333142)
+
+### 怎么下载？
+
+- 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新版的卡组，或点击以下链接直接下载：
+
+  - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
+  - [下载地址 2](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg) （为中国大陆加速）  
+
+### 怎么使用？
+
+- 下载 [Anki](https://apps.ankiweb.net/) （iOS 版需付费）
+
+- 将下载好的 `apkg` 卡组导入 Anki。
+  - **首次**下载导入时，推荐将 `导入所有牌组预设配置` 设置为 `打开` （下图绿色部分），其中包含了我优化的预设。除非有特殊需求，只需调整新词的数量即可开始学习。
+
 - 不定期进行错误修复和功能更新，重新下载卡组并导入即可更新。
 
-  - 注意：新导入的卡组将覆盖用户对当前卡组的所有修改（学习进度不受影响）。请谨慎更新，更新前**务必备份**！
+  - 注意：新导入的卡组将覆盖用户对当前卡组的所有修改（**学习进度不受影响**）。请谨慎更新，更新前**务必备份**！
   - 请在 `导入选项` 中，将 `合并笔记模板` 设置为 `打开` ，并将 `更新笔记` 和 `更新笔记模板` 设置为 `始终`（如图红色部分）。  
-  - **首次**下载导入时，推荐将 `导入所有牌组预设配置` 设置为 `打开` （如图绿色部分），其中包含了我优化的预设。除非有特殊需求，只需调整新词的数量即可开始学习。
 
 ![更新选项](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241128J8JTQp.png)
+
+### 怎么反馈？
 
 - 如有任何关于本卡组的问题，请通过以下方式反馈：
 
   - 提 [Issues](https://github.com/5mdld/anki-jlpt-decks/issues) 或在 [Discussions](https://github.com/5mdld/anki-jlpt-decks/discussions) 发帖。
   - 加入 Telegram 交流群：[点此链接](https://t.me/+tvTl5zf3auRlNDM9) （入群答案：`apkg`  ）。
   - 点击卡片右上角的 `反馈` 按钮，或 [点此链接](https://ncn8ci2h7v0y.feishu.cn/share/base/form/shrcnTh5DRxtrGWtiWTkdBlSWze?hide_NoteID=1&hide_Note+ID=1) 填写反馈问卷（匿名）。  
-- 我的全部卡组和插件： [点此链接](https://ankiweb.net/shared/by-author/842333142)
 
 ---
 
@@ -507,4 +522,6 @@ tts: {
 
 ---
 
-*本卡组所有内容均来源于公开的互联网资源及个人创作，采用 [![知识共享许可协议](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 进行许可。您可以在 [**非商业性用途**](https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans#ref-commercial-purposes) 的前提下复制、分发、展示和演绎本卡组，但必须注明原作者（egg rolls），并附上 [卡组发布页面的链接](https://ankiweb.net/shared/info/832276382)。*
+## License
+
+*本卡组所有内容均来自公开互联网资源及个人创作，并采用 [![知识共享许可协议](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 许可。 您仅可以在**非商业用途**的前提下自由使用、分享和修改本卡组，但必须注明作者 `egg rolls` 以及 [卡组发布页面的链接](https://github.com/5mdld/anki-jlpt-decks) 。*
