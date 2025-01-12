@@ -53,7 +53,7 @@
 
 <details>
 <summary>点击展开/折叠 FAQ</summary>
-  
+
 ### Q. 卡组导入后不能正常显示
 
 A. 本卡组仅保证兼容**最新版的 [官方版本 Anki](https://apps.ankiweb.net/)**，不保证兼容其他第三方或旧版 Anki（e.g. AnkiApp、AnkiPro）。  
