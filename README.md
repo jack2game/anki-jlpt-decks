@@ -43,7 +43,7 @@
 
 ---
 
-## 预览图：
+## 预览图
 
 ![预览图](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206hi5zpu.png) 
 
@@ -368,8 +368,9 @@ tts: {
 ## 旧更新日志归档
 
 <details>
-<summary>点击展开/折叠</summary>  
+<summary>点击展开/折叠</summary>
 
+```
 ### 2025-01-06
 
 - 用另一种方式修复了在正面添加 `hideFurigana()` 后，背面单词振假名显示错位的问题。
@@ -556,6 +557,7 @@ tts: {
 初版发布。
 
 </details>
+```
 
 ---
 
