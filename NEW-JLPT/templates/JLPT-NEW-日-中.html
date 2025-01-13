@@ -1,8 +1,3 @@
-<!-- v2025.01.06 -->
-<!-- 本卡组永久免费更新，且只在以下链接发布，其余均为盗版 -->
-<!-- https://ankiweb.net/shared/info/832276382   -->
-<!-- https://github.com/5mdld/anki-jlpt-decks    -->
-
 <!-- Card1 [日-中] 正面 -->
 
 {{^Alt1}}
@@ -31,7 +26,7 @@
       </h3>
     </li>
     {{/SentKanji1}}
- 
+
     {{#SentKanji2}}
     <li class="Sentence">
       <h3 class="SentKanji LabelIndent" lang="ja">
@@ -73,10 +68,11 @@ function CONFIG() {
       win: 'goldendict',  // 在 Windows 使用 GoldenDict-ng 词典
       other: 'weblio',    // 在其他平台使用 Weblio 国語辞典
     },
-    playback: 'force',  // 背面播放设置: 'default' 为使用系统设置；'force' 为强制只播放单词音频
+    display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假名；'kana' 为只显示假名；'kanji' 为只显示汉字
+    playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'force' 为强制只播放单词音频
     tts: {
       enable: true, // 为没有语音的例句增加在线 tts，部署参考 https://github.com/yy4382/ms-ra-forwarder-for-ifreetime
-      hotkey: 'G', // 播放快捷键，仅支持桌面端      
+      hotkey: 'G',  // 播放快捷键，仅支持桌面端
       domain: [
         // 可以添加更多域名，按顺序依次尝试播放
         'https://anki.0w0.live/',
@@ -122,6 +118,10 @@ function isAndroid() {
   return !!document.documentElement.className.includes('android')
 }
 
+function isBackSide() {
+  return !!document.getElementById('BackSide')
+}
+
 function cleanWord(word) {
   return word.replace(/\[[^\]]*\]|\([^)]*\)|[0-9!@#$%^&*()_+\-='":\\|,.<>/?~～〜\s]+/g, '')
 }
@@ -152,15 +152,24 @@ function hideFrontElements() {
 }
 
 function hideFurigana() {
-  const isBackSide = !!document.getElementById('BackSide')
-  document.querySelectorAll('.VocabKanji rt').forEach(rt => {
-    rt.style.display = isBackSide ? 'ruby-text' : 'none'
-  })
+  if (CONFIG().settings.display === 'kanji') {
+    document.querySelectorAll('.VocabKanji rt').forEach(rt => {
+      rt.style.display = isBackSide() ? 'ruby-text' : 'none'
+    })
+  }
 }
 
 function hideKanji() {
-  if (document.getElementById('BackSide')) return
-  updateText('.VocabKanji span[lang="ja"]', '{{VocabFurigana}}')
+  if (CONFIG().settings.display === 'kana') {
+    if (isBackSide()) {
+      if (isAndroid()) {
+        updateText('.VocabKanji span[lang="ja"]', '{{furigana:VocabKanji}}')
+      }
+      return
+    }
+    const isKatakana = getTags().includes('外') || /^[ァ-ヴー]+$/.test('{{VocabKanji}}')
+    updateText('.VocabKanji span[lang="ja"]', isKatakana ? '{{kanji:VocabKanji}}' : '{{VocabFurigana}}')
+  }
 }
 
 function audioStylePatch() {
@@ -175,7 +184,9 @@ function audioStylePatch() {
 function updateText(selector, text) {
   if (!text) return
   const el = document.querySelector(selector)
-  if (el) el.textContent = text
+  if (el) {
+    el.innerHTML.includes('<ruby>') ? el.innerHTML = text : el.textContent = text
+  }
 }
 
 function getTags(tags = '{{Tags}}') {
@@ -221,12 +232,6 @@ function setType() {
   ['.SentKanji', '.SentFurigana', '.SentDef'].forEach(selector => {
     document.querySelectorAll(selector).forEach((el, i) => {
       if (!el.textContent.trim() || el.querySelector('em')) return
-      /*
-      const prefix = el.textContent.trim().match(/^［.*?］/)
-      if (prefix) {
-        el.innerHTML = el.innerHTML.replace(prefix[0], '')
-      }
-      */
       const type = el.className.includes('SentDef') ? '［訳］' : `［${getType(i)}］`
       el.insertAdjacentHTML('afterbegin', `<em lang='ja'>${type}</em>`)
     })
@@ -262,15 +267,16 @@ function highlightWords() {
     const prefix = type.match(/^(関|対)/)
     if (!prefix) return
     const tag = prefix[1] === '関' ? 'synonym' : 'antonym'
-    const content = el.innerHTML.replace(/^<em[^>]*>［[^]*?］<\/em>/, '').trim().replace(/^［[^]*?］/, '')
-    el.innerHTML = el.querySelector('em')
-      ? `<em lang='ja'>［${type}］</em><span class='${tag}'>${content}</span>`
-      : `<span class='${tag}'>${content}</span>`
+    const content = el.innerHTML
+      .replace(/^<em[^>]*>［[^]*?］<\/em>/, '')
+      .trim()
+      .replace(/^［[^]*?］/, '')
+    el.innerHTML = el.querySelector('em') ? `<em lang='ja'>［${type}］</em><span class='${tag}'>${content}</span>` : `<span class='${tag}'>${content}</span>`
   })
 }
 
 function showHint() {
-  if (document.getElementById('BackSide')) {
+  if (isBackSide()) {
     document.querySelectorAll('a.hint').forEach(hint => hint.style.display = 'none')
   }
 }
@@ -295,16 +301,17 @@ function setAnkiWebAudio() {
 function setEdgeTTS() {
   const { enable, hotkey, domain, params } = CONFIG().settings.tts
   if (!enable) return
+
   const getVoice = () => {
     const voices = params.voiceName.split(',').map(v => v.trim())
     return voices.length === 1 ? voices[0] : voices[Math.floor(Math.random() * voices.length)]
   }
   const getSentKanji = (index) => {
     const SentKanji = ['{{text:SentKanji1}}', '{{text:SentKanji2}}', '{{text:SentKanji3}}', '{{text:SentKanji4}}'][index] || ''
-    return SentKanji.replace(/[～〜]/g, cleanWord('{{text:VocabKanji}}')).replace(/・/g, '、')
+    return SentKanji.replace(/・/g, '、')
   }
   document.querySelectorAll('.SentAudio').forEach((el, i) => {
-    if (el.childNodes.length) return
+    if (el.childNodes.length) return // 如需同时开启在线 TTS，注释此行
     const text = getSentKanji(i)
     if (!text) return
     const queryString = new URLSearchParams({ ...params, text, voiceName: getVoice() }).toString()
@@ -367,14 +374,11 @@ setType()
 markWords()
 removeSpaces()
 setAnkiWebAudio()
+hideFurigana()
+hideKanji()
 </script>
 
 {{/Alt1}}
-<!-- v2025.01.06 -->
-<!-- 本卡组永久免费更新，且只在以下链接发布，其余均为盗版 -->
-<!-- https://ankiweb.net/shared/info/832276382   -->
-<!-- https://github.com/5mdld/anki-jlpt-decks    -->
-
 <!-- Card1 [日-中] 背面 -->
 
 {{^Alt1}}
@@ -390,13 +394,13 @@ setAnkiWebAudio()
       <span class="VocabPitch">{{VocabPitch}}</span>
     </h2>
 
-    <h3 class="VocabPoS LabelIndent2">
-      <em lang="ja">［{{VocabPoS}}］</em><span class="VocabDef">{{VocabDefCN}}</span>
-    </h3>
-
     {{#VocabPlus}}
     <h3 class="VocabPlus LabelIndent" lang="ja"><em>［補］</em>{{VocabPlus}}</h3>
     {{/VocabPlus}}
+
+    <h3 class="VocabPoS LabelIndent2">
+      <em lang="ja">［{{VocabPoS}}］</em><span class="VocabDef">{{VocabDefCN}}</span>
+    </h3>
   </section>
 
   <ul class="SentenceList">
@@ -422,7 +426,7 @@ setAnkiWebAudio()
         </h3>
         <h3 class="SentDef LabelIndent">{{SentDef2}}</h3>
       </div>
-      <div class="SentAudio">{{furigana:SentAudio2}}</div>
+      <div class="SentAudio">{{SentAudio2}}</div>
     </li>
     {{/SentKanji2}}
 
@@ -456,6 +460,7 @@ setAnkiWebAudio()
 </main>
 
 <script>
+showHint()
 setEdgeTTS()
 highlightWords()
 audioStylePatch()
@@ -468,6 +473,7 @@ if (isAndroid()) {
   setType()
   markWords()
   removeSpaces()
+  hideKanji()
 }
 </script>
 
