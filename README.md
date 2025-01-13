@@ -257,8 +257,9 @@ tts: {
 
 ### * 修改卡片字体
 
-1. 在卡片模板中找到卡片样式部分。
-2. 如果要改成系统中已有的字体，只需在以下代码中，将字体名称添加到每个语言字体 `font-family` 的首位即可。
+- 在卡片模板中找到卡片样式（css）部分。
+
+- 如果要改成系统中已有的字体，只需在以下代码中，将字体名称添加到每个语言字体 `font-family` 的首位即可。
 
 ```
 :lang(zh-Hans) {
@@ -272,7 +273,10 @@ tts: {
 }
 ```
 
-1. 如果要更改为其他自定义字体，首先下载字体文件并放入 Anki 的媒体文件夹，然后将字体文件重命名为以 `_` 开头的名称。接着，修改 `@font-face` 中的 src 路径（无需修改 `font-family` 的名称，如果修改，也要同步修改样式中使用该名称的部分）。
+- 如果更改为其他自定义字体：
+  1. 下载字体文件并放入 Anki 的媒体文件夹。
+  2. 将字体文件重命名为以 `_` 开头的名称。
+  3. 修改 `@font-face` 中的 src 路径（无需修改 `font-family` 的名称，如果修改，也要同步修改样式中引用该名称的部分）。
 
 ```
 @font-face {
@@ -292,18 +296,22 @@ tts: {
 }
 ```
 
-1. 在 iOS 端使用其他字体时，请删除或注释掉以下 `transform` 部分。这个样式仅用于调整 iOS 上思源宋体的振假名高度。
+- 在 iOS 端使用其他字体时，请参考以下代码进行调整。
+
+  - 如果只额外安装了教科书字体，可以只打开第二段 `transform: 0;` 这一行。
+  - 如果完全替换了字体，就把第一段 `transform: translateY(0.6em);` 注释掉。
 
 ```
-.safari rt,
-.iphone rt,
-.ipad rt {
-  transform: translateY(6px);
+/* --- iOS 思源宋体振假名高度修复 --- */
+.ios rt,
+.safari rt {
+  transform: translateY(0.6em);
 }
-.safari .VocabKanji rt,
-.iphone .VocabKanji rt,
-.ipad .VocabKanji rt {
-  transform: translateY(12px);
+
+/* --- iOS 若安装教科书字体开启以下样式 --- */
+.ios .VocabKanji rt,
+.safari .VocabKanji rt {
+  /* transform: 0; */
 }
 ```
 
