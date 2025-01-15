@@ -367,7 +367,7 @@ tts: {
 
 ## License
 
-*本卡组所有内容均来自公开互联网资源及个人创作，并采用 [![知识共享许可协议](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 许可。 您仅可以在**非商业用途**的前提下自由使用、分享和修改本卡组，但必须注明作者 `egg rolls` 以及 [卡组发布页面的链接](https://github.com/5mdld/anki-jlpt-decks) 。*
+本卡组所有内容均来自公开互联网资源及个人创作，并采用 [![知识共享许可协议](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh) 许可。 您仅可以在**非商业用途**的前提下自由使用、分享和修改本卡组，但必须注明作者 `egg rolls` 以及 [卡组发布页面的链接](https://github.com/5mdld/anki-jlpt-decks) 。
 
 ---
 
