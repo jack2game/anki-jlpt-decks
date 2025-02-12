@@ -14,14 +14,14 @@
 
 ### 怎么下载？
 
-- 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新版的卡组，或点击以下链接直接下载：
+- 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新版的卡组（后缀为 `.apkg` ，请不要下载 `.zip` 文件），或点击以下链接直接下载：
 
   - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
   - [下载地址 2](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg) （为中国大陆加速）  
 
 ### 怎么使用？
 
-1. 下载 [Anki](https://apps.ankiweb.net/) （iOS 版需付费，其余平台免费）。
+1. 下载 [Anki](https://apps.ankiweb.net/) （iOS 版需付费，注意不要下错了；其余平台免费）。
 2. 将下载好的 `apkg` 格式的卡组导入 Anki。  
    - **首次**下载导入时，推荐将 `导入所有牌组预设配置` 设置为 `打开` （下图绿色部分），其中包含了我优化的预设。除非您了解如何配置参数，否则只需调整新词的数量即可开始学习。
 3. （可选）注册一个 [AnkiWeb 账号](https://ankiweb.net/account/signup) ，用于多设备间的学习进度同步和云端备份。
@@ -38,7 +38,7 @@
 - 如有任何关于本卡组的问题，请通过以下方式反馈：
 
   - 提 [Issues](https://github.com/5mdld/anki-jlpt-decks/issues) 或在 [Discussions](https://github.com/5mdld/anki-jlpt-decks/discussions) 发帖。
-  - 加入 Telegram 交流群：[点此链接](https://t.me/+tvTl5zf3auRlNDM9) （入群答案：`apkg`  ）。
+  - 加入 Telegram 交流群：[点此链接](https://t.me/+tvTl5zf3auRlNDM9) （入群答案：`apkg`  ，答错会被 bot 封禁，可联系 `@AnkiJapan` 解封）。
   - 点击卡片右上角的 `反馈` 按钮，或 [点此链接](https://ncn8ci2h7v0y.feishu.cn/share/base/form/shrcnTh5DRxtrGWtiWTkdBlSWze?hide_NoteID=1&hide_Note+ID=1) 填写反馈问卷（匿名）。  
 
 ---
