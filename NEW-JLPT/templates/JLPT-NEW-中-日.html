@@ -1,4 +1,4 @@
-<!-- v25.01.17 -->
+<!-- v25.02.10 -->
 
 <!-- Card2 [中-日] 正面 -->
 <!-- 开启方法：正反面 #Alt2 改为 ^Alt2 -->
@@ -27,12 +27,12 @@
     </h2>
 
     <h3 class="VocabPoS LabelIndent2">
-      <em lang="ja">［{{VocabPoS}}］</em><span class="VocabDef">{{VocabDefCN}}</span>
+      <span class="VocabDef">{{VocabDefCN}}</span>
     </h3>
 
     {{#VocabPlus}}
     <h3 class="VocabPlus LabelIndent" lang="ja">
-      <em>［補］</em>{{VocabPlus}}
+      {{furigana:VocabPlus}}
     </h3>
     {{/VocabPlus}}
   </section>
@@ -249,10 +249,17 @@ function getType(index) {
 }
 
 function setType() {
-  ['.SentKanji', '.SentFurigana', '.SentDef'].forEach(selector => {
+  ['.SentKanji', '.SentFurigana', '.SentDef', '.VocabPlus', '.VocabPoS'].forEach(selector => {
     document.querySelectorAll(selector).forEach((el, i) => {
       if (!el.textContent.trim() || el.querySelector('em')) return
-      const type = el.className.includes('SentDef') ? '［訳］' : `［${getType(i)}］`
+      const typeMap = {
+        'SentDef': '［訳］',
+        'VocabPlus': '［補］',
+        'SentKanji': `［${getType(i)}］`,
+        'SentFurigana': `［${getType(i)}］`,
+        'VocabPoS': '{{VocabPoS}}' ? '［{{VocabPoS}}］' : '［名］',
+      }
+      const type = typeMap[Object.keys(typeMap).find(key => el.className.includes(key))]
       el.insertAdjacentHTML('afterbegin', `<em lang='ja'>${type}</em>`)
     })
   })
@@ -327,7 +334,12 @@ function setEdgeTTS() {
     return voices.length === 1 ? voices[0] : voices[Math.floor(Math.random() * voices.length)]
   }
   const getSentKanji = (index) => {
-    const SentKanji = ['{{text:SentKanji1}}', '{{text:SentKanji2}}', '{{text:SentKanji3}}', '{{text:SentKanji4}}'][index] || ''
+    const SentKanji = [
+      '{{text:kanji:SentKanji1}}',
+      '{{text:kanji:SentKanji2}}',
+      '{{text:kanji:SentKanji3}}',
+      '{{text:kanji:SentKanji4}}'
+    ][index] || ''
     return SentKanji.replace(/・/g, '、')
   }
   document.querySelectorAll('.SentAudio').forEach((el, i) => {
@@ -400,7 +412,8 @@ hideKanji()
 </script>
 
 {{/Alt2}}
-<!-- v25.01.17 -->
+
+<!-- v25.02.10 -->
 
 <!-- Card2 [中-日] 背面 -->
 <!-- 开启方法：正反面 #Alt2 改为 ^Alt2 -->
