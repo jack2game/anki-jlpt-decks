@@ -6,31 +6,43 @@
 
 - 这是一个基于 [Anki](https://apps.ankiweb.net/) 的日语单词卡组，涵盖 JLPT N1～N5 级别及一些补充词汇。
 
-- 本卡组永久免费更新，请勿在闲鱼等平台付费购买。
+- 本卡组在 GitHub 上永久免费更新，且不接受任何形式的打赏。在闲鱼等平台上出售的付费版本均为倒卖！
 
-- Anki 的使用方法请参考 Anki 手册：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
+  如果您有付费意愿，可以考虑捐赠给为 Anki 做出巨大贡献的 FSRS 算法作者叶峻峣（[主页链接](https://github.com/L-M-Sherlock)）。
 
 - **如果您觉得卡组做得还不错，请点个 Star，或在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) 上点个赞，谢谢！**
 
 - 我的其他卡组和插件： [点此链接](https://ankiweb.net/shared/by-author/842333142)
 
-### 怎么下载？
-
-- 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新版的卡组（后缀为 `.apkg` ，请不要下载 `.zip` 文件），或点击以下链接直接下载：
-
-  - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
-  - [下载地址 2](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg) （为中国大陆加速）  
-
 ### 怎么使用？
 
-1. 下载 [Anki](https://apps.ankiweb.net/) （iOS 版需付费，注意不要下错了；其余平台免费）。
-2. 将下载好的 `apkg` 格式的卡组导入 Anki。  
-   - **首次**下载导入时，推荐将 `导入所有牌组预设配置` 设置为 `打开` （下图绿色部分），其中包含了我优化的预设。除非您了解如何配置参数，否则只需调整新词的数量即可开始学习。
-3. （可选）注册一个 [AnkiWeb 账号](https://ankiweb.net/account/signup) ，用于多设备间的学习进度同步和云端备份。
+0. Anki 的使用说明请参考：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
 
-4. （可选）不定期进行错误修复和功能更新，重新下载卡组并覆盖导入即可更新。
+1. 下载并安装 Anki。
 
-   - 新导入的卡组将覆盖用户对当前卡组的所有修改（卡片内容的修改、字段的增减等，但**学习进度不受影响**）。请谨慎更新，更新前**务必备份**！
+   - Windows / macOS / Linux：[AnkiWeb](https://apps.ankiweb.net/)
+
+   - iOS：[AnkiMobile Flashcards](https://apps.apple.com/jp/app/ankimobile-flashcards/id373493387)（需付费，定价 24.99 USD /168 CNY / 4000 JPY）
+   - Android：请前往 [Play Store](https://play.google.com/store/apps/details?id=com.ichi2.anki) 或 [GitHub](https://github.com/ankidroid/Anki-Android/releases/latest) 下载 AnkiDroid。  
+
+     注意：请不要下载“ [Anki 中国 ](http://www.ankichina.net/resource/ankiDroid)”提供的版本，有严重的兼容性问题！
+
+2. 在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新版的卡组（后缀为 `apkg` ，请不要下载 `zip` 文件），或点击以下链接直接下载：
+
+   - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
+   - [下载地址 2](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg) （为中国大陆加速）  
+
+3. 将下载好的 `apkg` 格式的卡组导入 Anki。  
+   - **首次**下载导入时，推荐将 `导入所有牌组预设配置` 设置为 `打开` （下图绿色部分），其中包含了我优化的预设。
+
+4. 点击⚙️图标打开牌组选项，设置每日学习的新词数量（默认为 20 个）。请根据自身情况调整此数量，设置完成后即可开始学习。
+   
+   - 如果您不清楚配置中各项参数的具体含义，请保持默认。请勿参考一些过时的（特别是 FSRS 实装之前的）教程随意修改参数。
+   
+1. （可选）注册一个 [AnkiWeb 账号](https://ankiweb.net/account/signup) ，用于多设备间的学习进度同步和云端备份。
+2. （可选）卡组不定期进行错误修复和功能更新，重新下载并覆盖导入即可更新。
+
+   - 新导入的卡组将覆盖用户对当前卡组的所有修改（卡片内容的修改、字段的增减等，**学习进度不受影响**）。请谨慎更新，更新前**务必备份**！
    - 请在 `导入选项` 中，将 `合并笔记模板` 设置为 `打开` ，并将 `更新笔记` 和 `更新笔记模板` 设置为 `始终`（如图红色部分）。  
 
 ![更新选项](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241128J8JTQp.png)
@@ -39,7 +51,7 @@
 
 - 如有任何关于本卡组的问题，请通过以下方式反馈：
 
-  - 提 [Issues](https://github.com/5mdld/anki-jlpt-decks/issues) 或在 [Discussions](https://github.com/5mdld/anki-jlpt-decks/discussions) 发帖。
+  - 在 [Discussions](https://github.com/5mdld/anki-jlpt-decks/discussions) 中发帖。
   - 加入 Telegram 交流群：[点此链接](https://t.me/+tvTl5zf3auRlNDM9) （入群答案：`apkg`  ，答错会被 bot 封禁，可联系 `@AnkiJapan` 解封）。
   - 点击卡片右上角的 `反馈` 按钮，或 [点此链接](https://ncn8ci2h7v0y.feishu.cn/share/base/form/shrcnTh5DRxtrGWtiWTkdBlSWze?hide_NoteID=1&hide_Note+ID=1) 填写反馈问卷（匿名）。  
 
@@ -82,38 +94,41 @@
 
 ---
 
-## FAQ
+## 常见问题
 
-<details>
-<summary>点击展开/折叠 FAQ</summary>
+### * 卡组导入失败 / 导入时卡住 / 导入后不能正常显示
 
-### Q. 卡组导入后不能正常显示
+- 请使用**最新的 [官方版 Anki](https://apps.ankiweb.net/)**。
 
-A. 本卡组仅保证兼容**最新版的 [官方版本 Anki](https://apps.ankiweb.net/)**，不保证兼容其他第三方或旧版 Anki（e.g. AnkiApp、AnkiPro）。  
+  不保证兼容其他第三方类 Anki 应用（e.g. AnkiApp、AnkiPro）或旧版 Anki。
 
-### Q. 卡组下载很慢 / 下载失败 / 第一次导入非常慢 / 同步很慢
+  注意：请不要下载“[ Anki 中国 ](http://www.ankichina.net/resource/ankiDroid)”提供的版本，有严重的兼容性问题！
 
-A. 中国大陆用户请尝试使用 VPN 等网络代理工具进行下载。
+- 请确保在导入时 Anki 处于前台并保持屏幕亮起。导入过程可能需要几十秒或更久，具体时间取决于您的设备配置。
 
-### Q. 无法发音 / 缺少媒体文件
+- 如果您在 AnkiDroid 内下载的卡组的后缀是 `bin` 而不是 `apkg` ，那么请更新 AnkiDroid 到最新版本后重新下载。
 
-A. 请检查媒体文件是否**完全同步到云端**，首次同步可能超过 30 分钟。必要时请使用 VPN 等网络代理工具。
+### * 卡组下载很慢 / 下载失败 / 媒体同步很慢
 
-### Q. Windows 上出现卡片切换延迟的问题
+- 中国大陆用户请尝试使用网络代理（翻墙）工具。
 
-A. 在 Anki 设置中，将 `显示驱动` 改为 `Software` 或 `OpenGL` 。
+### * 单词或句子无法发音 / 缺少媒体文件
 
-### Q. 为什么有的卡片正面带有”ふりがな“（假名），我可以关掉吗
+- 如果您已登录 AnkiWeb 账号，那么在首次下载导入卡组后，需要将本地媒体文件同步到云端。同样地，在新设备上登录后，也需要从云端下载数据。
+- 首次同步可能需要数十分钟。同步时请不要关闭 Anki（移动端需要保持 Anki 处于前台并亮屏）。必要时，请使用网络代理（翻墙）工具加快同步速度。
 
-A. 只对“常用汉字”范围外（即 JLPT 范围外）以及仅凭假名无法判断读音的词汇添加“ふりがな”，不是所有词汇都有，无需关闭。  
+### * Windows 上出现卡片切换延迟的问题
 
-如想关闭，请参考下面的“高级选项”。
+- 在 Anki 设置中，将 `显示驱动` 改为 `Software` 或 `OpenGL` 。
 
-### Q. （AnkiWeb）下载的时候提示 “Daily limit exceeded; please try again tomorrow.”
+### * 为什么有的卡片正面的汉字上面带有”ふりがな“（假名），我可以关掉吗
 
-A. 如果您的 IP 地址在 24 小时内下载超过 25 个卡组，则会收到该提示。请尝试更换 IP 或等待 24 小时后再试。
+- 只对“常用汉字”范围外（即 JLPT 范围外）以及仅凭假名无法判断读音的词汇添加“ふりがな”，不是所有词汇都有，一般无需关闭。  
+- 如想关闭，请参考下面的“高级选项”。
 
-</details>
+### * （AnkiWeb）下载的时候提示 “Daily limit exceeded; please try again tomorrow.”
+
+- 如果您的 IP 地址在 24 小时内下载超过 25 个卡组，则会收到该提示。请尝试更换 IP 或等待 24 小时后再试。
 
 ---
 
@@ -123,9 +138,6 @@ A. 如果您的 IP 地址在 24 小时内下载超过 25 个卡组，则会收�
 以下为高级选项，需具备一定编程知识。请参考说明自行研究，或通过前述的反馈方式交流讨论。  
 
 注意：作为免费项目，我们没有义务提供全面的技术支持，也无法保证达到您的预期效果。  
-
-<details>
-<summary>点击展开/折叠高级选项</summary><br>
 
 模板位置的视频教程：[Android](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109vviFO1.mp4) ｜ [iOS](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109HaTDmE.mp4) ｜ [macOS / Windows](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241124F22Meh.mp4)  
 
@@ -143,6 +155,9 @@ lang: 'zh-Hant',      // 顯示語言: 'zh-Hans' 為簡體中文；'zh-Hant' 為
 ```
 
 ### * 根据不同平台修改“🔍”跳转的链接
+
+<details>
+<summary>点击展开/折叠</summary><br>
 
 ```html
 dict: {
@@ -172,7 +187,12 @@ const dictOptions = {
 }
 ```
 
+</details>
+
 ### * 音频高级设置
+
+<details>
+<summary>点击展开/折叠</summary><br>
 
 - 正面自动发音 + 背面自动播放单词和例句发音：
   1. `牌组选项` → `音频` → 关闭 `不要自动播放音频` 
@@ -203,6 +223,8 @@ const dictOptions = {
 playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'force' 为强制只播放单词音频
 ```
 
+</details>
+
 ### * 隐藏指定字段
 
 在待隐藏的字段前使用 `hint:` 即可。  
@@ -220,6 +242,9 @@ display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假�
 ```
 
 ### * 例句 TTS 语音高级设置
+
+<details>
+<summary>点击展开/折叠</summary><br>
 
 - 默认情况下，仅对没有本地音频的例句启用在线 TTS。 如果你想为所有例句启用，请用 `// ` 注释掉 `function setEdgeTTS()` 中的以下代码：
 
@@ -257,7 +282,12 @@ tts: {
     }
 ```
 
+</details>
+
 ### * 修改卡片字体
+
+<details>
+<summary>点击展开/折叠</summary><br>
 
 - 在卡片模板中找到卡片样式（css）部分。
 
@@ -317,7 +347,12 @@ tts: {
 }
 ```
 
+</details>
+
 ### * 开启/关闭正面为中文，背面为日语的卡片
+
+<details>
+<summary>点击展开/折叠</summary><br>
 
 预览图：  
 
