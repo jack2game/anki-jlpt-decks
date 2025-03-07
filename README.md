@@ -25,7 +25,7 @@
 
 ## 预览图
 
-![预览图](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206hi5zpu.png)
+![预览图](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250307N3Tcdz.png)
 
 ------
 
