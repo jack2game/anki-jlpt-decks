@@ -1,5 +1,3 @@
-<!-- v25.02.10 -->
-
 <!-- Card1 [日-中] 正面 -->
 
 {{^Alt1}}
@@ -184,20 +182,33 @@ function audioStylePatch() {
 }
 
 function updateText(selector, text) {
-  if (!text) return
-  const el = document.querySelector(selector)
+  if (!text) return;
+  const el = document.querySelector(selector);
   if (el) {
-    el.innerHTML.includes('<ruby>') ? el.innerHTML = text : el.textContent = text
+    if (isAndroid()) { 
+      el.innerHTML = text;
+    } else {
+      el.innerHTML.includes('<ruby>') ? el.innerHTML = text : el.textContent = text;
+    }
   }
 }
 
 function getTags(tags = '{{Tags}}') {
-  const ignore = ['$', '^']
+  const ignore = ['$', '^'];
   return tags.split(/\s+/)
     .map(tag => tag.split(/::|-/).pop())
     .filter(tag => !ignore.some(prefix => tag.startsWith(prefix)))
-    .sort((a, b) => b.startsWith('N') - a.startsWith('N') || a.localeCompare(b))
-    .join('・')
+    .sort((a, b) => {
+      const getRank = tag => {
+        if (/^v\d/.test(tag)) return 0;
+        if (tag.startsWith('N')) return 1;
+        return 2;
+      }
+      const rankA = getRank(a);
+      const rankB = getRank(b);
+      return rankA !== rankB ? rankA - rankB : a.localeCompare(b);
+    })
+    .join('・');
 }
 
 function setLang() {
@@ -393,8 +404,6 @@ hideKanji()
 </script>
 
 {{/Alt1}}
-
-<!-- v25.02.10 -->
 
 <!-- Card1 [日-中] 背面 -->
 
