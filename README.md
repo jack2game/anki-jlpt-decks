@@ -1,14 +1,10 @@
-# 【egg rolls】JLPT N1～N5 单词＋补充（含语音、例句）v2
+# 【egg rolls】JLPT N1～N5 单词 + 补充（含语音、例句）v2
 
 > **前言**
 >
-> - 本卡组在 GitHub 上**永久免费更新**。
->
-> - 闲鱼等平台上的付费版本均为**倒卖**，请谨慎鉴别！
->
-> - 如果您有付费意愿，可以考虑捐赠给 FSRS 算法作者 [叶峻峣](https://github.com/L-M-Sherlock)。
->
-> - 如果觉得本卡组对您有帮助，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) **点赞**或给本仓库点个 **Star**，谢谢！
+> - 本卡组在 GitHub 上**永久免费更新**，闲鱼等平台上的付费版本均为倒卖！  
+> - 如果您有付费意愿，可以考虑捐赠给 FSRS 算法作者 [叶峻峣](https://github.com/L-M-Sherlock) 。  
+> - 如果觉得本卡组对您有帮助，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) **点赞**或给本仓库点个 **Star**，您的支持是我更新的最大动力！  
 > - 加入 Telegram 交流群：[点此链接](https://t.me/+tvTl5zf3auRlNDM9)（入群答案：`apkg`）。
 
 ------
@@ -17,15 +13,15 @@
 
 这是一个基于 [Anki](https://apps.ankiweb.net/) 制作的日语单词卡组，涵盖 JLPT N1～N5 级别单词以及部分补充词汇，合计约 12600 个词条。
 
-每个单词都配有释义和例句，并提供了真人或 TTS 音频，可帮助学习者更好地记忆和理解。
+每个单词都附有释义和例句，并提供单词和例句的音频，帮助学习者更好地记忆和理解。
 
-如果您想查看我的其他日语相关卡组与插件，请前往 [AnkiWeb 个人主页](https://ankiweb.net/shared/by-author/842333142)。
+如果您想查看我的其他日语相关卡组与插件，请前往 [AnkiWeb 个人主页](https://ankiweb.net/shared/by-author/842333142) 。
 
 ------
 
 ## 预览图
 
-![预览图](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250307N3Tcdz.png)
+![预览图](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250311WuXSuX.png)
 
 ------
 
@@ -33,53 +29,48 @@
 
 ### 单词
 
-- 总单词数：约 **12600** 个
-  - JLPT N1～N5 单词：约 **10500** 个
-  - 补充单词（非 JLPT 范围）：约 **2100** 个（归入“N1-补充”）
+- 总单词数：约 12600 个。
+  - JLPT N1～N5 单词：约 10500 个。
+  - 非 JLPT 范围的补充单词：约 2100 个，归入 「N1-补充」。
 
 - N3 以上的单词分为两类：
+  - 必考：高频且较为重要。
+  - 核心：基础但在常见场合出现频率相对较低。
 
-  - **必考**：高频且较为重要
-
-  - **核心**：基础但在常见场合出现频率相对较低
-
-> ⚠️分级仅供参考，难免存在误差。如发现错误，欢迎反馈。
+> ⚠️  分级仅供参考，难免存在误差。如发现错误，欢迎反馈。
 
 ### 例句
 
 - 每个单词都有附至少一个例句。
 - 例句高亮：
   - <span style="background-color:yellow">黄色</span>：本单词
-  - <span style="background-color:lightgreen">绿色</span>：同义 / 关联词
+  - <span style="background-color:lightgreen">绿色</span>：同义／关联词
   - <span style="background-color:lightblue">蓝色</span>：反义词
 
-> ⚠️已变形的单词只高亮**词干**部分。
+> ⚠️  已变形的单词只高亮**词干**部分。
 
 ### 音频
 
-- 单词音频： 绝大多数为播音员真人语音。
-
-- 例句音频：基于已校对的 TTS（机器发音）。
-
+- 单词音频：绝大多数为播音员真人语音。
+- 例句音频：基于已校对的 TTS（机器）发音。
 - 音频按钮：
-
-  - <span style="background-color:black">黑色</span>▶️：卡组自带本地音频。
-  - <span style="background-color:purple">紫色</span>▶️：在线实时 TTS 音频（自动生成，请不要反馈此类错误）。
+  - <span style="background-color:black">黑色</span> ▶️：卡组自带本地音频。
+  - <span style="background-color:purple">紫色</span> ▶️：自动生成的在线 TTS 音频。（请不要反馈此类错误）
 
 ### 卡片各部分含义说明
 
 | 标签示例  | 含义                                                         |
 | --------- | ------------------------------------------------------------ |
-| v25.01.01 | 卡片的版本号（最后更新的日期）                               |
 | N3必考    | 该单词的 JLPT 等级及重要性                                   |
 | ②         | 该单词的音调，参考 https://www.jp-lab.com/pitch-accent-explanation |
-| [他動1]   | 该单词的词性；<br />动词后数字含义： `1`= 五段動詞、 `2`= 上一段/下一段動詞、`3`= カ変/サ変動詞 |
-| [補]      | 额外补充说明                                                 |
-| [例]      | 普通例句                                                     |
-| [関]      | 同义、近义、关联词                                           |
+| [他動1]   | 该单词的词性；<br />动词后数字含义： `1`= 五段動詞、 `2`= 上一段／下一段動詞、`3`= カ変／サ変動詞 |
+| [補]      | 一些补充说明                                                 |
+| [例]      | 例句                                                         |
+| [関]      | 同义／近义／关联词                                           |
 | [対]      | 反义词                                                       |
 | 🔍         | 跳转外部词典或网页查词（可自定义）                           |
-| 反馈      | 跳转外部问卷，可报告错误或提供优化建议                       |
+| v25.01.01 | 卡片的版本号（最后更新的日期）                               |
+| 反馈      | 如果本地卡组为最新版本，则跳转至 GitHub Issues 反馈页面<br />如果本地卡组非最新版本，则跳转至最新版本卡组的下载页面 |
 
 ------
 
@@ -89,13 +80,13 @@
 
 1. **安装 Anki**
 
-   - Windows / macOS / Linux：[AnkiWeb](https://apps.ankiweb.net/)
+   - Windows／macOS／Linux：[AnkiWeb](https://apps.ankiweb.net/)
 
-   - iOS：[AnkiMobile Flashcards](https://apps.apple.com/jp/app/ankimobile-flashcards/id373493387)（付费， 24.99 USD / 168 CNY / 4,000 JPY）
+   - iOS：[AnkiMobile Flashcards](https://apps.apple.com/jp/app/ankimobile-flashcards/id373493387)（付费，24.99 USD／168 CNY／4000 JPY）
 
-   - Android：AnkiDroid（ [Play Store](https://play.google.com/store/apps/details?id=com.ichi2.anki) ｜ [GitHub](https://github.com/ankidroid/Anki-Android/releases/latest) ）
+   - Android：AnkiDroid（[Play Store](https://play.google.com/store/apps/details?id=com.ichi2.anki) ｜ [GitHub](https://github.com/ankidroid/Anki-Android/releases/latest)）
 
-     > ⚠️ 请勿下载 “[Anki 中国](http://www.ankichina.net/resource/ankiDroid)” 提供的 AnkiDroid，存在兼容性问题！
+     > ⚠️ 请勿下载「Anki 中国」提供的 AnkiDroid，存在兼容性问题！
 
 2. **下载卡组**
 
@@ -105,13 +96,13 @@
 
 3. **导入卡组**
 
-   - 将下载好的 `apkg` 文件导入到 Anki。
-   - **首次**导入时，推荐将 “导入所有牌组预设配置” 设置为 `打开` （下图绿框部分），其中包含了我优化的预设。
+   - 将下载好的 `apkg` 文件导入到 Anki。  
+   - **首次导入**时，推荐将「导入所有牌组预设配置」设置为 `打开`（下图绿框部分），其中包含了我优化的预设。
 
 4. **设置每日学习量**
 
    - 点击 ⚙️ 图标打开牌组选项，调整每日新词数量（默认 20 个，请根据自身情况调整）。
-   - **若不熟悉各项参数，请保持默认设置**，避免参考一些过时（ FSRS 实装前）的教程随意修改。
+   - **若不熟悉各项参数，请保持默认设置**，避免参考一些过时（FSRS 实装前）的教程随意修改。
 
 5. **开启同步**（可选）
 
@@ -119,50 +110,53 @@
 
 6. **更新卡组**（可选）
 
-   - 不定期发布修复和功能更新。只需重新导入最新 `apkg` 文件覆盖即可，**学习进度不受影响**。
-   - 更新前请**务必备份**当前卡组！新导入的卡组将覆盖用户对当前卡组的所有修改（比如卡片内容的修改、字段的增减等）。
-   - 请在 “导入选项” 中，将 “合并笔记模板” 设置为 `打开` ，并将 “更新笔记” 和 “更新笔记模板” 设置为 `始终`（下图红框部分）。  
+   - 不定期发布修复和功能更新。重新导入最新 `apkg` 文件覆盖即可更新，**学习进度不受影响**。  
+
+   - 更新前请**务必备份！**  
+
+     新导入的卡组将覆盖用户对当前卡组的所有修改（比如卡片内容的修改、标签的修改、字段的增减等）。  
+
+   - 请在「导入选项」中，将「合并笔记模板」设置为 `打开`，并将「更新笔记」和「更新笔记模板」设置为 `始终`（下图红框部分）。  
 
 ![更新选项](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241128J8JTQp.png)
-
 
 ------
 
 ## 常见问题
 
-- **卡组导入失败 / 导入卡住 / 显示异常**
+- **卡组导入失败／导入卡住／显示异常**
 
-  - 请务必使用 **[最新官方版 Anki](https://apps.ankiweb.net/)** 。
+  - 请务必使用 **[最新官方版 Anki](https://apps.ankiweb.net/)** 。  
 
     > ⚠️ 卡组不保证兼容第三方类 Anki 应用（e.g. AnkiApp, AnkiPro）或旧版 Anki。  
     >
-    > ⚠️ 请勿下载 “[Anki 中国](http://www.ankichina.net/resource/ankiDroid)” 提供的 AnkiDroid，存在兼容性问题！
+    > ⚠️ 请勿下载「Anki 中国」提供的 AnkiDroid，存在兼容性问题！
 
   - 确保导入时，Anki 处于前台且屏幕常亮（移动端）。
 
   - 如果您在 AnkiDroid 中下载的卡组后缀是 `bin` 而不是 `apkg`，请更新 AnkiDroid 到最新版本后重新下载。
 
-- **卡组下载 / 同步慢或失败**
+- **卡组下载／同步慢或失败**
 
   - 中国大陆用户可尝试使用网络代理（翻墙）工具。
 
--  **单词或句子无法发音 / 缺少媒体文件**
+- **单词或句子无法发音／缺少媒体文件**
 
-   - 卡组导入完成后，若已登录 AnkiWeb 账号，会进行媒体文件同步；首次同步可能需要较长时间。
-   - 同步时请保持应用处于前台且屏幕常亮（移动端）；必要时使用网络代理（翻墙）工具加速。
+  - 卡组导入完成后，若已登录 AnkiWeb 账号，会进行媒体文件同步；首次同步可能需要较长时间。
+  - 同步时请保持应用处于前台且屏幕常亮（移动端）；必要时使用网络代理（翻墙）工具加速。
 
--  **Windows 上卡片切换延迟**
+- **Windows 上卡片切换延迟**
 
-   - Anki 设置 → “显示驱动” → 尝试 `Software` 或 `OpenGL`。
+  - Anki 设置 →「显示驱动」→ 尝试 `Software` 或 `OpenGL` 。
 
--  **带有“ふりがな”的汉字如何关闭？**
+- **带有「ふりがな」的汉字如何关闭？**
 
-   - 本卡组仅对“常用汉字范围外”以及仅看假名难以确定读音的词汇添加“ふりがな”，并非所有单词都有。一般无需关闭。
-   - 如需关闭，请参见高级选项。
+  - 本卡组仅对「常用汉字」范围外以及仅看假名难以确定读音的词汇添加「ふりがな」，并非所有单词都有，一般无需关闭。
+  - 如需关闭，请参见高级选项。
 
--  **AnkiWeb 提示 “Daily limit exceeded; please try again tomorrow.”**
+- **AnkiWeb 提示「Daily limit exceeded; please try again tomorrow」**
 
-   - 表示同一 IP 24 小时内下载超过 25 个卡组，需更换 IP 或等 24 小时后再试。
+  - 表示同一 IP 24 小时内下载超过 25 个卡组，需更换 IP 或等 24 小时后再试。
 
 ------
 
@@ -227,20 +221,20 @@ const dictOptions = {
 
 ### 音频高级设置
 
-如想调整正 / 背面自动播放策略或只播放单词音频，参考下表：
+如想调整音频的自动播放策略，参考下表：
 
 <details>
 <summary>点击展开/折叠</summary><br>
 
-| 需求                                      | 牌组选项 → 音频         | `playback` 参数 | 正面模板中的 `{{ VocabAudio }}` |
-| ----------------------------------------- | ----------------------- | --------------- | ------------------------------- |
-| 正 / 背面都自动播放（单词 + 例句）        | 关闭 “不要自动播放音频” | `'default'`     | 保留                            |
-| 正面自动播放 + 背面仅自动播放单词         | 关闭 “不要自动播放音频” | `'force'`       | 保留                            |
-| 正面手动播放 + 背面仅自动播放单词（默认） | 开启 “不要自动播放音频” | `'force'`       | 保留                            |
-| 正面手动播放 + 背面手动播放               | 开启 “不要自动播放音频” | `'default'`     | 保留                            |
-| 正面不发音 + 背面自动播放（单词 + 例句）  | 关闭 “不要自动播放音频” | `'default'`     | **删除** `{{ VocabAudio }}`     |
-| 正面不发音 + 背面仅自动播放单词           | 开启 “不要自动播放音频” | `'force'`       | **删除** `{{ VocabAudio }}`     |
-| 正 / 背面都不发音                         | 开启 “不要自动播放音频” | `'default'`     | **删除** `{{ VocabAudio }}`     |
+| 需求                                     | 牌组选项 → 音频          | `playback` 参数 | 正面模板中的 `{{ VocabAudio }}` |
+| ---------------------------------------- | ------------------------ | --------------- | ------------------------------- |
+| 正／背面都自动播放（单词＋例句）         | 关闭「不要自动播放音频」 | `'default'`     | 保留                            |
+| 正面自动播放＋背面仅自动播放单词         | 关闭「不要自动播放音频」 | `'force'`       | 保留                            |
+| 正面手动播放＋背面仅自动播放单词（默认） | 开启「不要自动播放音频」 | `'force'`       | 保留                            |
+| 正面手动播放＋背面手动播放               | 开启「不要自动播放音频」 | `'default'`     | 保留                            |
+| 正面不发音＋背面自动播放（单词＋例句）   | 关闭「不要自动播放音频」 | `'default'`     | **删除** `{{ VocabAudio }}`     |
+| 正面不发音＋背面仅自动播放单词           | 开启「不要自动播放音频」 | `'force'`       | **删除** `{{ VocabAudio }}`     |
+| 正／背面都不发音                         | 开启「不要自动播放音频」 | `'default'`     | **删除** `{{ VocabAudio }}`     |
 
 ```html
 playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'force' 为强制只播放单词音频
@@ -310,13 +304,13 @@ tts: {
 
 ```css
 :lang(zh-Hans) {
-  font-family: '您的简体中文字体名称', 'Source Han Serif CN', 'Source Han Serif JP', 'Source Han Serif TW', serif;
+  font-family: '您的简体中文字体名', 'Source Han Serif CN', 'Source Han Serif JP', 'Source Han Serif TW', serif;
 }
 :lang(zh-Hant) {
-  font-family: '您的繁体中文字体名称', 'Source Han Serif TW', 'Source Han Serif JP', 'Source Han Serif CN', serif;
+  font-family: '您的繁體中文字體名', 'Source Han Serif TW', 'Source Han Serif JP', 'Source Han Serif CN', serif;
 }
 :lang(ja) {
-  font-family: '您的日文字体名称', 'Source Han Serif JP', 'Source Han Serif CN', 'Source Han Serif TW', serif;
+  font-family: '您的日文字体名', 'Source Han Serif JP', 'Source Han Serif CN', 'Source Han Serif TW', serif;
 }
 ```
 
@@ -333,12 +327,12 @@ tts: {
 }
 @font-face {
   font-family: 'Source Han Serif TW';
-  src: url('您的繁体中文字体文件名') format('truetype');
+  src: url('你的繁體中文字體檔案名') format('truetype');
   font-display: swap;
 }
 @font-face {
   font-family: 'Source Han Serif JP';
-  src: url('您的繁体中文字体文件名') format('truetype');
+  src: url('您的日文字体文件名') format('truetype');
   font-display: swap;
 }
 ```
@@ -364,22 +358,23 @@ tts: {
 
 </details>
 
-### 开启 / 关闭 “中-日” 模板（正面为中文，背面为日语）的卡片
+### 开启／关闭「中-日」模板（正面为中文，背面为日语）的卡片
 
-> 本卡组的 “中-日” 模板卡片默认为关闭，可自行开启。
+> 默认为关闭，可自行开启。
 
 <details>
 <summary>点击展开/折叠</summary><br>
 
 1. 开启
-   - 打开卡片模板 → 选择 “2：中-日……” → 在正 / 背面模板中找到 `{{ #Alt2 }}` 改为 `{{ ^Alt2 }}` → 保存并重启 Anki。
-   - 新增的 “中-日” 模板卡片会与现有卡片一同出现，可自行分组管理。  
+   - 打开卡片模板 → 选择「2：中-日……」→ 在正／背面模板中找到 `{{ #Alt2 }}` 改为 `{{ ^Alt2 }}` → 保存并重启 Anki。
+   - 新增的「中-日」模板卡片会与现有卡片一同出现，可自行分组管理。  
 
 ![操作方法](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206vC6C4m.png)
 
 2. 关闭
    - 将 `{{ ^Alt2 }}` 改回 `{{ #Alt2 }}` → 保存 → `工具` → `空白卡片` → `删除` 对应卡片。  
-   ![删除空白卡片](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206aUZkfD.png)
+   
+     ![删除空白卡片](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206aUZkfD.png)
 
 </details>
 
@@ -389,7 +384,7 @@ tts: {
 
 - 请参考 [此链接 ](https://ankiweb.net/shared/by-author/1681155450)下载适时适所、蓝宝书、のんびり文法卡组；新标日、绿宝书、红宝书单词卡组等资源（均由 TG 群友 `MasterOfMasterSword` 制作，如有问题请在相应卡组下反馈）。
 
-- 综合日语第三版第一册～第四册单词卡组，带真人单词语音和原书课文例句，每一课每一 unit 都打上了对应的 tag，方便按课进度背词。[点此下载](https://ankiweb.net/shared/by-author/516873037)（由 TG 群友 `uovkm` 制作，如有问题请在相应卡组下反馈）。
+- 《综合日语第三版》第一册～第四册单词卡组，带真人单词语音和原书课文例句，每一课每一 unit 都打上了对应的 tag，方便按课进度背词。[点此下载](https://ankiweb.net/shared/by-author/516873037)（由 TG 群友 `uovkm` 制作，如有问题请在相应卡组下反馈）。
 
 - 基于二语习得理论的日语学习指南，推荐一读： [点此链接](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f)（由 TG 群友 `菜鸡` 撰写）。
 
