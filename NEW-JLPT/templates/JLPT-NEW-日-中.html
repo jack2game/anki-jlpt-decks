@@ -57,354 +57,455 @@
 </main>
 
 <script>
-function CONFIG() {
-  // --- 以下为设置里的预设项，根据个人需求调整 --- //
-  const settings = {
-    lang: 'zh-Hans',      // 显示语言: 'zh-Hans' 为简体中文；'zh-Hant' 为繁体中文
-    dict: {
-      ios: 'moji',        // 在 iOS 使用 MOji 辞書
-      android: 'moji',    // 在 Android 使用 MOji 辞書
-      mac: 'dict',        // 在 macOS 使用系统自带的词典
-      win: 'goldendict',  // 在 Windows 使用 GoldenDict-ng 词典
-      other: 'weblio',    // 在其他平台使用 Weblio 国語辞典
-    },
-    display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假名；'kana' 为只显示假名；'kanji' 为只显示汉字
-    playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'force' 为强制只播放单词音频
-    tts: {
-      enable: true, // 为没有语音的例句增加在线 tts，部署参考 https://github.com/yy4382/ms-ra-forwarder-for-ifreetime
-      hotkey: 'G',  // 播放快捷键，仅支持桌面端
-      domain: [
-        // 可以添加更多域名，按顺序依次尝试播放
-        'https://anki.0w0.live/',
-        'https://ms-ra-forwarder-for-ifreetime-v9q1.vercel.app/',
-      ],
-      params: {
-        voiceName: 'ja-JP-KeitaNeural,ja-JP-NanamiNeural', // 语音为多个时随机选择一个
-        speed: -4, // 语速范围 -50 到 100，0 为正常语速
+  function CONFIG() {
+    // --- 以下为设置里的预设项，根据个人需求调整 --- //
+    const settings = {
+      lang: 'zh-Hans',      // 显示语言: 'zh-Hans' 为简体中文；'zh-Hant' 为繁体中文
+      dict: {
+        ios: 'moji',        // 在 iOS 使用 MOji 辞書
+        android: 'moji',    // 在 Android 使用 MOji 辞書
+        mac: 'dict',        // 在 macOS 使用系统自带的词典
+        win: 'goldendict',  // 在 Windows 使用 GoldenDict-ng 词典
+        other: 'weblio',    // 在其他平台使用 Weblio 国語辞典
+      },
+      display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假名；'kana' 为只显示假名；'kanji' 为只显示汉字
+      playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'force' 为强制只播放单词音频
+      tts: {
+        enable: true, // 为没有语音的例句增加在线 tts，部署参考 https://github.com/yy4382/ms-ra-forwarder-for-ifreetime
+        hotkey: 'G',  // 播放快捷键，仅支持桌面端
+        domain: [
+          // 可以添加更多域名，按顺序依次尝试播放
+          'https://anki.0w0.live/',
+          'https://ms-ra-forwarder-for-ifreetime-v9q1.vercel.app/',
+        ],
+        params: {
+          voiceName: 'ja-JP-KeitaNeural,ja-JP-NanamiNeural', // 语音为多个时随机选择一个
+          speed: -4, // 语速范围 -50 到 100，0 为正常语速
+        }
       }
     }
+    // --- 以下为词典预设项，新增词典参考格式添加 --- //
+    const dictOptions = {
+      'moji': 'mojisho://?search={query}',                          // MOJi 辞書 [ios|android]
+      'mojidict': 'https://www.mojidict.com/searchText/{query}',    // MOJi 辞書网页版 [web]
+      'dict': 'dict://{query}',                                     // macOS 词典 [mac]
+      'eudic': 'eudic://dict/{query}',                              // Eudic 欧路词典 [win|mac|ios|android]
+      'goldendict': 'goldendict://{query}',                         // GoldenDict-ng 词典 [win]
+      'dicttango': 'dttp://app.dicttango/WordLookup?word={query}',  // DictTango [android]
+      'monokakido': 'mkdictionaries:///?text={query}',              // Monokakido 物書堂 [mac|ios]
+      'google': 'https://www.google.com/search?q={query}',          // Google Search [web]
+      'weblio': 'https://www.weblio.jp/content/{query}',            // Weblio 国語辞典 [web]
+      'weblioCJJC': 'https://cjjc.weblio.jp/content/{query}',       // Weblio 日中中日 [web]
+      'takoboto': 'https://takoboto.jp/?q={query}',                 // Takoboto [web]
+      'mazii': 'https://mazii.net/zh-TW/search/word/jatw/{query}',  // Mazii [web]
+      'jisho': 'https://jisho.org/search/{query}',                  // Jisho [web]
+      'kotobank': 'https://kotobank.jp/search?q={query}',           // Kotobank [web]
+      'goo': 'https://dictionary.goo.ne.jp/srch/all/{query}/m0u/',  // Goo 辞書 [web]
+    }
+
+    return { settings, dictOptions }
   }
-  // --- 以下为词典预设项，新增词典参考格式添加 --- //
-  const dictOptions = {
-    'moji': 'mojisho://?search={query}',                          // MOJi 辞書 [ios|android]
-    'mojidict': 'https://www.mojidict.com/searchText/{query}',    // MOJi 辞書网页版 [web]
-    'dict': 'dict://{query}',                                     // macOS 词典 [mac]
-    'eudic': 'eudic://dict/{query}',                              // Eudic 欧路词典 [win|mac|ios|android]
-    'goldendict': 'goldendict://{query}',                         // GoldenDict-ng 词典 [win]
-    'dicttango': 'dttp://app.dicttango/WordLookup?word={query}',  // DictTango [android]
-    'monokakido': 'mkdictionaries:///?text={query}',              // Monokakido 物書堂 [mac|ios]
-    'google': 'https://www.google.com/search?q={query}',          // Google Search [web]
-    'weblio': 'https://www.weblio.jp/content/{query}',            // Weblio 国語辞典 [web]
-    'weblioCJJC': 'https://cjjc.weblio.jp/content/{query}',       // Weblio 日中中日 [web]
-    'takoboto': 'https://takoboto.jp/?q={query}',                 // Takoboto [web]
-    'mazii': 'https://mazii.net/zh-TW/search/word/jatw/{query}',  // Mazii [web]
-    'jisho': 'https://jisho.org/search/{query}',                  // Jisho [web]
-    'kotobank': 'https://kotobank.jp/search?q={query}',           // Kotobank [web]
-    'goo': 'https://dictionary.goo.ne.jp/srch/all/{query}/m0u/',  // Goo 辞書 [web]
-  }
 
-  return { settings, dictOptions }
-}
-
-function feedback() {
-  document.querySelector('a.Feedback').href = 'https://ncn8ci2h7v0y.feishu.cn/share/base/form/shrcnTh5DRxtrGWtiWTkdBlSWze?prefill_NoteID={{NoteID}}&hide_NoteID=1&hide_Note+ID=1'
-}
-
-function getPlatform() {
-  return ['ios', 'android', 'mac', 'win'].find(p => document.documentElement.className.includes(p)) || 'other'
-}
-
-function isAndroid() {
-  return !!document.documentElement.className.includes('android')
-}
-
-function isBackSide() {
-  return !!document.getElementById('BackSide')
-}
-
-function cleanWord(word) {
-  return word.replace(/\[[^\]]*\]|\([^)]*\)|[0-9!@#$%^&*()_+\-='":\\|,.<>/?~～〜\s]+/g, '')
-}
-
-function lookUp(word = '{{text:VocabKanji}}') {
-  const cleaned = cleanWord(word)
-  const dict = CONFIG().settings.dict[getPlatform()]
-  const scheme = CONFIG().dictOptions[dict]
-  if (!scheme) {
+  function getTranslation(key) {
+    const translations = {
+      feedback: {
+        'zh-Hans': '反馈',
+        'zh-Hant': '反饋',
+      },
+      dictionaryTip: {
+        'zh-Hans': '未配置适用于此平台的词典',
+        'zh-Hant': '未配置適用於此平台的詞典',
+      },
+      updateReminder: {
+        'zh-Hans': '请更新至最新版后再提交反馈',
+        'zh-Hant': '請更新至最新版後再提交反饋',
+      },
+      versionCurrent: {
+        'zh-Hans': '当前版本',
+        'zh-Hant': '當前版本',
+      },
+      versionLatest: {
+        'zh-Hans': '最新版本',
+        'zh-Hant': '最新版本',
+      },
+      updateDetails: {
+        'zh-Hans': '更新说明',
+        'zh-Hant': '更新說明',
+      }
+    }
     const lang = CONFIG().settings.lang
-    const tip = lang !== 'zh-Hant'
-      ? '未配置适用于此平台的词典'
-      : '未配置適用於此平台的詞典'
-    return alert(tip)
+    return translations[key]?.[lang] || ''
   }
-  const url = scheme.replace('{query}', encodeURIComponent(cleaned))
-  document.querySelector('a.Search').href = url
-}
 
-function forcePlayback() {
-  if (CONFIG().settings.playback !== 'force') return
-  const el = document.querySelector('.VocabAudio .replay-button')
-  if (el) el.click()
-}
-
-function hideFrontElements() {
-  document.querySelector('#FrontSide ul').style.display = 'none'
-}
-
-function hideFurigana() {
-  if (CONFIG().settings.display === 'kanji') {
-    document.querySelectorAll('.VocabKanji rt').forEach(rt => {
-      rt.style.display = isBackSide() ? 'ruby-text' : 'none'
-    })
+  function getCurrentVersion(tags = '{{Tags}}') {
+    return tags.split(/\s+|::/).find(part => part.startsWith('v')) || ''
   }
-}
 
-function hideKanji() {
-  if (CONFIG().settings.display === 'kana') {
-    if (isBackSide()) {
-      if (isAndroid()) {
-        updateText('.VocabKanji span[lang="ja"]', '{{furigana:VocabKanji}}')
-      }
-      return
+  async function getLatestReleaseInfo() {
+    const response = await fetch('https://api.github.com/repos/5mdld/anki-jlpt-decks/releases/latest')
+    const data = await response.json()
+    const version = `v${data.tag_name.split('_')[0].replace(/^v/, '')}`
+    const info = data.body.replace(/\r\n/g, '<br>')
+    return { version, info }
+  }
+
+  function createDialog(config = {}) {
+    if (document.getElementById('DynamicDialog')) {
+      closeDialog()
     }
-    const isKatakana = getTags().includes('外') || /^[ァ-ヴー]+$/.test('{{VocabKanji}}')
-    updateText('.VocabKanji span[lang="ja"]', isKatakana ? '{{kanji:VocabKanji}}' : '{{VocabFurigana}}')
+    const modal = document.createElement('div')
+    modal.id = 'DynamicDialog'
+    modal.className = 'DialogOverlay'
+    modal.innerHTML = `
+    <div class="DialogContent">
+      <h2 class="DialogTitle">${config.title || '提示'}</h2>
+      <div class="DialogBody">${config.content || ''}</div>
+      <div class="DialogFooter">
+        ${config.cancelText ? `<a href="#" target="_blank" class="DialogButton cancelButton">${config.cancelText}</a>` : ''}
+        <a href="#" target="_blank" class="DialogButton confirmButton">${config.confirmText || '确定'}</a>
+      </div>
+    </div>
+    `
+    modal.querySelector('.DialogContent').addEventListener('click', (event) => event.stopPropagation())
+    modal.querySelector('.cancelButton')?.addEventListener('click', config.onCancel || closeDialog)
+    modal.querySelector('.confirmButton').addEventListener('click', config.onConfirm || closeDialog)
+    modal.addEventListener('click', closeDialog)
+    document.getElementById('qa').appendChild(modal)
+    document.body.style.overflow = 'hidden'
   }
-}
 
-function audioStylePatch() {
-  const target = document.querySelector('#FrontSide .VocabAudio')
-  const source = document.querySelector('#qa > .VocabAudio')
-  if (source && target && !target.innerHTML.trim()) {
-    source.classList.remove('!hidden')
-    target.replaceWith(source)
+  function closeDialog() {
+    document.getElementById('DynamicDialog')?.remove()
+    document.body.style.overflow = ''
   }
-}
 
-function updateText(selector, text) {
-  if (!text) return;
-  const el = document.querySelector(selector);
-  if (el) {
-    if (isAndroid()) { 
-      el.innerHTML = text;
-    } else {
-      el.innerHTML.includes('<ruby>') ? el.innerHTML = text : el.textContent = text;
-    }
-  }
-}
+  async function feedback() {
+    const current = getCurrentVersion()
+    const { version: latest = 'unknown', info = 'unknown' } = await getLatestReleaseInfo()
 
-function getTags(tags = '{{Tags}}') {
-  const ignore = ['$', '^'];
-  return tags.split(/\s+/)
-    .map(tag => tag.split(/::|-/).pop())
-    .filter(tag => !ignore.some(prefix => tag.startsWith(prefix)))
-    .sort((a, b) => {
-      const getRank = tag => {
-        if (/^v\d/.test(tag)) return 0;
-        if (tag.startsWith('N')) return 1;
-        return 2;
-      }
-      const rankA = getRank(a);
-      const rankB = getRank(b);
-      return rankA !== rankB ? rankA - rankB : a.localeCompare(b);
-    })
-    .join('・');
-}
-
-function setLang() {
-  updateText('.Level', getTags())
-
-  const lang = CONFIG().settings.lang
-  if (lang !== 'zh-Hant') return
-  document.documentElement.lang = lang
-  updateText('.VocabDef', '{{VocabDefTC}}')
-  const defs = ['{{SentDefTC1}}', '{{SentDefTC2}}', '{{SentDefTC3}}', '{{SentDefTC4}}']
-  defs.forEach((def, index) => updateText(`li:nth-child(${index + 1}) .SentDef`, def))
-}
-
-function removeSpaces() {
-  document.querySelectorAll('.VocabPlus, .VocabPoS, .SentKanji, .SentFurigana, .SentDef').forEach(el => {
-    el.innerHTML = el.innerHTML
-      .replace(/\s*\n\s*/g, '')
-      .replace(/>\s+</g, '><')
-      .replace(/(<[^>]+>)|\s+/g, (m, tag) => tag || '')
-  })
-}
-
-function toggleBlur() {
-  document.querySelectorAll('.VocabKanji, .VocabFurigana, .VocabPlus, .SentKanji').forEach(el =>
-    el.classList.toggle('blur')
-  )
-}
-
-function getType(index) {
-  return ['{{SentType1}}', '{{SentType2}}', '{{SentType3}}', '{{SentType4}}'][index] || '例'
-}
-
-function setType() {
-  ['.SentKanji', '.SentFurigana', '.SentDef', '.VocabPlus', '.VocabPoS'].forEach(selector => {
-    document.querySelectorAll(selector).forEach((el, i) => {
-      if (!el.textContent.trim() || el.querySelector('em')) return
-      const typeMap = {
-        'SentDef': '［訳］',
-        'VocabPlus': '［補］',
-        'SentKanji': `［${getType(i)}］`,
-        'SentFurigana': `［${getType(i)}］`,
-        'VocabPoS': '{{VocabPoS}}' ? '［{{VocabPoS}}］' : '［名］',
-      }
-      const type = typeMap[Object.keys(typeMap).find(key => el.className.includes(key))]
-      el.insertAdjacentHTML('afterbegin', `<em lang='ja'>${type}</em>`)
-    })
-  })
-}
-
-function markWords(word = '{{text:VocabKanji}}') {
-  const wordRegex = /[一-龠々ヵヶ]+|[ぁ-んァ-ヴー]+/g
-  const kanjiRegex = /[一-龠々ヵヶ]/
-  const parts = cleanWord(word).match(wordRegex) ?? []
-  const regexParts = parts.map(part => {
-    return kanjiRegex.test(part)
-      ? `(?:<ruby><rb>${part}</rb><rt>[^<]+</rt></ruby>|${part})`
-      : `(?:<ruby><rb>[^<]+</rb><rt>${part}</rt></ruby>|${part})`
-  })
-  const regex = new RegExp(regexParts.join('(?:\\s*?)'), 'g');
-
-  ['.SentKanji', '.SentFurigana'].forEach(selector => {
-    document.querySelectorAll(selector).forEach((el, i) => {
-      const type = getType(i)
-      if (el.querySelector('b, i, u, span, strong') || type !== '例') return
-      el.innerHTML = el.innerHTML
-        .replace(regex, match => `<strong>${match}</strong>`)
-        .replace(/[～〜]/g, `<strong>${cleanWord(word)}</strong>`)
-    })
-  })
-}
-
-function highlightWords() {
-  document.querySelectorAll('.SentFurigana').forEach((el, i) => {
-    if (el.querySelector('b, i, u, span')) return
-    const type = getType(i)
-    const prefix = type.match(/^(関|対)/)
-    if (!prefix) return
-    const tag = prefix[1] === '関' ? 'synonym' : 'antonym'
-    const content = el.innerHTML
-      .replace(/^<em[^>]*>［[^]*?］<\/em>/, '')
-      .trim()
-      .replace(/^［[^]*?］/, '')
-    el.innerHTML = el.querySelector('em') ? `<em lang='ja'>［${type}］</em><span class='${tag}'>${content}</span>` : `<span class='${tag}'>${content}</span>`
-  })
-}
-
-function showHint() {
-  if (isBackSide()) {
-    document.querySelectorAll('a.hint').forEach(hint => hint.style.display = 'none')
-  }
-}
-
-function setAnkiWebAudio() {
-  if (!document.getElementById('quiz')) return
-
-  document.querySelectorAll('.VocabAudio, .SentAudio').forEach(el => {
-    const audio = el.querySelector('audio')
-    if (!audio) return
-    audio.removeAttribute('controls')
-    el.insertAdjacentHTML('beforeend', '<a class="replay-button soundLink"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="29"/><path d="M56.502,32.301l-37.502,20.101l0.329,-40.804l37.173,20.703Z"/></svg></a>')
-    el.querySelector('.replay-button').addEventListener('click', e => {
-      e.preventDefault()
-      document.querySelectorAll('audio').forEach(a => a !== audio && !a.paused && a.pause())
-      audio.currentTime = 0
-      audio.play()
-    })
-  })
-}
-
-function setEdgeTTS() {
-  const { enable, hotkey, domain, params } = CONFIG().settings.tts
-  if (!enable) return
-
-  const getVoice = () => {
-    const voices = params.voiceName.split(',').map(v => v.trim())
-    return voices.length === 1 ? voices[0] : voices[Math.floor(Math.random() * voices.length)]
-  }
-  const getSentKanji = (index) => {
-    const SentKanji = [
-      '{{text:kanji:SentKanji1}}',
-      '{{text:kanji:SentKanji2}}',
-      '{{text:kanji:SentKanji3}}',
-      '{{text:kanji:SentKanji4}}'
-    ][index] || ''
-    return SentKanji.replace(/・/g, '、')
-  }
-  document.querySelectorAll('.SentAudio').forEach((el, i) => {
-    if (el.childNodes.length) return // 如需同时开启在线 TTS，注释此行
-    const text = getSentKanji(i)
-    if (!text) return
-    const queryString = new URLSearchParams({ ...params, text, voiceName: getVoice() }).toString()
-    const audio = document.createElement('audio')
-    audio.preload = 'none'
-    domain.forEach(url => {
-      const source = document.createElement('source')
-      source.src = `${url}api/aiyue?${queryString}`
-      source.type = 'audio/mpeg'
-      audio.appendChild(source)
-    })
-    el.appendChild(audio)
-    el.insertAdjacentHTML(
-      'beforeend',
-      '<a class="tts replay-button soundLink"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="29"/><path d="M56.502,32.301l-37.502,20.101l0.329,-40.804l37.173,20.703Z"/></svg></a>',
-    )
-    el.querySelector('.tts.replay-button').addEventListener('click', e => {
-      e.preventDefault()
-      document.querySelectorAll('audio').forEach(a => a !== audio && !a.paused && a.pause())
-      audio.currentTime = 0
-      audio.play()
-    })
-  })
-  triggerAudioPlayback(hotkey)
-}
-
-function triggerAudioPlayback(hotkey) {
-  if (!hotkey) return
-
-  let currentAudioIndex = 0
-  let isError = false
-  document.addEventListener('keydown', (e) => {
-    if (e.key.toLowerCase() === hotkey.toLowerCase()) {
-      const audios = document.querySelectorAll('.CardSide audio')
-      audios.forEach((audio) => {
-        audio.pause()
-        audio.currentTime = 0
+    if (current !== latest) {
+      createDialog({
+        title: '更新提醒',
+        content: `
+        <p class="text-center">${getTranslation('updateReminder')}</p>
+        <p>⚡︎ ${getTranslation('versionCurrent')}: ${current}</p>
+        <p>⚡︎ ${getTranslation('versionLatest')}: ${latest}</p>
+        <p>⚡︎ ${getTranslation('updateDetails')}: <br><small>${info}</small></p>
+      `,
+        cancelText: '取消',
+        confirmText: '更新',
+        onConfirm: () => {
+          document.querySelector('a.confirmButton').href = 'https://github.com/5mdld/anki-jlpt-decks/releases/latest'
+          closeDialog()
+        }
       })
-      if (!isError) currentAudioIndex = 0
-      playNext(audios)
+    } else {
+      document.querySelector('a.Feedback').href = getFeedbackLink()
     }
-  })
-  function playNext(audios) {
-    if (currentAudioIndex >= audios.length) return
-    const audio = audios[currentAudioIndex]
-    audio.play().then(() => {
-      audio.onended = () => {
-        currentAudioIndex++
+  }
+
+  function getFeedbackLink(platform = 'github', VocabKanji = '{{VocabKanji}}', NoteID = '{{NoteID}}') {
+    const date = new Date().toISOString().split('T')[0]
+    const title = `${date} 卡片反馈 「${VocabKanji}」`
+    const urls = {
+      github: `https://github.com/5mdld/anki-jlpt-decks/issues/new?${new URLSearchParams({
+        title: `[卡片反馈] ${date} 「{{VocabKanji}}」`,
+        body: `- 卡片版本: ${getCurrentVersion()}\n- NoteID: ${NoteID}\n- VocabKanji: ${VocabKanji}\n- 反馈内容: `,
+      })}`,
+      feishu: `https://ncn8ci2h7v0y.feishu.cn/share/base/form/shrcnTh5DRxtrGWtiWTkdBlSWze?${new URLSearchParams({ NoteID })}`,
+    }
+    return urls[platform]
+  }
+
+  function getPlatform() {
+    return ['ios', 'android', 'mac', 'win'].find(p => document.documentElement.className.includes(p)) || 'other'
+  }
+
+  function isAndroid() {
+    return !!document.documentElement.className.includes('android')
+  }
+
+  function isBackSide() {
+    return !!document.getElementById('BackSide')
+  }
+
+  function cleanWord(word) {
+    return word.replace(/\[[^\]]*\]|\([^)]*\)|[0-9!@#$%^&*()_+\-='":\\|,.<>/?~～〜\s]+/g, '')
+  }
+
+  function lookUp(word = '{{text:VocabKanji}}') {
+    const cleaned = cleanWord(word)
+    const dict = CONFIG().settings.dict[getPlatform()]
+    const scheme = CONFIG().dictOptions[dict]
+    if (!scheme) {
+      createDialog({
+        content: `<p class="text-center">${getTranslation('dictionaryTip')}</p>`,
+        cancelText: '取消',
+        confirmText: '查看文档',
+        onConfirm: () => {
+          document.querySelector('a.confirmButton').href = 'https://github.com/5mdld/anki-jlpt-decks/blob/main/README.md'
+          closeDialog()
+        }
+      })
+    }
+    const url = scheme.replace('{query}', encodeURIComponent(cleaned))
+    document.querySelector('a.Search').href = url
+  }
+
+  function forcePlayback() {
+    if (CONFIG().settings.playback !== 'force') return
+    const el = document.querySelector('.VocabAudio .replay-button')
+    if (el) el.click()
+  }
+
+  function hideFrontElements() {
+    document.querySelector('#FrontSide ul').style.display = 'none'
+  }
+
+  function hideFurigana() {
+    if (CONFIG().settings.display === 'kanji') {
+      document.querySelectorAll('.VocabKanji rt').forEach(rt => {
+        rt.style.display = isBackSide() ? 'ruby-text' : 'none'
+      })
+    }
+  }
+
+  function hideKanji() {
+    if (CONFIG().settings.display === 'kana') {
+      if (isBackSide()) {
+        if (isAndroid()) {
+          updateText('.VocabKanji span[lang="ja"]', '{{furigana:VocabKanji}}')
+        }
+        return
+      }
+      const isKatakana = getTags().includes('外') || /^[ァ-ヴー]+$/.test('{{VocabKanji}}')
+      updateText('.VocabKanji span[lang="ja"]', isKatakana ? '{{kanji:VocabKanji}}' : '{{VocabFurigana}}')
+    }
+  }
+
+  function audioStylePatch() {
+    const target = document.querySelector('#FrontSide .VocabAudio')
+    const source = document.querySelector('#qa > .VocabAudio')
+    if (source && target && !target.innerHTML.trim()) {
+      source.classList.remove('!hidden')
+      target.replaceWith(source)
+    }
+  }
+
+  function updateText(selector, text) {
+    if (!text) return
+    const el = document.querySelector(selector)
+    if (el) {
+      isAndroid() || el.innerHTML.includes('<ruby>')
+        ? el.innerHTML = text
+        : el.textContent = text
+    }
+  }
+
+  function getTags(tags = '{{Tags}}') {
+    const ignore = ['$', '^', 'v']
+    return tags.split(/\s+/)
+      .map(tag => tag.split(/::|-/).pop())
+      .filter(tag => !ignore.some(prefix => tag.startsWith(prefix)))
+      .sort((a, b) => b.startsWith('N') - a.startsWith('N') || a.localeCompare(b))
+      .join('・')
+  }
+
+  function setLang() {
+    updateText('.Level', getTags())
+    updateText('.Feedback', getCurrentVersion() ? `${getCurrentVersion()}・${getTranslation('feedback')}` : getTranslation('feedback'))
+
+    const lang = CONFIG().settings.lang
+    if (lang === 'zh-Hant') {
+      document.documentElement.lang = lang
+      updateText('.VocabDef', '{{VocabDefTC}}')
+      const defs = ['{{SentDefTC1}}', '{{SentDefTC2}}', '{{SentDefTC3}}', '{{SentDefTC4}}']
+      defs.forEach((def, index) => updateText(`li:nth-child(${index + 1}) .SentDef`, def))
+    }
+  }
+
+  function removeSpaces() {
+    document.querySelectorAll('.VocabPlus, .VocabPoS, .SentKanji, .SentFurigana, .SentDef').forEach(el => {
+      el.innerHTML = el.innerHTML
+        .replace(/\s*\n\s*/g, '')
+        .replace(/>\s+</g, '><')
+        .replace(/(<[^>]+>)|\s+/g, (m, tag) => tag || '')
+    })
+  }
+
+  function toggleBlur() {
+    document.querySelectorAll('.VocabKanji, .VocabFurigana, .VocabPlus, .SentKanji').forEach(el =>
+      el.classList.toggle('blur')
+    )
+  }
+
+  function getType(index) {
+    return ['{{SentType1}}', '{{SentType2}}', '{{SentType3}}', '{{SentType4}}'][index] || '例'
+  }
+
+  function setType() {
+    ['.SentKanji', '.SentFurigana', '.SentDef', '.VocabPlus', '.VocabPoS'].forEach(selector => {
+      document.querySelectorAll(selector).forEach((el, i) => {
+        if (!el.textContent.trim() || el.querySelector('em')) return
+        const typeMap = {
+          'SentDef': '［訳］',
+          'VocabPlus': '［補］',
+          'SentKanji': `［${getType(i)}］`,
+          'SentFurigana': `［${getType(i)}］`,
+          'VocabPoS': '{{VocabPoS}}' ? '［{{VocabPoS}}］' : '［名］',
+        }
+        const type = typeMap[Object.keys(typeMap).find(key => el.className.includes(key))]
+        el.insertAdjacentHTML('afterbegin', `<em lang='ja'>${type}</em>`)
+      })
+    })
+  }
+
+  function markWords(word = '{{text:VocabKanji}}') {
+    const wordRegex = /[一-龠々ヵヶ]+|[ぁ-んァ-ヴー]+/g
+    const kanjiRegex = /[一-龠々ヵヶ]/
+    const parts = cleanWord(word).match(wordRegex) ?? []
+    const regexParts = parts.map(part => {
+      return kanjiRegex.test(part)
+        ? `(?:<ruby><rb>${part}</rb><rt>[^<]+</rt></ruby>|${part})`
+        : `(?:<ruby><rb>[^<]+</rb><rt>${part}</rt></ruby>|${part})`
+    })
+    const regex = new RegExp(regexParts.join('(?:\\s*?)'), 'g');
+
+    ['.SentKanji', '.SentFurigana'].forEach(selector => {
+      document.querySelectorAll(selector).forEach((el, i) => {
+        const type = getType(i)
+        if (el.querySelector('b, i, u, span, strong') || type !== '例') return
+        el.innerHTML = el.innerHTML
+          .replace(regex, match => `<strong>${match}</strong>`)
+          .replace(/[～〜]/g, `<strong>${cleanWord(word)}</strong>`)
+      })
+    })
+  }
+
+  function highlightWords() {
+    document.querySelectorAll('.SentFurigana').forEach((el, i) => {
+      if (el.querySelector('b, i, u, span')) return
+      const type = getType(i)
+      const prefix = type.match(/^(関|対)/)
+      if (!prefix) return
+      const tag = prefix[1] === '関' ? 'synonym' : 'antonym'
+      const content = el.innerHTML
+        .replace(/^<em[^>]*>［[^]*?］<\/em>/, '')
+        .trim()
+        .replace(/^［[^]*?］/, '')
+      el.innerHTML = el.querySelector('em') ? `<em lang='ja'>［${type}］</em><span class='${tag}'>${content}</span>` : `<span class='${tag}'>${content}</span>`
+    })
+  }
+
+  function showHint() {
+    if (isBackSide()) {
+      document.querySelectorAll('a.hint').forEach(hint => hint.style.display = 'none')
+    }
+  }
+
+  function setAnkiWebAudio() {
+    if (!document.getElementById('quiz')) return
+
+    document.querySelectorAll('.VocabAudio, .SentAudio').forEach(el => {
+      const audio = el.querySelector('audio')
+      if (!audio) return
+      audio.removeAttribute('controls')
+      el.insertAdjacentHTML('beforeend', '<a class="replay-button soundLink"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="29"/><path d="M56.502,32.301l-37.502,20.101l0.329,-40.804l37.173,20.703Z"/></svg></a>')
+      el.querySelector('.replay-button').addEventListener('click', e => {
+        e.preventDefault()
+        document.querySelectorAll('audio').forEach(a => a !== audio && !a.paused && a.pause())
+        audio.currentTime = 0
+        audio.play()
+      })
+    })
+  }
+
+  function setEdgeTTS() {
+    const { enable, hotkey, domain, params } = CONFIG().settings.tts
+    if (!enable) return
+
+    const getVoice = () => {
+      const voices = params.voiceName.split(',').map(v => v.trim())
+      return voices.length === 1 ? voices[0] : voices[Math.floor(Math.random() * voices.length)]
+    }
+    const getSentKanji = (index) => {
+      const SentKanji = [
+        '{{text:kanji:SentKanji1}}',
+        '{{text:kanji:SentKanji2}}',
+        '{{text:kanji:SentKanji3}}',
+        '{{text:kanji:SentKanji4}}'
+      ][index] || ''
+      return SentKanji.replace(/・/g, '、')
+    }
+    document.querySelectorAll('.SentAudio').forEach((el, i) => {
+      if (el.childNodes.length) return // 如需同时开启在线 TTS，注释此行
+      const text = getSentKanji(i)
+      if (!text) return
+      const queryString = new URLSearchParams({ ...params, text, voiceName: getVoice() })
+      const audio = document.createElement('audio')
+      audio.preload = 'none'
+      domain.forEach(url => {
+        const source = document.createElement('source')
+        source.src = `${url}api/aiyue?${queryString}`
+        source.type = 'audio/mpeg'
+        audio.appendChild(source)
+      })
+      el.appendChild(audio)
+      el.insertAdjacentHTML(
+        'beforeend',
+        '<a class="tts replay-button soundLink"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="29"/><path d="M56.502,32.301l-37.502,20.101l0.329,-40.804l37.173,20.703Z"/></svg></a>',
+      )
+      el.querySelector('.tts.replay-button').addEventListener('click', e => {
+        e.preventDefault()
+        document.querySelectorAll('audio').forEach(a => a !== audio && !a.paused && a.pause())
+        audio.currentTime = 0
+        audio.play()
+      })
+    })
+    triggerAudioPlayback(hotkey)
+  }
+
+  function triggerAudioPlayback(hotkey) {
+    if (!hotkey) return
+
+    let currentAudioIndex = 0
+    let isError = false
+    document.addEventListener('keydown', (e) => {
+      if (e.key.toLowerCase() === hotkey.toLowerCase()) {
+        const audios = document.querySelectorAll('.CardSide audio')
+        audios.forEach((audio) => {
+          audio.pause()
+          audio.currentTime = 0
+        })
+        if (!isError) currentAudioIndex = 0
         playNext(audios)
       }
-      isError = false
-    }).catch(() => (isError = true))
+    })
+    function playNext(audios) {
+      if (currentAudioIndex >= audios.length) return
+      const audio = audios[currentAudioIndex]
+      audio.play().then(() => {
+        audio.onended = () => {
+          currentAudioIndex++
+          playNext(audios)
+        }
+        isError = false
+      }).catch(() => (isError = true))
+    }
   }
-}
 </script>
 
 <script>
-setLang()
-setType()
-markWords()
-removeSpaces()
-setAnkiWebAudio()
-hideFurigana()
-hideKanji()
+  setLang()
+  setType()
+  markWords()
+  removeSpaces()
+  setAnkiWebAudio()
+  hideFurigana()
+  hideKanji()
 </script>
 
 {{/Alt1}}
-
 <!-- Card1 [日-中] 背面 -->
 
 {{^Alt1}}
@@ -488,21 +589,21 @@ hideKanji()
 </main>
 
 <script>
-showHint()
-setEdgeTTS()
-highlightWords()
-audioStylePatch()
-hideFrontElements()
-typeof onShownHook !== 'undefined' ? onShownHook.push(forcePlayback) : forcePlayback()
+  showHint()
+  setEdgeTTS()
+  highlightWords()
+  audioStylePatch()
+  hideFrontElements()
+  typeof onShownHook !== 'undefined' ? onShownHook.push(forcePlayback) : forcePlayback()
 
-// 安卓平台需要重复正面调用的方法
-if (isAndroid()) {
-  setLang()
-  setType()
-  markWords()
-  removeSpaces()
-  hideKanji()
-}
+  // 安卓平台需要重复正面调用的方法
+  if (isAndroid()) {
+    setLang()
+    setType()
+    markWords()
+    removeSpaces()
+    hideKanji()
+  }
 </script>
 
 {{/Alt1}}
