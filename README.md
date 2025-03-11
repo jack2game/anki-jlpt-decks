@@ -420,15 +420,23 @@ tts: {
 
 ## 友情链接
 
-- 请参考 [此链接 ](https://ankiweb.net/shared/by-author/1681155450)下载适时适所、蓝宝书、のんびり文法卡组；新标日、绿宝书、红宝书单词卡组等资源（均由 TG 群友 `MasterOfMasterSword` 制作，如有问题请在相应卡组下反馈）。
+- 以下卡组均由 TG 群友 `MasterOfMasterSword` 制作，请前往  [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 下载。
 
-- 《综合日语第三版》第一册～第四册单词卡组，带真人单词语音和原书课文例句，每一课每一 unit 都打上了对应的 tag，方便按课进度背词。[点此下载](https://ankiweb.net/shared/by-author/516873037)（由 TG 群友 `uovkm` 制作，如有问题请在相应卡组下反馈）。
+  - 《どんなときどう使う日本語文型（适时适所）》文法卡组
+  - 《蓝宝书（超值白金版）》文法卡组
+  - 《のんびり日本語教師》文法卡组
 
-- 基于二语习得理论的日语学习指南，推荐一读： [点此链接](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f)（由 TG 群友 `菜鸡` 撰写）。
+  - 《标准日本语》单词卡组
+  - 《绿宝书》单词卡组
+  - 《红宝书》单词卡组
+
+- TG 群友 `uovkm` 制作的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037)。
+
+-  TG 群友 `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f)，推荐一读。
 
   相关 QQ 群： [点此链接](https://qm.qq.com/q/Iy7QuEz5WQ) 或搜索群号 `830058869` 加群。
 
-- 语言学习论坛 `Campfirium` ，[点此访问](https://campfirium.info)（由 TG 群友 `Z` 创建）。
+- 由 TG 群友 `Z` 创建的语言学习论坛： [Campfirium](https://campfirium.info)。
 
 ------
 
