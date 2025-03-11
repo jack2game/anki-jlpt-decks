@@ -6,7 +6,7 @@
 <main id="FrontSide" class="CardSide">
   <div class="Top">
     <span class="Level">{{Tags}}</span>
-    <a class="Feedback" href="#" target="_blank" onclick="feedback()">反馈</a>
+    <a class="Feedback" href="#" target="_blank" onclick="feedback(event)">反馈</a>
   </div>
 
   <header class="Question">
@@ -155,16 +155,40 @@
     return translations[key]?.[lang] || ''
   }
 
+  function getToday() {
+    return new Date().toLocaleDateString('sv-SE')
+  }
+
+  function setStorage(value) {
+    Object.keys(localStorage)
+      .filter(key => key.startsWith('JLPT_'))
+      .forEach(key => localStorage.removeItem(key))
+    const key = `JLPT_${getToday()}`
+    localStorage.setItem(key, JSON.stringify(value))
+  }
+
+  function getStorage() {
+    const key = `JLPT_${getToday()}`
+    return JSON.parse(localStorage.getItem(key)) || {}
+  }
+
   function getCurrentVersion(tags = '{{Tags}}') {
     return tags.split(/\s+|::/).find(part => part.startsWith('v')) || ''
   }
 
   async function getLatestReleaseInfo() {
-    const response = await fetch('https://api.github.com/repos/5mdld/anki-jlpt-decks/releases/latest')
-    const data = await response.json()
-    const version = `v${data.tag_name.split('_')[0].replace(/^v/, '')}`
-    const info = data.body.replace(/\r\n/g, '<br>')
-    return { version, info }
+    let latest, info
+    try {
+      const response = await fetch('https://api.github.com/repos/5mdld/anki-jlpt-decks/releases/latest')
+      if (!response.ok) throw new Error(response.status)
+
+      const data = await response.json()
+      latest = `v${data.tag_name?.split('_')[0].replace(/^v/, '')}`
+      info = data.body?.replace(/\r?\n/g, '<br>')
+    } catch (err) {
+      console.error(err)
+    }
+    return { latest, info }
   }
 
   function createDialog(config = {}) {
@@ -179,14 +203,14 @@
       <h2 class="DialogTitle">${config.title || '提示'}</h2>
       <div class="DialogBody">${config.content || ''}</div>
       <div class="DialogFooter">
-        ${config.cancelText ? `<a href="#" target="_blank" class="DialogButton cancelButton">${config.cancelText}</a>` : ''}
-        <a href="#" target="_blank" class="DialogButton confirmButton">${config.confirmText || '确定'}</a>
+        ${config.cancelText ? `<a href="#" target="_blank" class="DialogButton CancelButton">${config.cancelText}</a>` : ''}
+        <a href="#" target="_blank" class="DialogButton ConfirmButton">${config.confirmText || '确定'}</a>
       </div>
     </div>
     `
-    modal.querySelector('.DialogContent').addEventListener('click', (event) => event.stopPropagation())
-    modal.querySelector('.cancelButton')?.addEventListener('click', config.onCancel || closeDialog)
-    modal.querySelector('.confirmButton').addEventListener('click', config.onConfirm || closeDialog)
+    modal.querySelector('.DialogContent').addEventListener('click', e => e.stopPropagation())
+    modal.querySelector('.CancelButton')?.addEventListener('click', e => { e.preventDefault(); (config.onCancel || closeDialog)() })
+    modal.querySelector('.ConfirmButton').addEventListener('click', config.onConfirm || closeDialog)
     modal.addEventListener('click', closeDialog)
     document.getElementById('qa').appendChild(modal)
     document.body.style.overflow = 'hidden'
@@ -197,23 +221,46 @@
     document.body.style.overflow = ''
   }
 
-  async function feedback() {
+  async function checkVersion(force = false) {
     const current = getCurrentVersion()
-    const { version: latest = 'unknown', info = 'unknown' } = await getLatestReleaseInfo()
+    const storage = getStorage()
+    const el = document.querySelector('.Feedback')
 
-    if (current !== latest) {
+    const shouldFetch = force || (current && !storage.latest?.startsWith?.('v'))
+    const { latest, info } = shouldFetch ? await getLatestReleaseInfo().then(res => (setStorage(res), res)) : storage
+
+    const icon = el.querySelector('i')
+    if (current && latest && current !== latest) {
+      if (!icon) {
+        el.insertAdjacentHTML('afterbegin', '<i>🎉 </i>')
+      }
+    } else {
+      icon?.remove()
+    }
+    return { current, latest, info }
+  }
+
+  async function feedback(e) {
+    const current = getCurrentVersion()
+    const { latest, info } = await checkVersion(!current)
+
+    if (!current || current !== latest) {
+      e.preventDefault()
       createDialog({
-        title: '更新提醒',
+        title: `
+        <p>🎉 可用更新</p>
+        <span>${getTranslation('updateReminder')}</span>
+        `,
         content: `
-        <p class="text-center">${getTranslation('updateReminder')}</p>
-        <p>⚡︎ ${getTranslation('versionCurrent')}: ${current}</p>
-        <p>⚡︎ ${getTranslation('versionLatest')}: ${latest}</p>
-        <p>⚡︎ ${getTranslation('updateDetails')}: <br><small>${info}</small></p>
-      `,
+        <p>📌 ${getTranslation('versionCurrent')}: ${current || 'Unknown'}</p>
+        <p>🌟 ${getTranslation('versionLatest')}: ${latest || 'Unknown'}</p>
+        <p>🚀 ${getTranslation('updateDetails')}: </p>
+        <ul>${info || '- No details available'}</ul>
+        `,
         cancelText: '取消',
         confirmText: '更新',
         onConfirm: () => {
-          document.querySelector('a.confirmButton').href = 'https://github.com/5mdld/anki-jlpt-decks/releases/latest'
+          document.querySelector('a.ConfirmButton').href = 'https://github.com/5mdld/anki-jlpt-decks/releases/latest'
           closeDialog()
         }
       })
@@ -222,15 +269,17 @@
     }
   }
 
-  function getFeedbackLink(platform = 'github', VocabKanji = '{{VocabKanji}}', NoteID = '{{NoteID}}') {
-    const date = new Date().toISOString().split('T')[0]
-    const title = `${date} 卡片反馈 「${VocabKanji}」`
+  function getFeedbackLink(platform = 'github', VocabKanji = '{{text:kanji:VocabKanji}}', NoteID = '{{text:NoteID}}') {
+    const current = getCurrentVersion()
     const urls = {
       github: `https://github.com/5mdld/anki-jlpt-decks/issues/new?${new URLSearchParams({
-        title: `[卡片反馈] ${date} 「{{VocabKanji}}」`,
-        body: `- 卡片版本: ${getCurrentVersion()}\n- NoteID: ${NoteID}\n- VocabKanji: ${VocabKanji}\n- 反馈内容: `,
+        title: `[卡片反馈] ${getToday()} 「${VocabKanji}」`,
+        body: `- 卡片版本: ${current}\n- NoteID: ${NoteID}\n- VocabKanji: ${VocabKanji}\n- 反馈内容: `,
       })}`,
-      feishu: `https://ncn8ci2h7v0y.feishu.cn/share/base/form/shrcnTh5DRxtrGWtiWTkdBlSWze?${new URLSearchParams({ NoteID })}`,
+      feishu: `https://ncn8ci2h7v0y.feishu.cn/share/base/form/shrcnTh5DRxtrGWtiWTkdBlSWze?${new URLSearchParams({
+        NoteID,
+        Version: current
+      })}`,
     }
     return urls[platform]
   }
@@ -261,7 +310,7 @@
         cancelText: '取消',
         confirmText: '查看文档',
         onConfirm: () => {
-          document.querySelector('a.confirmButton').href = 'https://github.com/5mdld/anki-jlpt-decks/blob/main/README.md'
+          document.querySelector('a.ConfirmButton').href = 'https://github.com/5mdld/anki-jlpt-decks/blob/main/README.md'
           closeDialog()
         }
       })
@@ -332,7 +381,6 @@
   function setLang() {
     updateText('.Level', getTags())
     updateText('.Feedback', getCurrentVersion() ? `${getCurrentVersion()}・${getTranslation('feedback')}` : getTranslation('feedback'))
-
     const lang = CONFIG().settings.lang
     if (lang === 'zh-Hant') {
       document.documentElement.lang = lang
@@ -340,6 +388,7 @@
       const defs = ['{{SentDefTC1}}', '{{SentDefTC2}}', '{{SentDefTC3}}', '{{SentDefTC4}}']
       defs.forEach((def, index) => updateText(`li:nth-child(${index + 1}) .SentDef`, def))
     }
+    checkVersion()
   }
 
   function removeSpaces() {
@@ -488,7 +537,7 @@
 
     let currentAudioIndex = 0
     let isError = false
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
       if (e.key.toLowerCase() === hotkey.toLowerCase()) {
         const audios = document.querySelectorAll('.CardSide audio')
         audios.forEach((audio) => {

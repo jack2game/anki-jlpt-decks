@@ -73,7 +73,7 @@ body,
 }
 
 :lang(zh-Hant) {
-  font-family: 'Source Han Serif TW', 'Source Han Serif JP', serif;
+  font-family: 'Source Han Serif TW', 'Source Han Serif JP', 'Source Han Serif CN', serif;
 }
 
 :lang(ja) {
@@ -93,8 +93,8 @@ body,
   --border: #d1d5db;
   --border-subtle: #e4e4e4;
   --border-radius: 7px;
-  --button-bg: #fcfcfc;
-  --button-gradient-start: white;
+  --button-bg: #f3f3f3;
+  --button-gradient-start: #f7f7f7;
   --button-primary-bg: #306bec;
   --button-primary-gradient-start: #3b82f6;
   --svg-path: #555;
@@ -106,6 +106,7 @@ body,
   --fg-highlight-indigo: #6366f1;
   --fg-highlight-purple: #a855f7;
   --font-size: 16px;
+  --text-xs: 12px;
   --text-sm: 14px;
   --text-lg: 18px;
   --text-xl: 20px;
@@ -148,6 +149,7 @@ body,
 
 @media (min-width: 475px) {
   :root {
+    --text-xs: 14px;
     --text-sm: 16px;
     --text-lg: 22px;
     --text-xl: 24px;
@@ -520,8 +522,14 @@ a.Feedback {
   font-size: var(--text-xl);
   letter-spacing: 2px;
   border-bottom: 1px solid var(--border);
-  padding-bottom: 8px;
-  margin-bottom: 8px;
+  padding-bottom: 12px;
+}
+
+.DialogTitle span {
+  display: block;
+  font-size: var(--text-sm);
+  letter-spacing: 0;
+  padding-top: 2px;
 }
 
 .DialogContent {
@@ -540,24 +548,24 @@ a.Feedback {
   max-width: 26em;
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
-  padding: 8px 0 16px;
+  row-gap: 6px;
+  padding: 10px 0 20px;
 }
 
-.DialogBody small {
-  display: block;
-  padding: 5px 0 0 1.5em;
+.DialogBody ul {
+  font-size: var(--text-xs);
+  padding-left: 1.2em;
 }
 
 .DialogFooter {
-  margin: 8px 10px 0;
+  margin: 0 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   column-gap: 20px;
 }
 
-a.DialogButton {
+.DialogButton {
   width: 100%;
   cursor: pointer;
   border: 1px solid var(--border-subtle);
@@ -569,15 +577,15 @@ a.DialogButton {
   letter-spacing: 2px;
 }
 
-.DialogButton.confirmButton {
-  color: #fff;
-  background-color: var(--button-primary-bg);
-}
-
 .DialogButton:hover {
   background-color: var(--button-gradient-start);
 }
 
-.DialogButton.confirmButton:hover {
+.DialogButton.ConfirmButton {
+  color: #fff;
+  background-color: var(--button-primary-bg);
+}
+
+.DialogButton.ConfirmButton:hover {
   background-color: var(--button-primary-gradient-start);
 }
