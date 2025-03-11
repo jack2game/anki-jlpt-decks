@@ -271,18 +271,16 @@ display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假�
 <details>
 <summary>点击展开／折叠</summary><br>
 
-- 在线 TTS 的开启与关闭
+- **在线 TTS 的开启与关闭**
   - 默认只为没有本地音频的例句启用 TTS。  
   - 如果想强制所有例句都走在线 TTS，请在 `function setEdgeTTS()` 中注释掉 `if (el.childNodes.length) return` 部分。
 
 
-- 自定义在线 TTS 服务
-
+- **自定义在线 TTS 服务**
   - 默认内置两个在线 TTS 服务器，可在 `domain: ''` 里自行增删。
   - 可参考 [ms-ra-forwarder-for-ifreetime](https://github.com/yy4382/ms-ra-forwarder-for-ifreetime) 搭建自己的 TTS 服务器（选择**无 token** 部署，建议自定义域名设置得复杂一些避免泄露）。
-
-- 在桌面端和 AnkiWeb 启用播放快捷键
-
+  
+- **在桌面端和 AnkiWeb 启用播放快捷键**
   - 在 `hotkey: 'G'` 中指定快捷键，留空则关闭。
   - 由于浏览器限制，无法自动连续播放，需要手动或再次触发快捷键。
 
@@ -312,7 +310,7 @@ tts: {
 <summary>点击展开／折叠</summary><br>
 
 
-- 使用系统自带字体
+- **使用系统自带字体**
   
   将您想添加的字体名称放在对应语言的 `font-family` 的首位。
 
@@ -336,7 +334,7 @@ tts: {
 }
 ```
 
-- 使用从 Anki 媒体文件夹加载的自定义字体文件
+- **使用从 Anki 媒体文件夹加载的自定义字体文件**
   
   >  参考教程：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/templates/styling.html?highlight=%E5%AD%97%E4%BD%93#%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93) ｜ [English](https://docs.ankiweb.net/templates/styling.html#installing-fonts)
   
@@ -362,7 +360,8 @@ tts: {
 }
 ```
 
-- 在 iOS 端使用「[UDデジタル教科書体](https://www.morisawa.co.jp/topic/upg201802/)」
+- **在 iOS 端使用「[UDデジタル教科書体](https://www.morisawa.co.jp/topic/upg201802/)」**
+  
   1. 下载并安装字体配置文件：[下载链接](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250311py61nT.mobileconfig)
   
   2. 将字体名称 `UD Digi Kyokasho NK-R` 放在日语的 `font-family` 的首位：
@@ -381,7 +380,7 @@ tts: {
      }
      ```
   
-- 在 iOS 端使用自定义字体时，Ruby（ふりがな）行与汉字行重叠
+- **在 iOS 端使用自定义字体时，Ruby（ふりがな）行与汉字行重叠**
   
   完全替换卡组自带字体后可能会出现这种情况，请注释掉以下代码中 `transform: translateY(0.6em);` 部分：
 
@@ -405,13 +404,14 @@ tts: {
 <summary>点击展开／折叠</summary><br>
 
 
-1. 开启
+1. **开启**
    - 打开卡片模板 → 选择「2：中-日……」→ 在正／背面模板中找到 `{{ #Alt2 }}` 改为 `{{ ^Alt2 }}` → 保存并重启 Anki。
    - 新增的「中-日」模板卡片会与现有卡片一同出现，可自行分组管理。  
 
 ![操作方法](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206vC6C4m.png)
 
-2. 关闭
+2. **关闭**
+   
    - 将 `{{ ^Alt2 }}` 改回 `{{ #Alt2 }}` → 保存 → `工具` → `清理空卡片` → `删除` 对应卡片。  
    
      ![删除空白卡片](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206aUZkfD.png)
@@ -422,18 +422,17 @@ tts: {
 
 ## 友情链接
 
-- 以下卡组均由 TG 群友 `MasterOfMasterSword` 制作，请前往  [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 下载。
-
-  - 《どんなときどう使う日本語文型（适时适所）》文法卡组
-  - 《蓝宝书（超值白金版）》文法卡组
+- `MasterOfMasterSword` 制作的一些文法和单词卡组，请前往  [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 下载。
+  - 《どんなときどう使う日本語文型》（适时适所）文法卡组
+  - 《蓝宝书超值白金版》文法卡组
   - 《のんびり日本語教師》文法卡组
-
+  
   - 《标准日本语》单词卡组
   - 《绿宝书》单词卡组
   - 《红宝书》单词卡组
-- TG 群友 `uovkm` 制作的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037)。
-- TG 群友 `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f)，推荐一读。
-- 由 TG 群友 `Z` 创建的语言学习论坛： [Campfirium](https://campfirium.info)。
+- `uovkm` 制作的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037)。
+- `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f)，推荐一读。
+- `Z` 创建的语言学习论坛： [Campfirium](https://campfirium.info)。
 
 ------
 
@@ -449,7 +448,9 @@ tts: {
 
 ## License
 
-本卡组所有内容均来自公开互联网资源及个人创作，采用 [知识共享许可协议（CC BY-NC 4.0）](https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans)，你可以自由地使用、修改及分享本卡组，但需满足：
+本卡组所有内容均来自公开互联网资源及个人创作，并采用 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans) 协议进行许可。
+
+你可以自由使用、修改及分享本卡组，但需遵循以下条件：
 
 - **署名**：注明原作者（egg rolls），提供协议链接，并标明是否进行了修改。
 - **非商业性使用**：不得用于商业目的。
