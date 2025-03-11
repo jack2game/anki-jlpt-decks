@@ -62,7 +62,7 @@
 | 标签示例  | 含义                                                         |
 | --------- | ------------------------------------------------------------ |
 | N3必考    | 该单词的 JLPT 等级及重要性                                   |
-| ②         | 该单词的音调，参考 https://www.jp-lab.com/pitch-accent-explanation |
+| ②         | 该单词的音调，参考 https://www.jp-lab.com/zh/pitch-accent-explanation |
 | [他動1]   | 该单词的词性；<br />动词数字含义： `1`  = 「五段動詞」、 `2` = 「上一段／下一段動詞」、`3` = 「カ変／サ変動詞」 |
 | [補]      | 一些补充说明                                                 |
 | [例]      | 例句                                                         |
@@ -161,7 +161,7 @@
 
 - **AnkiWeb 提示「Daily limit exceeded; please try again tomorrow」**
 
-  - 表示同一 IP 在 24 小时内下载超过 25 个卡组，需更换 IP 或等 24 小时后再试。
+  - 表示同一 IP 地址在 24 小时内下载超过 25 个卡组，请切换 IP 地址或等 24 小时后再试。
 
 ------
 
@@ -171,7 +171,7 @@
 >
 > 请务必先**备份**再自行探索，若遇到无法解决的问题可加群讨论。
 
-卡片**正面**模板中的 `function CONFIG()` 函数包含一些可修改的选项，您可以根据注释调整相应的设置。
+卡片**正面**模板中的 `function CONFIG()` 函数包含一些可修改的选项，您可以根据注释修改相应的设置。
 
 模板位置教程视频：[Android](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109vviFO1.mp4) ｜ [iOS](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109HaTDmE.mp4) ｜ [macOS／Windows](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241124F22Meh.mp4)  
 
@@ -235,8 +235,6 @@ const dictOptions = {
 
 <details>
 <summary>点击展开／折叠</summary><br>
-
-
 | 需求                                     | 牌组选项 → 音频          | `playback` 参数 | 正面模板中的 `{{ VocabAudio }}` |
 | ---------------------------------------- | ------------------------ | --------------- | ------------------------------- |
 | 正／背面都自动播放（单词＋例句）         | 关闭「不要自动播放音频」 | `'default'`     | 保留                            |
@@ -271,8 +269,6 @@ display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假�
 
 <details>
 <summary>点击展开／折叠</summary><br>
-
-
 - 在线 TTS 的开启与关闭
   - 默认只为没有本地音频的例句启用 TTS。  
   - 如果想强制所有例句都走在线 TTS，请在 `function setEdgeTTS()` 中注释掉 `if (el.childNodes.length) return` 部分。
