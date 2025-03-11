@@ -311,7 +311,8 @@ tts: {
 
 
 - 使用系统自带字体
-  - 在卡片样式（CSS）中，将你想添加的字体名称放在对应语言的 `font-family` 的首位。
+  
+  在卡片样式（CSS）中，将你想添加的字体名称放在对应语言的 `font-family` 的首位。
 
 ```css
 /* --- 字体样式（不包括 VocabKanji 字段） --- */
@@ -336,9 +337,7 @@ tts: {
 - 使用从 Anki 媒体文件夹加载的自定义字体文件
   
   0. 参考教程：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/templates/styling.html?highlight=%E5%AD%97%E4%BD%93#%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93) ｜ [English](https://docs.ankiweb.net/templates/styling.html#installing-fonts)
-  
   1. 将字体文件放入 Anki 媒体文件夹，并以 `_` 开头命名。
-  
   2. 修改对应语言的 `@font-face` 中的 `src` 路径为该文件名。
 
 ```css
@@ -380,7 +379,7 @@ tts: {
   
 - 在 iOS 端使用自定义字体时，假名与汉字重叠
   
-  - 完全替换卡组自带字体后可能会出现这种情况，请注释掉以下代码中 `transform: translateY(0.6em);` 部分。
+  完全替换卡组自带字体后可能会出现这种情况，请注释掉以下代码中 `transform: translateY(0.6em);` 部分。
 
 ```css
 /* --- iOS 思源宋体振假名高度修复 --- */
