@@ -432,7 +432,7 @@ tts: {
 
 - TG 群友 `uovkm` 制作的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037)。
 
--  TG 群友 `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f)，推荐一读。
+-  TG 群友 `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f)，推荐一读。  
 
   相关 QQ 群： [点此链接](https://qm.qq.com/q/Iy7QuEz5WQ) 或搜索群号 `830058869` 加群。
 
