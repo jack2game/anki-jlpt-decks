@@ -37,7 +37,7 @@
   - 必考：高频且较为重要。
   - 核心：基础但在常见场合出现频率相对较低。
 
-> ⚠️ 分级仅供参考。如发现明显不符合该等级的词汇，欢迎反馈。
+> 分级仅供参考。如发现明显不符合该等级的词汇，欢迎反馈。
 
 ### 例句
 
@@ -47,7 +47,7 @@
   - <span style="background-color:lightgreen">绿色</span>：同义／关联词
   - <span style="background-color:lightblue">蓝色</span>：反义词
 
-> ⚠️ 已变形的单词只高亮词干部分。
+> 已变形的单词只高亮词干部分。
 
 ### 音频
 
@@ -76,7 +76,7 @@
 
 ## 如何使用
 
-0. **Anki 教程**：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
+> Anki 手册：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
 
 1. **安装 Anki**
 
@@ -84,7 +84,7 @@
 
    - iOS／iPadOS：[AnkiMobile Flashcards](https://apps.apple.com/jp/app/ankimobile-flashcards/id373493387)
 
-     > ⚠️ 需付费，价格为 24.99美元／168人民币／4000日元／790台幣／188港幣。
+     > 需付费，价格为 24.99美元／168人民币／4000日元／790台幣／188港幣。
 
    - Android：AnkiDroid
 
@@ -167,13 +167,11 @@
 
 ## 高级选项
 
-> 以下内容涉及卡片模板的修改，适合具备一定计算机常识的用户。
+> 以下内容涉及卡片模板的修改，适合具备一定编程基础知识的用户。
 >
-> 请务必先**备份**再自行探索，若遇到无法解决的问题可加群讨论。
+> 模板位置教程视频：[Android](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109vviFO1.mp4) ｜ [iOS](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109HaTDmE.mp4) ｜ [macOS／Windows](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241124F22Meh.mp4)  
 
 卡片**正面**模板中的 `function CONFIG()` 函数包含一些可修改的选项，您可以根据注释修改相应的设置。
-
-模板位置教程视频：[Android](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109vviFO1.mp4) ｜ [iOS](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109HaTDmE.mp4) ｜ [macOS／Windows](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241124F22Meh.mp4)  
 
 ### 使用繁體中文
 
@@ -186,7 +184,7 @@
 並在 `function CONFIG()` 裡面修改：
 
 ```html
-lang: 'zh-Hant', // 'zh-Hans' = 简体中文；'zh-Hant' = 繁体中文
+lang: 'zh-Hant', // 'zh-Hans' = 简体中文；'zh-Hant' = 繁體中文
 ```
 
 ### 修改「🔍」跳转的链接
@@ -306,13 +304,15 @@ tts: {
 
 ### 修改卡片字体
 
+在卡片模板的「样式」（CSS）中进行以下修改：
+
 <details>
 <summary>点击展开／折叠</summary><br>
 
 
 - 使用系统自带字体
   
-  在卡片样式（CSS）中，将你想添加的字体名称放在对应语言的 `font-family` 的首位。
+  将您想添加的字体名称放在对应语言的 `font-family` 的首位。
 
 ```css
 /* --- 字体样式（不包括 VocabKanji 字段） --- */
@@ -336,8 +336,10 @@ tts: {
 
 - 使用从 Anki 媒体文件夹加载的自定义字体文件
   
-  0. 参考教程：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/templates/styling.html?highlight=%E5%AD%97%E4%BD%93#%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93) ｜ [English](https://docs.ankiweb.net/templates/styling.html#installing-fonts)
+  >  参考教程：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/templates/styling.html?highlight=%E5%AD%97%E4%BD%93#%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93) ｜ [English](https://docs.ankiweb.net/templates/styling.html#installing-fonts)
+  
   1. 将字体文件放入 Anki 媒体文件夹，并以 `_` 开头命名。
+  
   2. 修改对应语言的 `@font-face` 中的 `src` 路径为该文件名。
 
 ```css
@@ -348,7 +350,7 @@ tts: {
 }
 @font-face {
   font-family: 'Source Han Serif TW';
-  src: url('你的繁體中文字體檔案名') format('truetype');
+  src: url('您的繁體中文字體檔案名') format('truetype');
   font-display: swap;
 }
 @font-face {
@@ -361,14 +363,14 @@ tts: {
 - 在 iOS 端使用「[UDデジタル教科書体](https://www.morisawa.co.jp/topic/upg201802/)」
   1. 下载并安装字体配置文件：[下载链接](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250311py61nT.mobileconfig)
   
-  2. 在卡片样式（CSS）中，将字体名称（`UD Digi Kyokasho NK-R`）放在日语的 `font-family` 的首位：
+  2. 将字体名称 `UD Digi Kyokasho NK-R` 放在日语的 `font-family` 的首位：
   
      ```css
      :lang(ja) {
-       font-family: 'UD Digi Kyokasho NK-R', 'Source Han Serif JP', 'Source Han Serif CN', 'Source Han Serif TW', serif;
+       font-family: 'UD Digi Kyokasho NK-R', 'Source Han Serif JP', 'Source Han Serif CN', serif;
      }
      ```
-  3. 在卡片样式（CSS）中，取消注释以下代码的 `transform: 0;` 部分：
+  3. 取消注释以下代码的 `transform: 0;` 部分：
      ```css
      /* --- iOS 若安装教科书字体开启以下样式 --- */
      .ios .VocabKanji rt,
@@ -377,9 +379,9 @@ tts: {
      }
      ```
   
-- 在 iOS 端使用自定义字体时，假名与汉字重叠
+- 在 iOS 端使用自定义字体时，Ruby（ふりがな）行与汉字行重叠
   
-  完全替换卡组自带字体后可能会出现这种情况，请注释掉以下代码中 `transform: translateY(0.6em);` 部分。
+  完全替换卡组自带字体后可能会出现这种情况，请注释掉以下代码中 `transform: translateY(0.6em);` 部分：
 
 ```css
 /* --- iOS 思源宋体振假名高度修复 --- */
@@ -394,6 +396,8 @@ tts: {
 ### 开启／关闭「中-日」模板（正面为中文，背面为日语）的卡片
 
 > 默认为关闭，可自行开启。
+
+![预览图](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250311FpJaMP.png)  
 
 <details>
 <summary>点击展开／折叠</summary><br>
