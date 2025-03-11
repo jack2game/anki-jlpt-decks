@@ -235,6 +235,7 @@ const dictOptions = {
 
 <details>
 <summary>点击展开／折叠</summary><br>
+
 | 需求                                     | 牌组选项 → 音频          | `playback` 参数 | 正面模板中的 `{{ VocabAudio }}` |
 | ---------------------------------------- | ------------------------ | --------------- | ------------------------------- |
 | 正／背面都自动播放（单词＋例句）         | 关闭「不要自动播放音频」 | `'default'`     | 保留                            |
@@ -269,6 +270,7 @@ display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假�
 
 <details>
 <summary>点击展开／折叠</summary><br>
+
 - 在线 TTS 的开启与关闭
   - 默认只为没有本地音频的例句启用 TTS。  
   - 如果想强制所有例句都走在线 TTS，请在 `function setEdgeTTS()` 中注释掉 `if (el.childNodes.length) return` 部分。
