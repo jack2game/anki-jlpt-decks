@@ -452,7 +452,7 @@ tts: {
 
 ## License
 
-本卡组所有内容均来自公开互联网资源及个人创作，采用 [知识共享许可协议（CC BY-NC 4.0）](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)，你可以自由地使用、修改及分享本卡组，但需满足：
+本卡组所有内容均来自公开互联网资源及个人创作，采用 [知识共享许可协议（CC BY-NC 4.0）](https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans)，你可以自由地使用、修改及分享本卡组，但需满足：
 
 - **署名**：注明原作者（egg rolls），提供协议链接，并标明是否进行了修改。
 - **非商业性使用**：不得用于商业目的。
