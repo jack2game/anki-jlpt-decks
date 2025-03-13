@@ -93,7 +93,7 @@
      - [Play Store](https://play.google.com/store/apps/details?id=com.ichi2.anki)
      - [GitHub](https://github.com/ankidroid/Anki-Android/releases/latest)
      
-     > ⚠️ 请勿下载「Anki 中国」提供的 AnkiDroid（v2.16.0beta2），存在兼容性问题！
+     > ⚠️ 请勿使用「Anki 中国」提供的 AnkiDroid（v2.16.0beta2），存在兼容性问题！
 
 2. **下载卡组**
 
@@ -131,35 +131,38 @@
 
 ## 常见问题
 
-- **卡组导入失败／显示异常／同步时报错**
+> ⚠️ 卡组不保证兼容旧版 Anki 及「类 Anki」应用（如 AnkiApp、AnkiPro 等）。
+>
+> ⚠️ 如遇到问题，请务必先更新至 **[最新官方版 Anki](https://apps.ankiweb.net/)** 后，再参考以下内容：
 
-  - 请使用 **[最新官方版 Anki](https://apps.ankiweb.net/)**。  
+- **【AnkiDroid】卡组导入速度慢／导入失败／显示异常／同步时报错**
 
-    > ⚠️ 卡组不保证兼容旧版 Anki 及「类 Anki」应用（e.g. AnkiApp, AnkiPro）。  
-    >
-    > ⚠️ 请勿下载「Anki 中国」提供的 AnkiDroid（v2.16.0beta2），存在兼容性问题！
+  - **可能原因**
+    - 直接在文件管理器中点击 `apkg` 文件跳转到 AnkiDroid 导入时，可能导致导入速度异常缓慢（耗时从数小时到一天不等）。
+    - 使用 AnkiDroid 旧版本（v2.20.1 及以下）时，应用内导入的速度也较慢（约需数分钟）。
+    - 使用「Anki 中国」提供的旧版 AnkiDroid（v2.16.0beta2）可能会导致卡组导入失败、显示异常或同步出错。
 
-  - 确保导入时，Anki 处于前台状态并保持屏幕常亮（移动端）。
+  - **解决方案**
 
-  - 如果您在 AnkiDroid 中下载的卡组文件后缀为 `bin` 而不是 `apkg`，请将 AnkiDroid 更新到 v2.20.1 或更高版本。
+    - 从 AnkiDroid 内部（右上角菜单）使用「导入」功能进行操作。
+
+    - 将 AnkiDroid 更新至最新测试版（v2.21alpha13 及以上），或等待稳定版更新。
+
+      >  新版极大提升了导入速度，经实测仅需几秒到几十秒即可完成。
+
+- **【AnkiDroid】应用内下载的卡组后缀为 `bin`**
+  - 请更新 AnkiDroid 至 v2.20.0 或更高版本后重新下载。
 
 - **单词例句无法发音／字体显示不全／缺少媒体文件／同步慢／同步失败**
-
-  - 导入卡组并登录 AnkiWeb 后会进行媒体文件同步。首次同步需要上传／下载大量文件，由于卡组音频很多，可能耗时较长（数十分钟）。
-  - 如果想在其他设备上使用该卡组，需先在已下载卡组的设备上完成上传同步，再在目标设备上进行下载同步。可在新设备上手动导入卡组以加快首次同步速度。
-  - 同步时请保持 Anki 处于前台状态并保持屏幕常亮（移动端）；如有需要，可使用网络代理（翻墙）工具以提升同步速度。
-
-- **Windows 上卡片切换延迟**
-
-  - Anki 的「设置」 →「显示驱动」→ 尝试 `Software` 或 `OpenGL` 。
-
+  - 导入卡组并登录 AnkiWeb 后，应用会自动进行媒体文件同步。首次同步需上传／下载大量文件（尤其是音频），耗时可能较长（数十分钟）。
+  - 如需在其他设备上使用该卡组，请先在已下载卡组的设备上完成上传同步，再在目标设备进行下载同步。也可在新设备上手动导入卡组，以加快首次同步速度。
+  - 同步时，请保持 Anki 处于前台并保持屏幕常亮（移动端）；如有需要，可使用网络代理（翻墙）工具来提升同步速度。
+- **【Windows】卡片切换有延迟**
+  - 在 Anki 的「设置」 →「显示驱动」中，尝试选择 `Software` 或 `OpenGL`。
 - **卡片正面的单词上有假名标注**
-
-  - 本卡组仅对「[常用漢字表](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf)」范围外，以及仅看汉字难以确定读音的词汇添加假名标注，并非所有单词都有，一般无需隐藏。如需隐藏，请参见高级选项。
-  
-- **AnkiWeb 提示「Daily limit exceeded; please try again tomorrow.」**
-
-  - 表示同一 IP 地址在 24 小时内下载超过 25 个卡组，请切换 IP 地址或等 24 小时后再试。
+  - 本卡组仅针对「[常用漢字表](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf)」范围外，或仅看汉字难以确定读音的词汇添加了假名标注，并非所有单词均有。一般情况下无需隐藏；如需隐藏，请参考相应的高级选项。
+- **【AnkiWeb】提示「Daily limit exceeded; please try again tomorrow.」**
+  - 表示同一 IP 在 24 小时内已下载超过 25 个卡组。请切换 IP 地址或等待 24 小时后再试。
 
 ------
 
