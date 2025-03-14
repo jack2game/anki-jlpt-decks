@@ -277,7 +277,7 @@ lang: 'zh-Hant', // 'zh-Hans' = 简体中文；'zh-Hant' = 繁體中文
 例如，如果想将 iOS 跳转的词典改为「物書堂」，请设置为：`ios: 'monokakido'`。
 
 <details>
-<summary>点击展开／折叠</summary><br>
+<summary>点击展开／折叠</summary>
 
 
 ```html
@@ -319,7 +319,7 @@ const dictOptions = {
 设置方法参考下表：
 
 <details>
-<summary>点击展开／折叠</summary><br>
+<summary>点击展开／折叠</summary>
 
 | 需求                                     | 牌组选项 → 音频          | `playback` 参数 | 正面模板中的 `{{ VocabAudio }}` |
 | ---------------------------------------- | ------------------------ | --------------- | ------------------------------- |
@@ -362,7 +362,7 @@ display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假�
 ### 在线 TTS 语音高级设置
 
 <details>
-<summary>点击展开／折叠</summary><br>
+<summary>点击展开／折叠</summary>
 
 - **在线 TTS 的开启与关闭**
 
@@ -411,7 +411,7 @@ tts: {
 在卡片模板的「样式」（CSS）中进行以下修改：
 
 <details>
-<summary>点击展开／折叠</summary><br>
+<summary>点击展开／折叠</summary>
 
 
 - **使用系统自带字体**
@@ -513,7 +513,7 @@ tts: {
 ![预览图](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250311FpJaMP.png)  
 
 <details>
-<summary>点击展开／折叠</summary><br>
+<summary>点击展开／折叠</summary>
 
 ------
 
