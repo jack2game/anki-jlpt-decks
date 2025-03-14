@@ -105,6 +105,7 @@
    - Android：AnkiDroid
 
      - [Play Store](https://play.google.com/store/apps/details?id=com.ichi2.anki)
+
      - [GitHub](https://github.com/ankidroid/Anki-Android/releases/latest)
      
      > ⚠️ 请勿使用「Anki 中国」提供的 AnkiDroid（v2.16.0beta2），存在兼容性问题！
@@ -114,7 +115,9 @@
 2. **下载卡组**
 
    - 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新的 `apkg` 文件（**不要**下载 `zip`）。或直接点击以下链接：
+
      - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
+
      - [下载地址 2](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)（为中国大陆加速）
 
 ------
@@ -152,7 +155,8 @@
 
 5. **开启同步**（可选)
 
-- 注册 [AnkiWeb 账号](https://ankiweb.net/account/signup)，实现多设备学习进度同步和云端备份。
+   - 注册 [AnkiWeb 账号](https://ankiweb.net/account/signup)，实现多设备学习进度同步和云端备份。
+
 
 ------
 
@@ -167,10 +171,12 @@
 - **【AnkiDroid】卡组导入速度慢／导入失败／显示异常／同步时报错**
 
   - **可能原因**
-    - 直接在文件管理器中点击 `apkg` 文件跳转到 AnkiDroid 导入时，可能导致导入速度异常缓慢（耗时从数小时到一天不等）。
-    - 使用 AnkiDroid 旧版本（v2.20.1 及以下）时，应用内导入的速度也较慢（约需数分钟）。
-    - 使用「Anki 中国」提供的旧版 AnkiDroid（v2.16.0beta2）可能会导致卡组导入失败、显示异常或同步出错。
 
+    - 直接在文件管理器中点击 `apkg` 文件跳转到 AnkiDroid 导入时，可能导致导入速度异常缓慢（耗时从数小时到一天不等）。
+
+    - 使用 AnkiDroid 旧版本（v2.20.1 及以下）时，应用内导入的速度也较慢（约需数分钟）。
+
+    - 使用「Anki 中国」提供的旧版 AnkiDroid（v2.16.0beta2）可能会导致卡组导入失败、显示异常或同步出错。
 
   - **解决方案**
 
@@ -183,28 +189,35 @@
 ------
 
 - **【AnkiDroid】应用内下载的卡组后缀为 `bin`**
+
   - 请更新 AnkiDroid 至 v2.20.1 或更高版本后重新下载。
 
 ------
 
 - **单词例句无法发音／字体显示不全／缺少媒体文件／同步慢／同步失败**
+
   - 导入卡组并登录 AnkiWeb 后，应用会自动进行媒体文件同步。首次同步需上传／下载大量文件（尤其是音频），耗时可能较长（数十分钟）。
+
   - 如需在其他设备上使用该卡组，请先在已下载卡组的设备上完成上传同步，再在目标设备进行下载同步。也可在新设备上手动导入卡组，以加快首次同步速度。
+
   - 同步时，请保持 Anki 处于前台并保持屏幕常亮（移动端）；如有需要，可使用网络代理（翻墙）工具来提升同步速度。
 
 ------
 
 - **【Windows】卡片切换有延迟**
+
   - 在 Anki 的「设置」 →「显示驱动」中，尝试选择 `Software` 或 `OpenGL`。
 
 ------
 
 - **卡片正面的单词上有假名标注**
+
   - 本卡组仅针对「[常用漢字表](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf)」范围外，或仅看汉字难以确定读音的词汇添加了假名标注，并非所有单词均有。一般情况下无需隐藏；如需隐藏，请参考相应的高级选项。
 
 ------
 
 - **【AnkiWeb】提示「Daily limit exceeded; please try again tomorrow.」**
+
   - 表示同一 IP 在 24 小时内已下载超过 25 个卡组。请切换 IP 地址或等待 24 小时后再试。
 
 ------
