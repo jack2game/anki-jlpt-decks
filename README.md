@@ -40,6 +40,8 @@
 
 > 分级仅供参考。如发现明显不符合该等级的词汇，欢迎反馈。
 
+------
+
 ### 例句
 
 - 每个单词至少附有一个例句。
@@ -50,6 +52,8 @@
 
 > 已变形的单词只高亮词干部分。
 
+------
+
 ### 音频
 
 - 单词音频：绝大多数为播音员真人语音。
@@ -57,6 +61,8 @@
 - 音频按钮：
   - <span style="background-color:black">黑色</span> ▶️：卡组自带本地音频。
   - <span style="background-color:purple">紫色</span> ▶️：自动生成的在线 TTS 音频。（请不要反馈此类错误）
+
+------
 
 ### 卡片各部分含义说明
 
@@ -79,6 +85,14 @@
 ## 如何使用
 
 > Anki 手册：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
+>
+> 推荐两个实用插件（仅限桌面端）：
+>
+> [Special Fields](https://ankiweb.net/shared/info/1102281552)：在导入牌组的新更新时，你可以选择保护或强制更新卡片（包括更新哪些字段和不更新哪些字段）、标签、笔记的 HTML+CSS 样式以及牌组描述。
+>
+> [Transfer Scheduling Info Advanced](https://ankiweb.net/shared/info/1249258442)：在不同卡组间迁移学习记录。
+
+------
 
 1. **安装 Anki**
 
@@ -95,37 +109,50 @@
      
      > ⚠️ 请勿使用「Anki 中国」提供的 AnkiDroid（v2.16.0beta2），存在兼容性问题！
 
+------
+
 2. **下载卡组**
 
    - 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新的 `apkg` 文件（**不要**下载 `zip`）。或直接点击以下链接：
      - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
      - [下载地址 2](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)（为中国大陆加速）
 
-3. **导入卡组**
+------
 
-   - 将下载好的 `apkg` 文件导入到 Anki。  
-   - **首次导入**时，推荐将「导入所有牌组预设配置」设置为 `打开`（下图绿框部分），其中包含了我优化的预设。
+3. **导入／更新卡组**
 
-4. **设置每日学习量**
+   - **导入卡组**
 
-   - 点击 ⚙️ 图标打开牌组选项，调整每日新词数量（默认 20 个，请根据自身情况调整）。
-   - 若不熟悉各项参数，**请保持默认设置**，避免参考一些过时（FSRS 实装前）的教程随意修改。
+     - 将下载好的 `apkg` 文件导入到 Anki。  
 
-5. **开启同步**（可选）
+     - **首次导入**时，推荐将「导入所有牌组预设配置」设置为 `打开`（如下图绿框部分所示），其中包含了我优化的预设，名为「NEW-JLPT」。
 
-   - 注册 [AnkiWeb 账号](https://ankiweb.net/account/signup)，实现多设备学习进度同步和云端备份。
+       >  由于 Anki 的限制，预设中的部分选项无法被导入，请参考「4. 修改牌组选项」手动修改。
 
-6. **更新卡组**（可选）
+   - **更新卡组**（可选）
 
-   - 不定期发布修复和功能更新。重新导入最新 `apkg` 文件覆盖即可更新，**学习进度不受影响**。  
-
-   - 更新前请务必**备份** ！
-
-     新导入的卡组将覆盖用户对当前卡组的所有修改（比如卡片内容的修改、标签的修改、字段的增减等）。  
-
-   - 请在「导入选项」中，将「合并笔记模板」设置为 `打开`，并将「更新笔记」和「更新笔记模板」设置为 `始终`（下图红框部分）。  
+     > 更新前请务必**备份** ！
+     
+     - 不定期发布错误修复和功能更新。下载并重新导入最新版 `apkg` 文件即可更新，**学习进度不受影响**。  
+     - 新导入的卡组将覆盖用户对当前卡组的所有修改（如卡片内容的修改、标签的修改、字段的增减等）。
+     - 如需更灵活的导入方式，请使用代码区提供的的 `note.csv` 和 `media` 文件进行导入。
+     - 请在「导入选项」中，将「合并笔记模板」设置为 `打开`，并将「更新笔记」和「更新笔记模板」设置为 `始终`（如下图红框部分所示）。  
 
 ![更新选项](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241128J8JTQp.png)
+
+------
+
+4. **修改牌组选项**
+
+   - 点击 ⚙️ 图标打开牌组选项，参考以下图片进行修改。
+
+![deck options](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250314HpoTxy.png)
+
+------
+
+5. **开启同步**（可选)
+
+- 注册 [AnkiWeb 账号](https://ankiweb.net/account/signup)，实现多设备学习进度同步和云端备份。
 
 ------
 
@@ -135,12 +162,15 @@
 >
 > ⚠️ 如遇到问题，请务必先更新至 **[最新官方版 Anki](https://apps.ankiweb.net/)** 后，再参考以下内容：
 
+------
+
 - **【AnkiDroid】卡组导入速度慢／导入失败／显示异常／同步时报错**
 
   - **可能原因**
     - 直接在文件管理器中点击 `apkg` 文件跳转到 AnkiDroid 导入时，可能导致导入速度异常缓慢（耗时从数小时到一天不等）。
     - 使用 AnkiDroid 旧版本（v2.20.1 及以下）时，应用内导入的速度也较慢（约需数分钟）。
     - 使用「Anki 中国」提供的旧版 AnkiDroid（v2.16.0beta2）可能会导致卡组导入失败、显示异常或同步出错。
+
 
   - **解决方案**
 
@@ -150,17 +180,30 @@
 
       >  新版极大提升了导入速度，经实测仅需几秒到几十秒即可完成。
 
+------
+
 - **【AnkiDroid】应用内下载的卡组后缀为 `bin`**
   - 请更新 AnkiDroid 至 v2.20.1 或更高版本后重新下载。
+
+------
 
 - **单词例句无法发音／字体显示不全／缺少媒体文件／同步慢／同步失败**
   - 导入卡组并登录 AnkiWeb 后，应用会自动进行媒体文件同步。首次同步需上传／下载大量文件（尤其是音频），耗时可能较长（数十分钟）。
   - 如需在其他设备上使用该卡组，请先在已下载卡组的设备上完成上传同步，再在目标设备进行下载同步。也可在新设备上手动导入卡组，以加快首次同步速度。
   - 同步时，请保持 Anki 处于前台并保持屏幕常亮（移动端）；如有需要，可使用网络代理（翻墙）工具来提升同步速度。
+
+------
+
 - **【Windows】卡片切换有延迟**
   - 在 Anki 的「设置」 →「显示驱动」中，尝试选择 `Software` 或 `OpenGL`。
+
+------
+
 - **卡片正面的单词上有假名标注**
   - 本卡组仅针对「[常用漢字表](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf)」范围外，或仅看汉字难以确定读音的词汇添加了假名标注，并非所有单词均有。一般情况下无需隐藏；如需隐藏，请参考相应的高级选项。
+
+------
+
 - **【AnkiWeb】提示「Daily limit exceeded; please try again tomorrow.」**
   - 表示同一 IP 在 24 小时内已下载超过 25 个卡组。请切换 IP 地址或等待 24 小时后再试。
 
@@ -173,6 +216,8 @@
 > 模板位置教程视频：[Android](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109vviFO1.mp4) ｜ [iOS](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109HaTDmE.mp4) ｜ [macOS／Windows](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241124F22Meh.mp4)  
 
 卡片**正面**模板中的 `function CONFIG()` 函数包含一些可修改的选项，您可以根据注释修改相应的设置。
+
+------
 
 ### 使用繁體中文
 
@@ -187,6 +232,8 @@
 ```html
 lang: 'zh-Hant', // 'zh-Hans' = 简体中文；'zh-Hant' = 繁體中文
 ```
+
+------
 
 ### 修改「🔍」跳转的链接
 
@@ -228,6 +275,8 @@ const dictOptions = {
 
 </details>
 
+------
+
 ### 音频高级设置
 
 如想调整音频的自动播放策略，参考下表：
@@ -251,6 +300,8 @@ playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'
 
 </details>
 
+------
+
 ### 隐藏指定字段
 
 如果想在正面隐藏某些字段，可在 `{{ ... }}` 前加上 `hint:`，例如想隐藏正面的 `VocabKanji`：
@@ -259,11 +310,15 @@ playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'
 <span lang="ja">{{ hint:furigana:VocabKanji }}</span>
 ```
 
+------
+
 ### 控制正面单词显示模式
 
 ```html
 display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假名；'kana' 为只显示假名；'kanji' 为只显示汉字
 ```
+
+------
 
 ### 在线 TTS 语音高级设置
 
@@ -271,35 +326,44 @@ display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假�
 <summary>点击展开／折叠</summary><br>
 
 - **在线 TTS 的开启与关闭**
-  - 默认只为没有本地音频的例句启用 TTS。  
-  - 如果想强制所有例句都走在线 TTS，请在 `function setEdgeTTS()` 中注释掉 `if (el.childNodes.length) return` 部分。
+  - 参考以下代码，修改 `enable: ''` 内的参数。
+    - `'always'`：始终开启
+    - `fallback'` ：无本地音频时启用
+    - `'never'`：始终关闭
 
 
 - **自定义在线 TTS 服务**
-  - 默认内置两个在线 TTS 服务器，可在 `domain: ''` 里自行增删。
+  - 默认内置两个在线 TTS 服务器，可在 `domain: []` 里自行增删。
   - 可参考 [ms-ra-forwarder-for-ifreetime](https://github.com/yy4382/ms-ra-forwarder-for-ifreetime) 搭建自己的 TTS 服务器（选择**无 token** 部署，建议自定义域名设置得复杂一些避免泄露）。
   
 - **在桌面端和 AnkiWeb 启用播放快捷键**
-  - 在 `hotkey: 'G'` 中指定快捷键，留空则关闭。
+  - 在 `hotkey: ''` 中指定快捷键，留空则关闭。
   - 由于浏览器限制，无法自动连续播放，需要手动或再次触发快捷键。
+- **其他设置**
+  
+  - 在 `voiceName: ‘’` 中可以设置 TTS 语音名称。
+  - 在 `speed:` 中可以调节语速。
+  
 
 ```html
 tts: {
-      enable: true, // 为没有语音的例句增加在线 tts，部署参考 https://github.com/yy4382/ms-ra-forwarder-for-ifreetime
-      hotkey: 'G',  // 播放快捷键，仅支持桌面端
-      domain: [
-        // 可以添加更多域名，按顺序依次尝试播放
-        'https://anki.0w0.live/',
-        'https://ms-ra-forwarder-for-ifreetime-v9q1.vercel.app/',
-      ],
-      params: {
-        voiceName: 'ja-JP-KeitaNeural,ja-JP-NanamiNeural', // 语音为多个时随机选择一个
-        speed: -4, // 语速范围 -50 到 100，0 为正常语速
+        enable: 'fallback', // 在线 TTS 开关: 'always' 始终开启 | 'fallback' 无本地音频时启用 | 'never' 始终关闭
+        hotkey: 'G',        // 播放快捷键，仅支持桌面端
+        domain: [
+          // 可以添加更多域名，按顺序依次尝试播放
+          'https://anki.0w0.live/',
+          'https://ms-ra-forwarder-for-ifreetime-v9q1.vercel.app/',
+        ],
+        params: {
+          voiceName: 'ja-JP-KeitaNeural,ja-JP-NanamiNeural', // 语音为多个时随机选择一个
+          speed: -4, // 语速范围 -50 到 100，0 为正常语速
+        }
       }
-    }
 ```
 
 </details>
+
+------
 
 ### 修改卡片字体
 
@@ -333,6 +397,8 @@ tts: {
 }
 ```
 
+------
+
 - **使用从 Anki 媒体文件夹加载的自定义字体文件**
   
   >  参考教程：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/templates/styling.html?highlight=%E5%AD%97%E4%BD%93#%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93) ｜ [English](https://docs.ankiweb.net/templates/styling.html#installing-fonts)
@@ -359,6 +425,8 @@ tts: {
 }
 ```
 
+------
+
 - **在 iOS 端使用「[UDデジタル教科書体](https://www.morisawa.co.jp/topic/upg201802/)」**
   
   1. 下载并安装字体配置文件：[下载链接](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250311py61nT.mobileconfig)
@@ -379,6 +447,8 @@ tts: {
      }
      ```
   
+------
+
 - **在 iOS 端使用自定义字体时，Ruby（ふりがな）行与汉字行重叠**
   
   完全替换卡组自带字体后可能会出现这种情况，请注释掉以下代码中 `transform: translateY(0.6em);` 部分：
@@ -392,6 +462,8 @@ tts: {
 ```
 
 </details>
+
+------
 
 ### 开启／关闭「中-日」模板（正面为中文，背面为日语）的卡片
 
@@ -408,6 +480,8 @@ tts: {
    - 新增的「中-日」模板卡片会与现有卡片一同出现，可自行分组管理。  
 
 ![操作方法](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206vC6C4m.png)
+
+------
 
 2. **关闭**
    
