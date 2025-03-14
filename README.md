@@ -277,7 +277,7 @@ lang: 'zh-Hant', // 'zh-Hans' = 简体中文；'zh-Hant' = 繁體中文
 例如，如果想将 iOS 跳转的词典改为「物書堂」，请设置为：`ios: 'monokakido'`。
 
 <details>
-<summary>点击展开／折叠</summary>
+<summary>点击展开／折叠</summary><br>
 
 
 ```html
@@ -319,7 +319,7 @@ const dictOptions = {
 设置方法参考下表：
 
 <details>
-<summary>点击展开／折叠</summary>
+<summary>点击展开／折叠</summary><br>
 
 | 需求                                     | 牌组选项 → 音频          | `playback` 参数 | 正面模板中的 `{{ VocabAudio }}` |
 | ---------------------------------------- | ------------------------ | --------------- | ------------------------------- |
@@ -590,7 +590,7 @@ tts: {
 ## 旧更新日志归档
 
 <details>
-<summary>点击展开／折叠</summary>
+<summary>点击展开／折叠</summary><br>
 
 
 ```
