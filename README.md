@@ -31,11 +31,15 @@
 ### 单词
 
 - 总单词数：约 12,600 个。
+
   - JLPT N1～N5 单词：约 10,500 个。
+
   - 非 JLPT 范围的补充单词：约 2,100 个，归入 「N1-补充」。
 
 - N3 级别以上的单词分为两类：
+
   - 必考：高频且较为重要。
+
   - 核心：基础但在常见场合出现频率相对较低。
 
 > 分级仅供参考。如发现明显不符合该等级的词汇，欢迎反馈。
@@ -45,9 +49,13 @@
 ### 例句
 
 - 每个单词至少附有一个例句。
+
 - 例句高亮：
+
   - <span style="background-color:yellow">黄色</span>：本单词
+
   - <span style="background-color:lightgreen">绿色</span>：同义／关联词
+
   - <span style="background-color:lightblue">蓝色</span>：反义词
 
 > 已变形的单词只高亮词干部分。
@@ -57,9 +65,13 @@
 ### 音频
 
 - 单词音频：绝大多数为播音员真人语音。
+
 - 例句音频：基于已校对的 TTS（机器）发音。
+
 - 音频按钮：
+
   - <span style="background-color:black">黑色</span> ▶️：卡组自带本地音频。
+
   - <span style="background-color:purple">紫色</span> ▶️：自动生成的在线 TTS 音频。（请不要反馈此类错误）
 
 ------
@@ -136,9 +148,12 @@
 
      > 更新前请务必**备份** ！
      
-     - 不定期发布错误修复和功能更新。下载并重新导入最新版 `apkg` 文件即可更新，**学习进度不受影响**。  
+     - 不定期发布错误修复和功能更新。下载并重新导入最新版 `apkg` 文件即可更新，**学习进度不受影响**。
+
      - 新导入的卡组将覆盖用户对当前卡组的所有修改（如卡片内容的修改、标签的修改、字段的增减等）。
+
      - 如需更灵活的导入方式，请使用代码区提供的的 `note.csv` 和 `media` 文件进行导入。
+
      - 请在「导入选项」中，将「合并笔记模板」设置为 `打开`，并将「更新笔记」和「更新笔记模板」设置为 `始终`（如下图红框部分所示）。  
 
 ![更新选项](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241128J8JTQp.png)
@@ -339,25 +354,34 @@ display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假�
 <summary>点击展开／折叠</summary><br>
 
 - **在线 TTS 的开启与关闭**
+
   - 参考以下代码，修改 `enable: ''` 内的参数。
+
     - `'always'`：始终开启
+
     - `fallback'` ：无本地音频时启用
+
     - `'never'`：始终关闭
 
 
 - **自定义在线 TTS 服务**
+
   - 默认内置两个在线 TTS 服务器，可在 `domain: []` 里自行增删。
+
   - 可参考 [ms-ra-forwarder-for-ifreetime](https://github.com/yy4382/ms-ra-forwarder-for-ifreetime) 搭建自己的 TTS 服务器（选择**无 token** 部署，建议自定义域名设置得复杂一些避免泄露）。
   
 - **在桌面端和 AnkiWeb 启用播放快捷键**
+
   - 在 `hotkey: ''` 中指定快捷键，留空则关闭。
+
   - 由于浏览器限制，无法自动连续播放，需要手动或再次触发快捷键。
+
 - **其他设置**
   
   - 在 `voiceName: ‘’` 中可以设置 TTS 语音名称。
+
   - 在 `speed:` 中可以调节语速。
   
-
 ```html
 tts: {
         enable: 'fallback', // 在线 TTS 开关: 'always' 始终开启 | 'fallback' 无本地音频时启用 | 'never' 始终关闭
@@ -489,7 +513,9 @@ tts: {
 
 
 1. **开启**
+
    - 打开卡片模板 → 选择「2：中-日……」→ 在正／背面模板中找到 `{{ #Alt2 }}` 改为 `{{ ^Alt2 }}` → 保存并重启 Anki。
+
    - 新增的「中-日」模板卡片会与现有卡片一同出现，可自行分组管理。  
 
 ![操作方法](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206vC6C4m.png)
@@ -509,15 +535,23 @@ tts: {
 ## 友情链接
 
 - `MasterOfMasterSword` 制作的一些文法和单词卡组，请前往  [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 下载。
+
   - 《どんなときどう使う日本語文型》（适时适所）文法卡组
+
   - 《蓝宝书超值白金版》文法卡组
+
   - 《のんびり日本語教師》文法卡组
   
   - 《标准日本语》单词卡组
+
   - 《绿宝书》单词卡组
+
   - 《红宝书》单词卡组
+
 - `uovkm` 制作的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037)。
+
 - `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f)，推荐一读。
+
 - `Z` 创建的语言学习论坛： [Campfirium](https://campfirium.info)。
 
 ------
@@ -525,9 +559,13 @@ tts: {
 ## 致谢
 
 - 感谢 `iPumpkin` 对卡组模板的重构、功能添加和维护。
+
 - 感謝 `ShihHsing Chen` 提供的繁體中文資料。
+
 - 感谢 `YonezawaSama` 提供的在线 TTS 语音服务及 apkg 处理脚本。
+
 - 感谢 `Z` 提供的词源补充资料。
+
 - 感谢各位用户的反馈，让卡组不断完善！
 
 ------
