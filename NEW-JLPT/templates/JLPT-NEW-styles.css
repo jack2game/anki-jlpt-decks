@@ -248,28 +248,6 @@ body,
   padding: 0 12px;
 }
 
-@media (min-width: 475px) {
-  .CardSide {
-    padding: 0 24px;
-    max-width: 720px;
-  }
-
-  .SentenceList {
-    min-height: 364px;
-  }
-
-  .VocabAudio,
-  .SentAudio {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 1024px) {
-  .CardSide {
-    max-width: 1024px;
-  }
-}
-
 .LabelIndent {
   padding-left: var(--label-indent-padding);
   text-indent: var(--label-indent-text);
@@ -455,6 +433,29 @@ a.Feedback {
   color: var(--fg-subtle);
 }
 
+/* --- 针对屏幕尺寸特殊样式 --- */
+@media (min-width: 475px) {
+  .CardSide {
+    padding: 0 24px;
+    max-width: 720px;
+  }
+
+  .SentenceList {
+    min-height: 364px;
+  }
+
+  .VocabAudio,
+  .SentAudio {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .CardSide {
+    max-width: 1024px;
+  }
+}
+
 /* --- AnkiWeb 样式 --- */
 #quiz {
   --canvas: #fff;
@@ -555,6 +556,18 @@ a.Feedback {
 .DialogBody ul {
   font-size: var(--text-xs);
   padding-left: 1.2em;
+  white-space: pre-wrap;
+}
+
+.DialogBody ul code {
+  background-color: var(--button-bg);
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  color: var(--fg);
+  vertical-align: text-bottom;
+  padding: .2em .4em;
+  font-size: 85%;
+  white-space: break-spaces;
 }
 
 .DialogFooter {
@@ -575,6 +588,11 @@ a.Feedback {
   text-align: center;
   color: var(--fg);
   letter-spacing: 2px;
+}
+
+.DialogButton.CancelButton {
+  color: var(--fg);
+  background-color: var(--button-bg);
 }
 
 .DialogButton:hover {

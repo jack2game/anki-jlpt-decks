@@ -78,7 +78,7 @@
   function CONFIG() {
     // --- 以下为设置里的预设项，根据个人需求调整 --- //
     const settings = {
-      lang: 'zh-Hans',      // 显示语言: 'zh-Hans' 为简体中文；'zh-Hant' 为繁体中文
+      lang: 'zh-Hans',      // 显示语言: 'zh-Hans' 简体中文 | 'zh-Hant' 繁体中文
       dict: {
         ios: 'moji',        // 在 iOS 使用 MOji 辞書
         android: 'moji',    // 在 Android 使用 MOji 辞書
@@ -86,11 +86,11 @@
         win: 'goldendict',  // 在 Windows 使用 GoldenDict-ng 词典
         other: 'weblio',    // 在其他平台使用 Weblio 国語辞典
       },
-      display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假名；'kana' 为只显示假名；'kanji' 为只显示汉字
-      playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'force' 为强制只播放单词音频
+      display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假名 | 'kana' 只显示假名 | 'kanji' 只显示汉字
+      playback: 'force',    // 背面播放设置: 'default' 跟随牌组的系统设置 | 'force' 强制只播放单词音频
       tts: {
-        enable: true, // 为没有语音的例句增加在线 tts，部署参考 https://github.com/yy4382/ms-ra-forwarder-for-ifreetime
-        hotkey: 'G',  // 播放快捷键，仅支持桌面端
+        enable: 'fallback', // 在线 TTS 开关: 'always' 始终开启 | 'fallback' 无本地音频时启用 | 'never' 始终关闭
+        hotkey: 'G',        // 播放快捷键，仅支持桌面端
         domain: [
           // 可以添加更多域名，按顺序依次尝试播放
           'https://anki.0w0.live/',
@@ -185,6 +185,9 @@
       const data = await response.json()
       latest = `v${data.tag_name?.split('_')[0].replace(/^v/, '')}`
       info = data.body?.replace(/\r?\n/g, '<br>')
+        .replace(/`(.*?)`/g, '<code>$1</code>')
+        .replace(/(\s+)-/g, '$1◦')
+        .replace(/-/g, '▪')
     } catch (err) {
       console.error(err)
     }
@@ -274,7 +277,7 @@
     const urls = {
       github: `https://github.com/5mdld/anki-jlpt-decks/issues/new?${new URLSearchParams({
         title: `[卡片反馈] ${getToday()} 「${VocabKanji}」`,
-        body: `- 卡片版本: ${current}\n- NoteID: ${NoteID}\n- VocabKanji: ${VocabKanji}\n- 反馈内容: `,
+        body: `### 卡片信息\n- 卡片版本: ${current}\n- VocabKanji: ${VocabKanji}\n- NoteID: ${NoteID}\n\n### 反馈内容\n`,
       })}`,
       feishu: `https://ncn8ci2h7v0y.feishu.cn/share/base/form/shrcnTh5DRxtrGWtiWTkdBlSWze?${new URLSearchParams({
         NoteID,
@@ -489,7 +492,7 @@
 
   function setEdgeTTS() {
     const { enable, hotkey, domain, params } = CONFIG().settings.tts
-    if (!enable) return
+    if (enable === 'never') return
 
     const getVoice = () => {
       const voices = params.voiceName.split(',').map(v => v.trim())
@@ -505,7 +508,7 @@
       return SentKanji.replace(/・/g, '、')
     }
     document.querySelectorAll('.SentAudio').forEach((el, i) => {
-      if (el.childNodes.length) return // 如需同时开启在线 TTS，注释此行
+      if (enable === 'fallback' && el.childNodes.length) return
       const text = getSentKanji(i)
       if (!text) return
       const queryString = new URLSearchParams({ ...params, text, voiceName: getVoice() })
