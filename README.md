@@ -108,29 +108,36 @@
 
 1. **安装 Anki**
 
-   - Windows／macOS／Linux：[AnkiWeb](https://apps.ankiweb.net/)
+   - Windows／macOS／Linux：Anki
+
+     - [AnkiWeb 官网](https://apps.ankiweb.net/)
+
+     - [GitHub](https://github.com/ankitects/anki/releases/latest)
+
+     - [GitHub](https://gh-proxy.com/github.com/ankitects/anki/releases/latest)（为中国大陆加速）
 
    - iOS／iPadOS：[AnkiMobile Flashcards](https://apps.apple.com/jp/app/ankimobile-flashcards/id373493387)
 
-     > 需付费，价格为 24.99美元／168人民币／4000日元／790台幣／188港幣。
-
+     > 需付费，价格为 24.99美元／168人民币／4000日元／790新台幣／188港幣。
+   
    - Android：AnkiDroid
-
+   
      - [Play Store](https://play.google.com/store/apps/details?id=com.ichi2.anki)
-
+   
      - [GitHub](https://github.com/ankidroid/Anki-Android/releases/latest)
-     
+   
+     - [GitHub](https://gh-proxy.com/github.com/ankidroid/Anki-Android/releases/latest)（为中国大陆加速）
+   
      > ⚠️ 请勿使用「Anki 中国」提供的 AnkiDroid（v2.16.0beta2），存在兼容性问题！
 
 ------
 
 2. **下载卡组**
-
-   - 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新的 `apkg` 文件（**不要**下载 `zip`）。或直接点击以下链接：
-
-     - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
-
-     - [下载地址 2](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)（为中国大陆加速）
+- 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新的 `apkg` 文件（**不要**下载 `zip`）。或直接点击以下链接：
+  
+  - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
+  
+  - [下载地址 2](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)（为中国大陆加速）
 
 ------
 
@@ -255,7 +262,7 @@
 
 - `SentDefTC1～4`：例句 1～4 的繁體中文解釋
 
-並在 `function CONFIG()` 裡面修改：
+並在 `function CONFIG()` 裡面修改 `lang: ''` 為 `'zh-Hant'`：
 
 ```html
 lang: 'zh-Hant', // 'zh-Hans' = 简体中文；'zh-Hant' = 繁體中文
@@ -265,7 +272,7 @@ lang: 'zh-Hant', // 'zh-Hans' = 简体中文；'zh-Hant' = 繁體中文
 
 ### 修改「🔍」跳转的链接
 
-请根据以下注释，将 `dict: { ... }` 中各键对应的链接值修改为你想要跳转的词典地址。  
+请参考以下代码，将 `dict: { ... }` 中各键对应的链接值修改为你想要跳转的词典地址。  
 
 例如，如果想将 iOS 跳转的词典改为「物書堂」，请设置为：`ios: 'monokakido'`。
 
@@ -305,9 +312,11 @@ const dictOptions = {
 
 ------
 
-### 音频高级设置
+### 设置正反面音频的播放策略
 
-如想调整音频的自动播放策略，参考下表：
+由于 Anki 平台的限制，目前还没有找到更简单的设置方案。如果有更好的方案，欢迎贡献代码。
+
+设置方法参考下表：
 
 <details>
 <summary>点击展开／折叠</summary><br>
@@ -342,6 +351,8 @@ playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'
 
 ### 控制正面单词显示模式
 
+参考以下代码，修改 `display: ''` 内的参数。
+
 ```html
 display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假名；'kana' 为只显示假名；'kanji' 为只显示汉字
 ```
@@ -356,13 +367,6 @@ display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假�
 - **在线 TTS 的开启与关闭**
 
   - 参考以下代码，修改 `enable: ''` 内的参数。
-
-    - `'always'`：始终开启
-
-    - `fallback'` ：无本地音频时启用
-
-    - `'never'`：始终关闭
-
 
 - **自定义在线 TTS 服务**
 
@@ -511,6 +515,7 @@ tts: {
 <details>
 <summary>点击展开／折叠</summary><br>
 
+------
 
 1. **开启**
 
