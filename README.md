@@ -544,21 +544,16 @@ tts: {
 - `MasterOfMasterSword` 制作的一些文法和单词卡组，请前往  [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 下载。
 
   - 《どんなときどう使う日本語文型》（适时适所）文法卡组
-
   - 《蓝宝书超值白金版》文法卡组
-
-  - 《のんびり日本語教師》文法卡组
-  
+  - 「のんびり日本語教師」文法卡组
+  - 《新编日语》文法卡组
   - 《标准日本语》单词卡组
-
   - 《绿宝书》单词卡组
-
   - 《红宝书》单词卡组
+  - 「Onomatopoeia・オノマトペ・擬音語・擬態語」单词卡组
 
 - `uovkm` 制作的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037)。
-
 - `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f)，推荐一读。
-
 - `Z` 创建的语言学习论坛： [Campfirium](https://campfirium.info)。
 
 ------
