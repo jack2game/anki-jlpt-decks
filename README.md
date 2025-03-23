@@ -5,7 +5,7 @@
 > - 本卡组在 GitHub 上**永久免费**更新，闲鱼等平台上的付费版本均为倒卖！  
 > - 如果您有付费意愿，可以考虑捐赠给 FSRS 算法作者 [叶峻峣](https://github.com/L-M-Sherlock)。  
 > - 如果觉得本卡组对您有帮助，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) **点赞**或给本仓库点个 **Star**，您的支持是我更新的最大动力！  
-> - 加入 Telegram Anki 日语交流群：[点此链接](https://t.me/+tvTl5zf3auRlNDM9)（入群答案：`apkg`）。
+> - 加入 Telegram Anki 日语交流群：[点此链接](https://t.me/+N7bNc8-BpqJjZmQ1)（入群答案：`apkg`）。
 > - 加入基于二语习得理论的日语学习 QQ 群： [点此链接](https://qm.qq.com/q/Iy7QuEz5WQ) 或搜索群号 `830058869` 加群。
 
 ------
