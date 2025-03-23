@@ -552,9 +552,10 @@ tts: {
   - 《红宝书》单词卡组
   - 「Onomatopoeia・オノマトペ・擬音語・擬態語」单词卡组
 
-- `uovkm` 制作的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037)。
-- `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f)，推荐一读。
-- `Z` 创建的语言学习论坛： [Campfirium](https://campfirium.info)。
+- `uovkm` 制作的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037) 。
+- `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f) ，推荐一读。
+- `Z` 创建的语言学习论坛： [Campfirium](https://campfirium.info) 。
+- `nclark` 制作的 JLPT 真题备考网站：https://jlpt.nnde.de 。
 
 ------
 
@@ -578,7 +579,7 @@ tts: {
 
 你可以自由使用、修改及分享本卡组，但需遵循以下条件：
 
-- **署名**：注明原作者（egg rolls），提供协议链接，并标明是否进行了修改。
+- **署名**：注明原作者（egg rolls）及本卡组发布链接，并标明是否进行了修改。
 - **非商业性使用**：不得用于商业目的。
 - **无附加限制**：不可另加法律或技术限制。
 
