@@ -2,7 +2,7 @@
 
 > **前言**  
 >
-> - 本卡组在 GitHub 上**永久免费**更新，闲鱼等平台上的付费版本均为倒卖！  
+> - 本卡组在 GitHub & AnkiWeb 上**永久免费**更新，闲鱼等平台上的付费版本均为倒卖！  
 > - 如果您有付费意愿，可以考虑捐赠给 FSRS 算法作者 [叶峻峣](https://github.com/L-M-Sherlock)。  
 > - 如果觉得本卡组对您有帮助，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) **点赞**或给本仓库点个 **Star**，您的支持是我更新的最大动力！  
 > - 加入 Telegram Anki 日语交流群：[点此链接](https://t.me/+N7bNc8-BpqJjZmQ1)（入群答案：`apkg`）。
@@ -12,9 +12,9 @@
 
 ## 项目介绍
 
-这是一个基于 [Anki](https://apps.ankiweb.net/) 制作的日语单词卡组，涵盖 JLPT N1～N5 级别单词以及部分补充词汇，合计约 12,600 个词条。
+这是一个基于 [Anki](https://apps.ankiweb.net/) 制作的日语单词卡组，涵盖 JLPT N1～N5 级别单词以及部分补充词汇，合计约 12,600 个词条。每个单词都附有释义和例句，并提供单词和例句的音频，帮助学习者更好地记忆和理解。
 
-每个单词都附有释义和例句，并提供单词和例句的音频，帮助学习者更好地记忆和理解。
+**[点击此处](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8) 查看卡组下载与使用说明。**
 
 如果您想查看我的其他日语相关卡组与插件，请前往 [AnkiWeb 个人主页](https://ankiweb.net/shared/by-author/842333142)。
 
@@ -98,9 +98,8 @@
 
 > Anki 手册：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
 >
-> 推荐一个实用插件（仅限桌面端）：
+> 推荐一个可以在不同卡组间迁移学习记录的插件（仅限桌面端）：[Transfer Scheduling Info Advanced](https://ankiweb.net/shared/info/1249258442)
 >
-> [Transfer Scheduling Info Advanced](https://ankiweb.net/shared/info/1249258442)：在不同卡组间迁移学习记录。
 
 ------
 
@@ -130,7 +129,7 @@
 
 ------
 
-2. **下载卡组**
+2. **下载本卡组**
 - 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新的 `apkg` 文件（**不要**下载 `zip`）。或直接点击以下链接：
   
   - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
@@ -540,16 +539,15 @@ tts: {
 ## 友情链接
 
 - `MasterOfMasterSword` 制作的一些文法和单词卡组，请前往  [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 下载。
-
   - 《どんなときどう使う日本語文型》（适时适所）文法卡组
   - 《蓝宝书超值白金版》文法卡组
-  - 「のんびり日本語教師」文法卡组
+  - 「のんびり日本語教師」文法卡组（已完成汉化）
   - 《新编日语》文法卡组
   - 《标准日本语》单词卡组
   - 《绿宝书》单词卡组
   - 《红宝书》单词卡组
   - 「Onomatopoeia・オノマトペ・擬音語・擬態語」单词卡组
-
+  
 - `uovkm` 制作的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037) 。
 
 - `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f) ，推荐一读。
