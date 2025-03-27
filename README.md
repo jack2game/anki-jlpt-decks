@@ -1,7 +1,7 @@
 # 【egg rolls】JLPT N1～N5 单词 + 补充（含语音、例句）v2
 
 > **前言**  
-
+>
 > - 本卡组在 GitHub 上**永久免费**更新，闲鱼等平台上的付费版本均为倒卖！  
 > - 如果您有付费意愿，可以考虑捐赠给 FSRS 算法作者 [叶峻峣](https://github.com/L-M-Sherlock)。  
 > - 如果觉得本卡组对您有帮助，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) **点赞**或给本仓库点个 **Star**，您的支持是我更新的最大动力！  
@@ -98,9 +98,7 @@
 
 > Anki 手册：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
 >
-> 推荐两个实用插件（仅限桌面端）：
->
-> [Special Fields](https://ankiweb.net/shared/info/1102281552)：在导入牌组的新更新时，你可以选择保护或强制更新卡片（包括更新哪些字段和不更新哪些字段）、标签、笔记的 HTML+CSS 样式以及牌组描述。
+> 推荐一个实用插件（仅限桌面端）：
 >
 > [Transfer Scheduling Info Advanced](https://ankiweb.net/shared/info/1249258442)：在不同卡组间迁移学习记录。
 
