@@ -255,13 +255,7 @@
 
 ### 使用繁體中文
 
-卡組目前沒有內建繁體中文文本。如果需要顯示繁體中文，可以自行填寫以下欄位：
-
-- `VocabDefTC`：單字的繁體中文解釋
-
-- `SentDefTC1～4`：例句 1～4 的繁體中文解釋
-
-並在 `function CONFIG()` 裡面修改 `lang: ''` 為 `'zh-Hant'`：
+卡組已內建繁體中文文本。如果需要顯示繁體中文，請在 `function CONFIG()` 裡面修改 `lang: ''` 為 `'zh-Hant'`：
 
 ```html
 lang: 'zh-Hant', // 'zh-Hans' = 简体中文；'zh-Hant' = 繁體中文
