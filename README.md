@@ -1,4 +1,4 @@
-# 【egg rolls】JLPT N1～N5 单词 + 补充（含语音、例句）v2
+# 【简体・繁體中文】【egg rolls】JLPT N1～N5 单词 + 补充（含语音、例句）v2
 
 > **前言**  
 >
@@ -15,6 +15,8 @@
 这是一个基于 [Anki](https://apps.ankiweb.net/) 制作的日语单词卡组，涵盖 JLPT N1～N5 级别单词以及部分补充词汇，合计约 12,600 个词条。每个单词都附有释义和例句，并提供单词和例句的音频，帮助学习者更好地记忆和理解。
 
 **[点击此处](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8) 查看卡组下载与使用说明。**
+
+支援繁體中文，請參考 [這裡](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#使用繁體中文) 手動開啟（於 `function CONFIG()` 中將 `lang: ''` 修改為 `'zh-Hant'` ）
 
 如果您想查看我的其他日语相关卡组与插件，请前往 [AnkiWeb 个人主页](https://ankiweb.net/shared/by-author/842333142)。
 
