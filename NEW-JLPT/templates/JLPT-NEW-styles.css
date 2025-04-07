@@ -570,6 +570,10 @@ a.Feedback {
   white-space: break-spaces;
 }
 
+.DialogBody ul b {
+  font-weight: 600;
+}
+
 .DialogFooter {
   margin: 0 10px;
   display: flex;
@@ -590,13 +594,13 @@ a.Feedback {
   letter-spacing: 2px;
 }
 
+.DialogButton:hover {
+  background-color: var(--button-gradient-start);
+}
+
 .DialogButton.CancelButton {
   color: var(--fg);
   background-color: var(--button-bg);
-}
-
-.DialogButton:hover {
-  background-color: var(--button-gradient-start);
 }
 
 .DialogButton.ConfirmButton {
