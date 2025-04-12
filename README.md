@@ -14,11 +14,9 @@
 
 这是一个基于 [Anki](https://apps.ankiweb.net/) 制作的日语单词卡组，涵盖 JLPT N1～N5 级别单词以及部分补充词汇，合计约 12,600 个词条。每个单词都附有释义和例句，并提供单词和例句的音频，帮助学习者更好地记忆和理解。
 
-**[点击此处](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8) 查看卡组下载与使用说明。**
+支援繁體中文，請參考 [這裡](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#使用繁體中文) 手動開啟。
 
-支援繁體中文，請參考 [這裡](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#使用繁體中文) 手動開啟（於 `function CONFIG()` 中將 `lang: ''` 修改為 `'zh-Hant'` ）
-
-如果您想查看我的其他日语相关卡组与插件，请前往 [AnkiWeb 个人主页](https://ankiweb.net/shared/by-author/842333142)。
+我的其他卡组与插件： [AnkiWeb 主页](https://ankiweb.net/shared/by-author/842333142)
 
 ------
 
@@ -29,6 +27,9 @@
 ------
 
 ## 卡组简介
+
+<details>
+<summary>点击展开／折叠</summary><br>
 
 ### 单词
 
@@ -54,11 +55,11 @@
 
 - 例句高亮：
 
-  - <span style="background-color:yellow">黄色</span>：本单词
+  - 黄色：本单词
 
-  - <span style="background-color:lightgreen">绿色</span>：同义／关联词
+  - 绿色：同义／关联词
 
-  - <span style="background-color:lightblue">蓝色</span>：反义词
+  - 蓝色：反义词
 
 > 已变形的单词只高亮词干部分。
 
@@ -72,9 +73,9 @@
 
 - 音频按钮：
 
-  - <span style="background-color:black">黑色</span> ▶️：卡组自带本地音频。
+  - ▶️：卡组自带本地音频。
 
-  - <span style="background-color:purple">紫色</span> ▶️：自动生成的在线 TTS 音频。（请不要反馈此类错误）
+  - ▶️：自动生成的在线 TTS 音频。（请不要反馈此类错误）
 
 ------
 
@@ -94,14 +95,17 @@
 | 反馈      | 如果本地卡组为最新版本，点击后跳转至 GitHub Issues 反馈页面<br />如果本地卡组非最新版本，点击后跳转至最新版本卡组的下载页面 |
 | 🎉         | 检测到有可更新的新版卡组                                     |
 
+</details>
+
 ------
 
 ## 如何使用
 
 > Anki 手册：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
 >
-> 推荐一个可以在不同卡组间迁移学习记录的插件（仅限桌面端）：[Transfer Scheduling Info Advanced](https://ankiweb.net/shared/info/1249258442)
+> 在不同卡组间迁移学习记录的插件（仅限桌面端）：[Transfer Scheduling Info Advanced](https://ankiweb.net/shared/info/1249258442)
 >
+> 在更新时保护特定字段等内容不被覆盖的插件（仅限桌面端）：[Special Fields](https://ankiweb.net/shared/info/1102281552)
 
 ------
 
@@ -132,7 +136,7 @@
 ------
 
 2. **下载本卡组**
-- 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新的 `apkg` 文件（**不要**下载 `zip`）。或直接点击以下链接：
+- 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新稳定版（Latest）的 `apkg` 文件（**不要**下载 `zip`）。或直接点击以下链接：
   
   - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
   
@@ -153,14 +157,23 @@
    - **更新卡组**（可选）
 
      > 更新前请务必**备份** ！
+
+<details>
+<summary>点击展开／折叠</summary><br>
+
+     - 为了降低用户的更新频率，如果没有严重的 bug，卡组的稳定版（Latest）将每 1 到 2 个月更新一次；错误修复等更新将以预发布版本（Pre-release）的形式推出。
+    
+     - 下载并导入最新版 `apkg` 文件即可更新，**学习进度不受影响**。
+    
+     - 请在「导入选项」中，将「合并笔记模板」设置为 `打开`，并将「更新笔记」和「更新笔记模板」设置为 `始终`（如下图红框部分所示）。 
      
-     - 不定期发布错误修复和功能更新。下载并重新导入最新版 `apkg` 文件即可更新，**学习进度不受影响**。
-
-     - 新导入的卡组将覆盖用户对当前卡组的所有修改（如卡片内容的修改、标签的修改、字段的增减等）。
-
+     - 新导入的卡组将覆盖用户对当前卡组的所有修改（卡片内容、标签、字段等）。
+    
+     - 由于 Anki 的限制，调整子牌组和删除卡片等操作不会自动更新，请根据卡片的标签手动处理。
+    
      - 如需更灵活的导入方式，请使用代码区提供的的 `note.csv` 和 `media` 文件进行导入。
 
-     - 请在「导入选项」中，将「合并笔记模板」设置为 `打开`，并将「更新笔记」和「更新笔记模板」设置为 `始终`（如下图红框部分所示）。  
+</details>
 
 ![更新选项](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241128J8JTQp.png)
 
@@ -191,23 +204,28 @@
 
 ------
 
-- **【AnkiDroid】卡组导入速度慢／导入失败／显示异常／同步时报错**
+- **卡组导入失败／显示异常／同步时报错**
+  - 【AnkiDroid】使用「Anki 中国」提供的旧版 AnkiDroid（v2.16.0beta2）会导致此问题。请使用最新版 AnkiDroid。
 
-  - **可能原因**
+  - 【其他平台】请更新 Anki 至最新版本后再次尝试。
 
-    - 直接在文件管理器中点击 `apkg` 文件跳转到 AnkiDroid 导入时，可能导致导入速度异常缓慢（耗时从数小时到一天不等）。
+------
 
-    - 使用 AnkiDroid 旧版本（v2.20.1 及以下）时，应用内导入的速度也较慢（约需数分钟）。
+- **【AnkiDroid】卡组导入速度慢**
 
-    - 使用「Anki 中国」提供的旧版 AnkiDroid（v2.16.0beta2）可能会导致卡组导入失败、显示异常或同步出错。
+  - **已知问题**
+
+    - 当前版本的 AnkiDroid（v2.20.1）在导入大量卡片时，速度可能较慢（耗时数分钟甚至数小时）。
+    - 在文件管理器中点击 `apkg` 文件以跳转到 AnkiDroid 导入时，导入速度异常缓慢（耗时数小时甚至数天）。
 
   - **解决方案**
 
-    - 从 AnkiDroid 内部（右上角菜单）使用「导入」功能进行操作。
-
-    - 将 AnkiDroid 更新至最新测试版（v2.21alpha13 及以上），或等待稳定版更新。
-
-      >  新版极大提升了导入速度，经实测仅需几秒到几十秒即可完成。
+    - 使用 AnkiDroid 内部（右上角菜单）的「导入」功能进行导入。
+  
+    - 先在其他平台导入卡组，然后同步到 AnkiDroid。
+  
+    - 等待 AnkiDroid 官方修复此问题。
+  
 
 ------
 
