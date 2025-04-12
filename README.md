@@ -12,11 +12,11 @@
 
 ## 项目介绍
 
-这是一个基于 [Anki](https://apps.ankiweb.net/) 制作的日语单词卡组，涵盖 JLPT N1～N5 级别单词以及部分补充词汇，合计约 12,600 个词条。每个单词都附有释义和例句，并提供单词和例句的音频，帮助学习者更好地记忆和理解。
+- 这是一个基于 [Anki](https://apps.ankiweb.net/) 制作的日语单词卡组，涵盖 JLPT N1～N5 级别单词以及部分补充词汇，合计约 12,600 个词条。每个单词都附有释义和例句，并提供单词和例句的音频，帮助学习者更好地记忆和理解。
 
-支援繁體中文，請參考 [這裡](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#使用繁體中文) 手動開啟。
+- 支援繁體中文，請參考 [這裡](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#使用繁體中文) 手動開啟。
 
-我的其他卡组与插件： [AnkiWeb 主页](https://ankiweb.net/shared/by-author/842333142)
+- 我的其他卡组与插件： [AnkiWeb 主页](https://ankiweb.net/shared/by-author/842333142)
 
 ------
 
@@ -29,7 +29,7 @@
 ## 卡组简介
 
 <details>
-<summary>点击展开／折叠</summary><br>
+<summary>点击展开／折叠</summary>
 
 ### 单词
 
@@ -73,9 +73,9 @@
 
 - 音频按钮：
 
-  - ▶️：卡组自带本地音频。
+  - 黑白 ▶️：卡组自带本地音频。
 
-  - ▶️：自动生成的在线 TTS 音频。（请不要反馈此类错误）
+  - 紫色 ▶️：自动生成的在线 TTS 音频。（请不要反馈此类错误）
 
 ------
 
@@ -136,11 +136,12 @@
 ------
 
 2. **下载本卡组**
-- 请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新稳定版（Latest）的 `apkg` 文件（**不要**下载 `zip`）。或直接点击以下链接：
-  
-  - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
-  
-  - [下载地址 2](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)（为中国大陆加速）
+
+   请在 [Releases](https://github.com/5mdld/anki-jlpt-decks/releases) 中下载最新稳定版（Latest）的 `apkg` 文件（**不要**下载 `zip`）。或直接点击以下链接：
+
+   - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
+
+     - [下载地址 2](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)（为中国大陆加速）
 
 ------
 
@@ -178,7 +179,7 @@
 
    > 牌组选项位置教程视频：[Android](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250314Wwzrtj.mp4) ｜ [iOS](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/202503144dcecY.mp4) ｜ [macOS／Windows](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250314s2AMCN.mp4)  
    
-   - 点击 ⚙️ 图标打开牌组选项，参考以下图片进行修改。
+   点击 ⚙️ 图标打开牌组选项，参考以下图片进行修改。
 
 ![deck options](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250314HpoTxy.png)
 
@@ -186,7 +187,7 @@
 
 5. **开启同步**（可选)
 
-   - 注册 [AnkiWeb 账号](https://ankiweb.net/account/signup)，实现多设备学习进度同步和云端备份。
+   注册 [AnkiWeb 账号](https://ankiweb.net/account/signup)，实现多设备学习进度同步和云端备份。
 
 
 ------
@@ -226,7 +227,7 @@
 
 - **【AnkiDroid】应用内下载的卡组后缀为 `bin`**
 
-  - 请更新 AnkiDroid 至 v2.20.1 或更高版本后重新下载。
+  请更新 AnkiDroid 至 v2.20.1 或更高版本后重新下载。
 
 ------
 
@@ -242,19 +243,19 @@
 
 - **【Windows】卡片切换有延迟**
 
-  - 在 Anki 的「设置」 →「显示驱动」中，尝试选择 `Software` 或 `OpenGL`。
+  在 Anki 的「设置」 →「显示驱动」中，尝试选择 `Software` 或 `OpenGL`。
 
 ------
 
 - **卡片正面的单词上有假名标注**
 
-  - 本卡组仅针对「[常用漢字表](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf)」范围外，或仅看汉字难以确定读音的词汇添加了假名标注，并非所有单词均有。一般情况下无需隐藏；如需隐藏，请参考相应的高级选项。
+  本卡组仅针对「[常用漢字表](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf)」范围外，或仅看汉字难以确定读音的词汇添加了假名标注，并非所有单词均有。一般情况下无需隐藏；如需隐藏，请参考相应的高级选项。
 
 ------
 
 - **【AnkiWeb】提示「Daily limit exceeded; please try again tomorrow.」**
 
-  - 表示同一 IP 在 24 小时内已下载超过 25 个卡组。请切换 IP 地址或等待 24 小时后再试。
+  表示同一 IP 在 24 小时内已下载超过 25 个卡组。请切换 IP 地址或等待 24 小时后再试。
 
 ------
 
@@ -550,9 +551,9 @@ tts: {
 
 2. **关闭**
    
-   - 将 `{{ ^Alt2 }}` 改回 `{{ #Alt2 }}` → 保存 → `工具` → `清理空卡片` → `删除` 对应卡片。  
+   将 `{{ ^Alt2 }}` 改回 `{{ #Alt2 }}` → 保存 → `工具` → `清理空卡片` → `删除` 对应卡片。  
    
-     ![删除空白卡片](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206aUZkfD.png)
+   ![删除空白卡片](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241206aUZkfD.png)
 
 </details>
 
