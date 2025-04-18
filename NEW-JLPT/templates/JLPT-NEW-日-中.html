@@ -5,7 +5,7 @@
 <main id="FrontSide" class="CardSide">
   <div class="Top">
     <span class="Level">{{Tags}}</span>
-    <a class="Feedback" href="#" onclick="feedback(event)">反馈</a>
+    <a class="Feedback">反馈</a>
   </div>
 
   <header class="Question">
@@ -14,7 +14,7 @@
       <span lang="ja">{{furigana:VocabKanji}}</span>
       <span class="VocabPitch">{{VocabPitch}}</span>
     </h1>
-    <a class="Search" href="#" onclick="lookUp()">🔍</a>
+    <a class="Search">🔍</a>
   </header>
 
   <ul class="SentenceList">
@@ -210,13 +210,13 @@
       <h2 class="DialogTitle">${config.title || '提示'}</h2>
       <div class="DialogBody">${config.content || ''}</div>
       <div class="DialogFooter">
-        ${config.cancelText ? `<a href="#" class="DialogButton CancelButton">${config.cancelText}</a>` : ''}
-        <a href="#" class="DialogButton ConfirmButton">${config.confirmText || '确定'}</a>
+        ${config.cancelText ? `<a class="DialogButton CancelButton">${config.cancelText}</a>` : ''}
+        <a class="DialogButton ConfirmButton">${config.confirmText || '确定'}</a>
       </div>
     </div>
     `
     modal.querySelector('.DialogContent').addEventListener('click', e => e.stopPropagation())
-    modal.querySelector('.CancelButton')?.addEventListener('click', e => { e.preventDefault(); (config.onCancel || closeDialog)() })
+    modal.querySelector('.CancelButton')?.addEventListener('click', config.onCancel || closeDialog)
     modal.querySelector('.ConfirmButton').addEventListener('click', config.onConfirm || closeDialog)
     modal.addEventListener('click', closeDialog)
     document.getElementById('qa').appendChild(modal)
@@ -248,33 +248,35 @@
     return { current, latest, info }
   }
 
-  async function feedback(e) {
-    const current = getCurrentVersion()
-    const { latest, info } = await checkVersion(!current)
+  function feedback(e) {
+    const feedbackBtn = document.querySelector('.Feedback')
+    feedbackBtn.addEventListener('click', async e => {
+      const current = getCurrentVersion()
+      const { latest, info } = await checkVersion(!current)
 
-    if (!current || current !== latest) {
-      e.preventDefault()
-      createDialog({
-        title: `
-        <p>🎉 可用更新</p>
-        <span>${getTranslation('updateReminder')}</span>
-        `,
-        content: `
-        <p>📌 ${getTranslation('versionCurrent')}: ${current || 'Unknown'}</p>
-        <p>🌟 ${getTranslation('versionLatest')}: ${latest || 'Unknown'}</p>
-        <p>🚀 ${getTranslation('updateDetails')}: </p>
-        <ul>${info || '- No details available'}</ul>
-        `,
-        cancelText: '取消',
-        confirmText: '更新',
-        onConfirm: () => {
-          document.querySelector('a.ConfirmButton').href = 'https://github.com/5mdld/anki-jlpt-decks/releases/latest'
-          closeDialog()
-        }
-      })
-    } else {
-      document.querySelector('a.Feedback').href = getFeedbackLink()
-    }
+      if (!current || current !== latest) {
+        createDialog({
+          title: `
+          <p>🎉 可用更新</p>
+          <span>${getTranslation('updateReminder')}</span>
+          `,
+          content: `
+          <p>📌 ${getTranslation('versionCurrent')}: ${current || 'Unknown'}</p>
+          <p>🌟 ${getTranslation('versionLatest')}: ${latest || 'Unknown'}</p>
+          <p>🚀 ${getTranslation('updateDetails')}: </p>
+          <ul>${info || '- No details available'}</ul>
+          `,
+          cancelText: '取消',
+          confirmText: '更新',
+          onConfirm: () => {
+            document.querySelector('a.ConfirmButton').href = 'https://github.com/5mdld/anki-jlpt-decks/releases/latest'
+            closeDialog()
+          }
+        })
+      } else {
+        feedbackBtn.href = getFeedbackLink()
+      }
+    })
   }
 
   function getFeedbackLink(platform = 'github', VocabKanji = '{{text:kanji:VocabKanji}}', NoteID = '{{text:NoteID}}') {
@@ -325,22 +327,24 @@
   }
 
   function lookUp(word = '{{text:kanji:VocabKanji}}') {
-    const cleaned = cleanWord()
-    const dict = CONFIG().settings.dict[getPlatform()]
-    const scheme = CONFIG().dictOptions[dict]
-    if (!scheme) {
-      createDialog({
-        content: `<p class="text-center">${getTranslation('dictionaryTip')}</p>`,
-        cancelText: '取消',
-        confirmText: '查看文档',
-        onConfirm: () => {
-          document.querySelector('a.ConfirmButton').href = 'https://github.com/5mdld/anki-jlpt-decks/blob/main/README.md'
-          closeDialog()
-        }
-      })
-    }
-    const url = scheme.replace('{query}', encodeURIComponent(cleaned))
-    document.querySelector('a.Search').href = url
+    const searchBtn = document.querySelector('.Search')
+    searchBtn.addEventListener('click', e => {
+      const cleaned = cleanWord()
+      const dict = CONFIG().settings.dict[getPlatform()]
+      const scheme = CONFIG().dictOptions[dict]
+      if (!scheme) {
+        createDialog({
+          content: `<p class="text-center">${getTranslation('dictionaryTip')}</p>`,
+          cancelText: '取消',
+          confirmText: '查看文档',
+          onConfirm: () => {
+            document.querySelector('a.ConfirmButton').href = 'https://github.com/5mdld/anki-jlpt-decks/blob/main/README.md'
+            closeDialog()
+          }
+        })
+      }
+      searchBtn.href = scheme.replace('{query}', encodeURIComponent(cleaned))
+    })
   }
 
   function forcePlayback() {
@@ -412,8 +416,6 @@
       const defs = ['{{SentDefTC1}}', '{{SentDefTC2}}', '{{SentDefTC3}}', '{{SentDefTC4}}']
       defs.forEach((def, index) => updateText(`li:nth-child(${index + 1}) .SentDef`, def))
     }
-    checkVersion()
-    setLinkTarget()
   }
 
   function removeSpaces() {
@@ -596,16 +598,24 @@
       }
     }, 0)
   }
+
+  function setupCard() {
+    lookUp()
+    feedback()
+    setLang()
+    setType()
+    markWords()
+    hideKanji()
+    removeSpaces()
+    checkVersion()
+    setLinkTarget()
+  }
 </script>
 
 <script>
-  setLang()
-  setType()
-  markWords()
-  removeSpaces()
-  setAnkiWebAudio()
+  setupCard()
   hideFurigana()
-  hideKanji()
+  setAnkiWebAudio()
 </script>
 
 {{/Alt1}}
@@ -702,13 +712,7 @@
   typeof onShownHook !== 'undefined' ? onShownHook.push(forcePlayback) : forcePlayback()
 
   // 安卓平台需要重复正面调用的方法
-  if (isAndroid()) {
-    setLang()
-    setType()
-    markWords()
-    removeSpaces()
-    hideKanji()
-  }
+  if (isAndroid()) setupCard()
 </script>
 
 {{/Alt1}}

@@ -456,6 +456,11 @@ a.Feedback {
   }
 }
 
+/* --- 若需不限制宽度开启以下样式 --- */
+/* .CardSide {
+  max-width: none !important;
+} */
+
 /* --- AnkiWeb 样式 --- */
 #quiz {
   --canvas: #fff;
