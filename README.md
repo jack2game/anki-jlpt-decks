@@ -2,10 +2,14 @@
 
 > **前言**  
 >
-> - 本卡组在 GitHub & AnkiWeb 上**永久免费**更新，闲鱼等平台上的付费版本均为倒卖！  
+> - ### **本卡组在 GitHub & AnkiWeb 上永久免费更新，闲鱼等平台上的付费版本均为盗卖！**  
+>
 > - 如果您有付费意愿，可以考虑捐赠给 FSRS 算法作者 [叶峻峣](https://github.com/L-M-Sherlock)。  
+>
 > - 如果觉得本卡组对您有帮助，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) **点赞**或给本仓库点个 **Star**，您的支持是我更新的最大动力！  
+>
 > - 加入 Telegram Anki 日语交流群：[点此链接](https://t.me/+N7bNc8-BpqJjZmQ1)（入群答案：`apkg`）。
+>
 > - 加入基于二语习得理论的日语学习 QQ 群： [点此链接](https://qm.qq.com/q/Iy7QuEz5WQ) 或搜索群号 `830058869` 加群。
 
 ------
@@ -238,7 +242,7 @@
 
   - 导入卡组并登录 AnkiWeb 后，应用会自动进行媒体文件同步。首次同步需上传／下载大量文件（尤其是音频），耗时可能较长（数十分钟）。
 
-  - 如需在其他设备上使用该卡组，请先在已下载卡组的设备上完成上传同步，再在目标设备进行下载同步。也可在新设备上手动导入卡组，以加快首次同步速度。
+  - 如需在其他设备上使用该卡组，请**先在**已下载卡组的设备上完成上传同步，**再在**目标设备进行下载同步。也可在新设备上手动导入卡组，以加快首次同步速度。
   
   - 同步时，请保持 Anki 处于前台并保持屏幕常亮（移动端）；如有需要，可使用网络代理（翻墙）工具来提升同步速度。
 
@@ -276,7 +280,7 @@
 
 卡組已內建繁體中文文本。如果需要顯示繁體中文，請在 `function CONFIG()` 裡面修改 `lang: ''` 為 `'zh-Hant'`：
 
-```html
+```js
 lang: 'zh-Hant', // 'zh-Hans' = 简体中文；'zh-Hant' = 繁體中文
 ```
 
@@ -292,7 +296,7 @@ lang: 'zh-Hant', // 'zh-Hans' = 简体中文；'zh-Hant' = 繁體中文
 <summary>点击展开／折叠</summary><br>
 
 
-```html
+```js
 dict: {
   ios: 'moji',         // 在 iOS 使用 MOji 辞書
   android: 'moji',     // 在 Android 使用 MOji 辞書
@@ -365,7 +369,7 @@ playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'
 
 参考以下代码，修改 `display: ''` 内的参数。
 
-```html
+```js
 display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假名；'kana' 为只显示假名；'kanji' 为只显示汉字
 ```
 
@@ -375,12 +379,25 @@ display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假�
 
 可通过配置项 `autoCopy` 控制，默认仅 iPad 开启。  
 
-```html
+```js
 autoCopy: {           // 背面自动复制: true 开启 | false 关闭
   ipad: true,
   iphone: false,
   ankiweb: false,
 }
+```
+
+------
+
+### 不限制卡片最大宽度
+
+在卡片模板的「样式」（CSS）中取消注释以下代码：  
+
+```css
+/* --- 若需不限制宽度开启以下样式 --- */
+/* .CardSide {
+  max-width: none !important;
+} */
 ```
 
 ------
@@ -411,7 +428,7 @@ autoCopy: {           // 背面自动复制: true 开启 | false 关闭
 
   - 在 `speed:` 中可以调节语速。
   
-```html
+```js
 tts: {
   enable: 'fallback', // 在线 TTS 开关: 'always' 始终开启 | 'fallback' 无本地音频时启用 | 'never' 始终关闭
   hotkey: 'G',        // 播放快捷键，仅支持桌面端
