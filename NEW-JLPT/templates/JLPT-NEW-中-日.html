@@ -6,7 +6,7 @@
 <main id="FrontSide" class="CardSide">
   <div class="Top">
     <span class="Level">{{Tags}}</span>
-    <a class="Feedback" href="#" target="_blank" onclick="feedback(event)">反馈</a>
+    <a class="Feedback" href="#" onclick="feedback(event)">反馈</a>
   </div>
 
   <header class="Question">
@@ -15,7 +15,7 @@
       <span lang="ja">{{furigana:VocabKanji}}</span>
       <span class="VocabPitch">{{VocabPitch}}</span>
     </h1>
-    <a class="Search" href="#" target="_blank" onclick="lookUp()">🔍</a>
+    <a class="Search" href="#" onclick="lookUp()">🔍</a>
   </header>
 
   <section class="Answer">
@@ -88,6 +88,11 @@
       },
       display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假名 | 'kana' 只显示假名 | 'kanji' 只显示汉字
       playback: 'force',    // 背面播放设置: 'default' 跟随牌组的系统设置 | 'force' 强制只播放单词音频
+      autoCopy: {           // 背面自动复制: true 开启 | false 关闭
+        ipad: true,
+        iphone: false,
+        ankiweb: false,
+      },
       tts: {
         enable: 'fallback', // 在线 TTS 开关: 'always' 始终开启 | 'fallback' 无本地音频时启用 | 'never' 始终关闭
         hotkey: 'G',        // 播放快捷键，仅支持桌面端
@@ -223,8 +228,8 @@
       <h2 class="DialogTitle">${config.title || '提示'}</h2>
       <div class="DialogBody">${config.content || ''}</div>
       <div class="DialogFooter">
-        ${config.cancelText ? `<a href="#" target="_blank" class="DialogButton CancelButton">${config.cancelText}</a>` : ''}
-        <a href="#" target="_blank" class="DialogButton ConfirmButton">${config.confirmText || '确定'}</a>
+        ${config.cancelText ? `<a href="#" class="DialogButton CancelButton">${config.cancelText}</a>` : ''}
+        <a href="#" class="DialogButton ConfirmButton">${config.confirmText || '确定'}</a>
       </div>
     </div>
     `
@@ -234,6 +239,7 @@
     modal.addEventListener('click', closeDialog)
     document.getElementById('qa').appendChild(modal)
     document.body.style.overflow = 'hidden'
+    setLinkTarget()
   }
 
   function closeDialog() {
@@ -308,20 +314,36 @@
     return ['ios', 'android', 'mac', 'win'].find(p => document.documentElement.className.includes(p)) || 'other'
   }
 
+  function getDevice() {
+    if (isAnkiWeb()) return 'ankiweb'
+    return ['iphone', 'ipad'].find(p => document.documentElement.className.includes(p)) || 'other'
+  }
+
   function isAndroid() {
     return !!document.documentElement.className.includes('android')
+  }
+
+  function isAnkiWeb() {
+    return !!document.getElementById('quiz')
+  }
+
+  function setLinkTarget() {
+    if (!isAnkiWeb()) return
+    document.querySelectorAll('a:not([target="_blank"])').forEach(a => {
+      a.target = '_blank'
+    })
   }
 
   function isBackSide() {
     return !!document.getElementById('BackSide')
   }
 
-  function cleanWord(word) {
+  function cleanWord(word = '{{text:kanji:VocabKanji}}') {
     return word.replace(/\[[^\]]*\]|\([^)]*\)|[0-9!@#$%^&*()_+\-='":\\|,.<>/?~～〜\s]+/g, '')
   }
 
-  function lookUp(word = '{{text:VocabKanji}}') {
-    const cleaned = cleanWord(word)
+  function lookUp(word = '{{text:kanji:VocabKanji}}') {
+    const cleaned = cleanWord()
     const dict = CONFIG().settings.dict[getPlatform()]
     const scheme = CONFIG().dictOptions[dict]
     if (!scheme) {
@@ -409,6 +431,7 @@
       defs.forEach((def, index) => updateText(`li:nth-child(${index + 1}) .SentDef`, def))
     }
     checkVersion()
+    setLinkTarget()
   }
 
   function removeSpaces() {
@@ -447,10 +470,10 @@
     })
   }
 
-  function markWords(word = '{{text:VocabKanji}}') {
+  function markWords(word = '{{text:kanji:VocabKanji}}') {
     const wordRegex = /[一-龠々ヵヶ]+|[ぁ-んァ-ヴー]+/g
     const kanjiRegex = /[一-龠々ヵヶ]/
-    const parts = cleanWord(word).match(wordRegex) ?? []
+    const parts = cleanWord().match(wordRegex) ?? []
     const regexParts = parts.map(part => {
       return kanjiRegex.test(part)
         ? `(?:<ruby><rb>${part}</rb><rt>[^<]+</rt></ruby>|${part})`
@@ -464,7 +487,7 @@
         if (el.querySelector('b, i, u, span, strong') || type !== '例') return
         el.innerHTML = el.innerHTML
           .replace(regex, match => `<strong>${match}</strong>`)
-          .replace(/[～〜]/g, `<strong>${cleanWord(word)}</strong>`)
+          .replace(/[～〜]/g, `<strong>${cleanWord()}</strong>`)
       })
     })
   }
@@ -491,7 +514,7 @@
   }
 
   function setAnkiWebAudio() {
-    if (!document.getElementById('quiz')) return
+    if (!isAnkiWeb()) return
 
     document.querySelectorAll('.VocabAudio, .SentAudio').forEach(el => {
       const audio = el.querySelector('audio')
@@ -580,6 +603,17 @@
       }).catch(() => (isError = true))
     }
   }
+
+  function autoCopyWord() {
+    if (!CONFIG().settings.autoCopy[getDevice()]) return
+    setTimeout(async () => {
+      try {
+        await navigator.clipboard.writeText(cleanWord())
+      } catch (err) {
+        console.error(err)
+      }
+    }, 0)
+  }
 </script>
 
 <script>
@@ -666,6 +700,7 @@
   showHint()
   setEdgeTTS()
   toggleBlur()
+  autoCopyWord()
   highlightWords()
   audioStylePatch()
   hideFrontElements()

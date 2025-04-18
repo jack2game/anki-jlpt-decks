@@ -490,14 +490,14 @@ a.Feedback {
 }
 
 /* --- 移动端不显示左右边框和底部边框 --- */
-.iphone *,
+.ios *,
 .android * {
   border-left-width: 0;
   border-right-width: 0;
   border-radius: 0;
 }
 
-.iphone .SentenceList,
+.ios .SentenceList,
 .android .SentenceList {
   border-bottom-width: 0;
   min-height: 0;
