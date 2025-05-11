@@ -271,6 +271,8 @@
 > 以下内容涉及卡片模板的修改，适合具备一定编程基础知识的用户。
 >
 > 模板位置教程视频：[Android](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109vviFO1.mp4) ｜ [iOS](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/202503141dbbxv.mp4) ｜ [macOS／Windows](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241124F22Meh.mp4)  
+>
+> Anki Webview 调试插件（仅限桌面端）：[AnkiWebView Inspector](https://ankiweb.net/shared/info/31746032)
 
 卡片**正面**模板中的 `function CONFIG()` 函数包含一些可修改的选项，您可以根据注释修改相应的设置。
 
