@@ -266,6 +266,12 @@
 
 ------
 
+- **【Windows／macOS】卡组的词典跳转与反馈功能失效**
+
+  Anki 桌面端 25.02.1 版本的安全更新意外破坏了卡组的词典跳转与反馈等功能。请下载使用最新版本的 Anki。
+
+------
+
 ## 高级选项
 
 > 以下内容涉及卡片模板的修改，适合具备一定编程基础知识的用户。
@@ -583,7 +589,7 @@ tts: {
 
 ## 友情链接
 
-- `MasterOfMasterSword` 制作的一些文法和单词卡组，请前往  [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 下载。
+- `MasterOfMasterSword` 的一些卡组，请前往  [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 下载。
   - 《どんなときどう使う日本語文型》（适时适所）文法卡组
   - 《蓝宝书超值白金版》文法卡组
   - 「のんびり日本語教師」文法卡组（已完成汉化）
@@ -593,13 +599,15 @@ tts: {
   - 《红宝书》单词卡组
   - 「Onomatopoeia・オノマトペ・擬音語・擬態語」单词卡组
   
-- `uovkm` 制作的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037) 。
+- `uovkm` 的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037) 。
 
-- `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f) ，推荐一读。
+- `菜鸡` 的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f) ，推荐一读。
 
-- `Z` 创建的语言学习论坛： [Campfirium](https://campfirium.info) 。
+- `Z` 的语言学习论坛： [Campfirium](https://campfirium.info) 。
 
-- `nclark` 制作的 JLPT 真题备考网站：https://jlpt.nnde.de 。
+- `nclark` 的 JLPT 真题备考网站：https://jlpt.nnde.de 。
+
+- `raynor` 的《毎日一問日本語》TG 频道，每天早上会发布一道 JLPT 真题：[N1](https://t.me/daily_jlptn1) ｜[N2](https://t.me/daily_jlptn2) ｜[N3](https://t.me/daily_jlptn3) 。
 
 ------
 
