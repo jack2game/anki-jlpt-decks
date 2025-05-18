@@ -8,7 +8,7 @@
 >
 > - 如果觉得本卡组对您有帮助，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) **点赞**或给本仓库点个 **Star**，您的支持是我更新的最大动力！  
 >
-> - 加入 Telegram Anki 日语交流群：[点此链接](https://t.me/+N7bNc8-BpqJjZmQ1)（入群答案：`apkg`）。
+> - 加入 Telegram Anki 日语交流群：[点此链接](https://t.me/+N7bNc8-BpqJjZmQ1)。
 >
 > - 加入基于二语习得理论的日语学习 QQ 群： [点此链接](https://qm.qq.com/q/Iy7QuEz5WQ) 或搜索群号 `830058869` 加群。
 
@@ -266,11 +266,19 @@
 
 ------
 
+- **【Windows／macOS】卡组的词典跳转与反馈功能失效**
+
+  Anki 桌面端 25.02.1 版本的安全更新意外破坏了卡组的词典跳转与反馈等功能。请下载使用最新版本的 Anki。
+
+------
+
 ## 高级选项
 
 > 以下内容涉及卡片模板的修改，适合具备一定编程基础知识的用户。
 >
 > 模板位置教程视频：[Android](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241109/20241109vviFO1.mp4) ｜ [iOS](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/202503141dbbxv.mp4) ｜ [macOS／Windows](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20241124F22Meh.mp4)  
+>
+> Anki Webview 调试插件（仅限桌面端）：[AnkiWebView Inspector](https://ankiweb.net/shared/info/31746032)
 
 卡片**正面**模板中的 `function CONFIG()` 函数包含一些可修改的选项，您可以根据注释修改相应的设置。
 
@@ -581,7 +589,7 @@ tts: {
 
 ## 友情链接
 
-- `MasterOfMasterSword` 制作的一些文法和单词卡组，请前往  [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 下载。
+- `MasterOfMasterSword` 的一些卡组，请前往  [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 下载。
   - 《どんなときどう使う日本語文型》（适时适所）文法卡组
   - 《蓝宝书超值白金版》文法卡组
   - 「のんびり日本語教師」文法卡组（已完成汉化）
@@ -591,13 +599,15 @@ tts: {
   - 《红宝书》单词卡组
   - 「Onomatopoeia・オノマトペ・擬音語・擬態語」单词卡组
   
-- `uovkm` 制作的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037) 。
+- `uovkm` 的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037) 。
 
-- `菜鸡` 撰写的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f) ，推荐一读。
+- `菜鸡` 的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f) ，推荐一读。
 
-- `Z` 创建的语言学习论坛： [Campfirium](https://campfirium.info) 。
+- `Z` 的语言学习论坛： [Campfirium](https://campfirium.info) 。
 
-- `nclark` 制作的 JLPT 真题备考网站：https://jlpt.nnde.de 。
+- `nclark` 的 JLPT 真题备考网站：https://jlpt.nnde.de 。
+
+- `raynor` 的《毎日一問日本語》TG 频道，每天早上会发布一道 JLPT 真题：[N1](https://t.me/daily_jlptn1) ｜[N2](https://t.me/daily_jlptn2) ｜[N3](https://t.me/daily_jlptn3) 。
 
 ------
 
