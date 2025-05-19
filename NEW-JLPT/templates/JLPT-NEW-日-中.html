@@ -34,7 +34,7 @@ countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
 <main id="FrontSide" class="CardSide">
   <div class="Top">
     <span class="Level">{{Tags}}</span>
-    <a class="Feedback">反馈</a>
+    <a target="_blank" class="Feedback">反馈</a>
   </div>
 
   <header class="Question">
@@ -43,7 +43,7 @@ countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
       <span lang="ja">{{kanji:VocabKanji}}</span>
       <span class="VocabPitch"></span>
     </h1>
-    <a class="Search">🔍</a>
+    <a target="_blank" class="Search">🔍</a>
   </header>
 
   <ul class="SentenceList">
@@ -239,8 +239,8 @@ countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
       <h2 class="DialogTitle">${config.title || '提示'}</h2>
       <div class="DialogBody">${config.content || ''}</div>
       <div class="DialogFooter">
-        ${config.cancelText ? `<a class="DialogButton CancelButton">${config.cancelText}</a>` : ''}
-        <a class="DialogButton ConfirmButton">${config.confirmText || '确定'}</a>
+        ${config.cancelText ? `<a target="_blank" class="DialogButton CancelButton">${config.cancelText}</a>` : ''}
+        <a target="_blank" class="DialogButton ConfirmButton">${config.confirmText || '确定'}</a>
       </div>
     </div>
     `
@@ -250,7 +250,6 @@ countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
     modal.addEventListener('click', closeDialog)
     document.getElementById('qa').appendChild(modal)
     document.body.style.overflow = 'hidden'
-    setLinkTarget()
   }
 
   function closeDialog() {
@@ -267,10 +266,8 @@ countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
     const { latest, info } = shouldFetch ? await getLatestReleaseInfo().then(res => (setStorage(res), res)) : storage
 
     const icon = el.querySelector('i')
-    if (current && latest && current !== latest) {
-      if (!icon) {
-        el.insertAdjacentHTML('afterbegin', '<i>🎉 </i>')
-      }
+    if (current && latest && current < latest) {
+      if (!icon) el.insertAdjacentHTML('afterbegin', '<i>🎉 </i>')
     } else {
       icon?.remove()
     }
@@ -283,7 +280,7 @@ countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
       const current = getCurrentVersion()
       const { latest, info } = await checkVersion(!current)
 
-      if (!current || current !== latest) {
+      if (!current || current < latest) {
         createDialog({
           title: `
           <p>🎉 可用更新</p>
@@ -338,13 +335,6 @@ countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
 
   function isAnkiWeb() {
     return !!document.getElementById('quiz')
-  }
-
-  function setLinkTarget() {
-    if (!isAnkiWeb()) return
-    document.querySelectorAll('a:not([target="_blank"])').forEach(a => {
-      a.target = '_blank'
-    })
   }
 
   function isBackSide() {
@@ -637,7 +627,6 @@ countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
     hideKanji()
     removeSpaces()
     checkVersion()
-    setLinkTarget()
   }
 </script>
 
