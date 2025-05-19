@@ -5,7 +5,7 @@
 <main id="FrontSide" class="CardSide">
   <div class="Top">
     <span class="Level">{{Tags}}</span>
-    <a class="Feedback">反馈</a>
+    <a target="_blank" class="Feedback">反馈</a>
   </div>
 
   <header class="Question">
@@ -14,7 +14,7 @@
       <span lang="ja">{{furigana:VocabKanji}}</span>
       <span class="VocabPitch">{{VocabPitch}}</span>
     </h1>
-    <a class="Search">🔍</a>
+    <a target="_blank" class="Search">🔍</a>
   </header>
 
   <ul class="SentenceList">
@@ -210,8 +210,8 @@
       <h2 class="DialogTitle">${config.title || '提示'}</h2>
       <div class="DialogBody">${config.content || ''}</div>
       <div class="DialogFooter">
-        ${config.cancelText ? `<a class="DialogButton CancelButton">${config.cancelText}</a>` : ''}
-        <a class="DialogButton ConfirmButton">${config.confirmText || '确定'}</a>
+        ${config.cancelText ? `<a target="_blank" class="DialogButton CancelButton">${config.cancelText}</a>` : ''}
+        <a target="_blank" class="DialogButton ConfirmButton">${config.confirmText || '确定'}</a>
       </div>
     </div>
     `
@@ -221,7 +221,6 @@
     modal.addEventListener('click', closeDialog)
     document.getElementById('qa').appendChild(modal)
     document.body.style.overflow = 'hidden'
-    setLinkTarget()
   }
 
   function closeDialog() {
@@ -238,10 +237,8 @@
     const { latest, info } = shouldFetch ? await getLatestReleaseInfo().then(res => (setStorage(res), res)) : storage
 
     const icon = el.querySelector('i')
-    if (current && latest && current !== latest) {
-      if (!icon) {
-        el.insertAdjacentHTML('afterbegin', '<i>🎉 </i>')
-      }
+    if (current && latest && current < latest) {
+      if (!icon) el.insertAdjacentHTML('afterbegin', '<i>🎉 </i>')
     } else {
       icon?.remove()
     }
@@ -254,7 +251,7 @@
       const current = getCurrentVersion()
       const { latest, info } = await checkVersion(!current)
 
-      if (!current || current !== latest) {
+      if (!current || current < latest) {
         createDialog({
           title: `
           <p>🎉 可用更新</p>
@@ -309,13 +306,6 @@
 
   function isAnkiWeb() {
     return !!document.getElementById('quiz')
-  }
-
-  function setLinkTarget() {
-    if (!isAnkiWeb()) return
-    document.querySelectorAll('a:not([target="_blank"])').forEach(a => {
-      a.target = '_blank'
-    })
   }
 
   function isBackSide() {
@@ -608,7 +598,6 @@
     hideKanji()
     removeSpaces()
     checkVersion()
-    setLinkTarget()
   }
 </script>
 
