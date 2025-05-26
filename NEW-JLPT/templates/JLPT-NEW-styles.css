@@ -399,6 +399,8 @@ a.Feedback {
   display: grid;
   flex: 1 1 0%;
   row-gap: 2px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .SentFurigana {
@@ -407,6 +409,8 @@ a.Feedback {
   line-height: 1.625;
   line-break: anywhere;
   -webkit-line-break: anywhere;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .SentFurigana b,

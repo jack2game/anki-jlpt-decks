@@ -256,7 +256,7 @@
 
 - **卡片正面的单词上有假名标注**
 
-  本卡组仅针对「[常用漢字表](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf)」范围外，或仅看汉字难以确定读音的词汇添加了假名标注，并非所有单词均有。一般情况下无需隐藏；如需隐藏，请参考相应的高级选项。
+  本卡组仅针对「[常用漢字表](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf)」范围外的词汇添加了假名标注，并非所有单词都有，一般情况下无需隐藏；如需隐藏，请参考高级选项中的相应设置。
 
 ------
 
@@ -558,9 +558,7 @@ tts: {
 
 ### 开启／关闭「中-日」模板（正面为中文，背面为日语）的卡片
 
-> 默认为关闭，可自行开启。
-
-![预览图](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250311FpJaMP.png)  
+默认为关闭，可自行开启。开启／关闭方法：  
 
 <details>
 <summary>点击展开／折叠</summary>
