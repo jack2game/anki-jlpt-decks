@@ -266,7 +266,7 @@ countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
     const { latest, info } = shouldFetch ? await getLatestReleaseInfo().then(res => (setStorage(res), res)) : storage
 
     const icon = el.querySelector('i')
-    if (current && latest && current < latest) {
+    if (!getTags().isDeleted && current && latest && current < latest) {
       if (!icon) el.insertAdjacentHTML('afterbegin', '<i>🎉 </i>')
     } else {
       icon?.remove()
@@ -392,7 +392,7 @@ countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
         }
         return
       }
-      const isKatakana = getTags().includes('外') || /^[ァ-ヴー]+$/.test('{{VocabKanji}}')
+      const isKatakana = getTags().isLoanword || /^[ァ-ヴー]+$/.test('{{VocabKanji}}')
       updateText('.VocabKanji span[lang="ja"]', isKatakana ? '{{kanji:VocabKanji}}' : '{{VocabFurigana}}')
     }
   }
@@ -417,16 +417,35 @@ countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
   }
 
   function getTags(tags = '{{Tags}}') {
-    const ignore = ['$', '^', 'v']
-    return tags.split(/\s+/)
+    const ignoreTags = ['$', '^', 'v']
+    const deleteTags = ['del', 'delete', 'remove', 'outdated']
+
+    const rawTags = tags.split(/\s+/)
       .map(tag => tag.split(/::|-/).pop())
-      .filter(tag => !ignore.some(prefix => tag.startsWith(prefix)))
-      .sort((a, b) => b.startsWith('N') - a.startsWith('N') || a.localeCompare(b))
-      .join('・')
+      .filter(tag => tag && !ignoreTags.some(prefix => tag.startsWith(prefix)))
+
+    const deleted = rawTags.filter(tag => deleteTags.includes(tag))
+    const normal = rawTags.filter(tag => !deleteTags.includes(tag))
+
+    const compareTags = (a, b) => {
+      const getPriority = s => s.startsWith('N') ? 0 : /^[a-zA-Z]/.test(s) ? 1 : 2
+      const pa = getPriority(a)
+      const pb = getPriority(b)
+      if (pa !== pb) return pa - pb
+      return a.localeCompare(b)
+    }
+    const sorted = [...normal].sort(compareTags)
+
+    return {
+      all: [...sorted, ...deleted],
+      formatted: [...sorted, ...deleted].join('・'),
+      isDeleted: deleted.length > 0,
+      isLoanword: sorted.includes?.('外'),
+    }
   }
 
   function setLang() {
-    updateText('.Level', getTags())
+    updateText('.Level', getTags().formatted)
     updateText('.Feedback', getCurrentVersion() ? `${getCurrentVersion()}・${getTranslation('feedback')}` : getTranslation('feedback'))
     const lang = CONFIG().settings.lang
     if (lang === 'zh-Hant') {
