@@ -2,9 +2,9 @@
 
 ## 前言
 
-- ### **本卡组在 GitHub 和 AnkiWeb 上永久免费更新。闲鱼等平台的付费版本均为盗卖，请勿购买！**
+- ### **本卡组在 GitHub 和 AnkiWeb 上永久免费更新。闲鱼等平台的付费版本均为盗卖，卖家啥也不会，请勿购买！**
 
-- 如果您希望表达支持，建议捐赠给 FSRS 算法的作者叶峻峣（[GitHub 主页](https://github.com/L-M-Sherlock)），他为 Anki 的排程算法优化做出了重要贡献。
+- 如果您想表达支持，可以捐赠给 FSRS 算法的作者叶峻峣（[GitHub 赞赏](https://github.com/sponsors/L-M-Sherlock) ｜ [买咖啡](https://ko-fi.com/jarrettye) ｜ [爱发电](https://afdian.com/a/jarrettye)），他为 Anki 的排程算法优化做出了重要贡献。
 
 - 如果您觉得本卡组对学习有所帮助，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) **点赞**，或者给本仓库点个 **Star**，您的支持将是我持续更新的最大动力！
 
@@ -16,9 +16,9 @@
 
 ## 项目介绍
 
-- 本项目是基于 [Anki](https://apps.ankiweb.net/) 制作的日语单词卡组，覆盖 JLPT N1 至 N5 全等级以及部分额外补充词汇，共计约 **14,600 个词条**。每个词条均提供详细释义、例句，以及对应的单词和例句音频，帮助学习者更高效地记忆和理解。
+- 本项目是基于 [Anki](https://apps.ankiweb.net/) 制作的日语单词卡组，覆盖 JLPT N1 至 N5 全等级以及部分额外补充词汇，共计约 **14,600 个词条**。每个词条均提供释义、例句以及对应的单词和例句音频，帮助学习者更高效地记忆和理解。
 
-- 卡組支援繁體中文，詳細設定方法請參考 [此處說明](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#使用繁體中文)。
+- 支援繁體中文，詳細設定方法請參考 [此處說明](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#使用繁體中文)。
 
 - 我的其他 Anki 卡组和插件可访问：[AnkiWeb 主页](https://ankiweb.net/shared/by-author/842333142)。
 
@@ -37,12 +37,11 @@
 
 ### 单词
 
-- **总词汇量**：约 14,600 个。
-
+- **总单词数**：约 14,600 个。
   - JLPT N1～N5 单词：约 12,500 个（`25.05.19` 版本新增约 2000 个）。
-
+  
   - 补充词汇（非 JLPT）：约 2,100 个，统一归入「N1-补充」。
-
+  
 - **N3 以上单词的分类**：
 
   - **必考**：出现频率高且重要的单词。
@@ -79,7 +78,7 @@
 
   - **黑白 ▶️**：卡组自带本地音频。
 
-  - **紫色 ▶️**：自动生成的在线音频（无需反馈相关错误）。
+  - **紫色 ▶️**：自动生成的在线音频（请不要反馈相关错误）。
 
 ------
 
@@ -105,7 +104,7 @@
 
 ## 如何使用
 
-0. **使用说明与推荐插件**
+0. **一些资源推荐**
 
   - Anki 官方使用手册：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
    
@@ -138,10 +137,8 @@
 2. **下载卡组**
 
    请前往 [Releases 页面](https://github.com/5mdld/anki-jlpt-decks/releases) 下载最新稳定版（Latest）的 `.apkg` 文件（**注意：不要下载 `zip` 文件**）。也可通过以下链接直接下载：
-
-  - [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
    
-  - [下载地址 2（中国大陆加速）](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
+   [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg) ｜ [下载地址 2（中国大陆加速）](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
 
 ------
 
@@ -188,9 +185,9 @@
 
 ![更新选项](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250527yrnhsY.png)
 
-  - 导入更新卡组会覆盖之前所做的所有自定义修改（如卡片内容、标签等）。
+  - 导入更新卡组会覆盖本地对卡组所做的所有自定义修改（如卡片内容、标签、字段等）。
 
-    若希望保留个性化修改，请勿直接更新卡组，推荐使用代码仓库中的 `notes.csv` 文件和 `media` 文件夹手动比对并解决冲突后再更新。
+    若希望保留自定义修改的内容，请勿直接更新卡组，推荐使用代码仓库中的 `notes.csv` 文件和 `media` 文件夹手动比对并解决冲突后再更新。
 
   - 由于 Anki 功能限制，子牌组结构调整及已删除的卡片无法自动同步，需手动管理：
 
@@ -210,7 +207,7 @@
 
 > ⚠️ 卡组不保证兼容旧版 Anki 及「类 Anki」应用（如 AnkiApp、AnkiPro 等）。
 >
-> ⚠️ 如遇到问题，请先更新到 **[最新版 Anki](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)** 后（最好卸载旧版后重新安装新版），再参考以下内容：
+> ⚠️ 如遇到问题，请先更新到 **[最新版 Anki](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)** 后（最好卸载旧版后重新安装新版，请注意备份），再参考以下内容：
 
 ------
 
@@ -242,13 +239,13 @@
 
 - **【AnkiDroid】应用内下载的卡组后缀为 `bin`**
 
-  请更新 AnkiDroid 至 v2.20.1 或更高版本后重新下载。
+  请将 AnkiDroid 更新至 v2.20.1 或更高版本后重新下载，或使用其他方式下载。
 
 ------
 
 - **单词例句无法发音／字体显示不全／缺少媒体文件／同步慢／同步失败**
 
-  一般来说是媒体文件未完全同步导致的：
+  一般来说都是媒体文件未完全同步导致的：
 
   - 导入卡组并登录 AnkiWeb 后，应用会自动进行媒体文件同步。首次同步需上传／下载大量文件（尤其是音频），耗时可能较长（数十分钟）。
 
@@ -282,6 +279,11 @@
 
 ------
 
+- **已经更新到最新版卡组，但部分卡片仍为旧版**
+
+  请参考前文「[如何使用](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)」中「6. 更新卡组（可选）」最后部分的说明。
+
+------
 ## 高级选项
 
 > 以下内容涉及卡片模板的修改，适合具备一定编程基础知识的用户。
@@ -597,25 +599,17 @@ tts: {
 
 ## 友情链接
 
-- `MasterOfMasterSword` 的一些卡组，请前往  [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 下载。
-  - 《どんなときどう使う日本語文型》（适时适所）文法卡组
-  - 《蓝宝书超值白金版》文法卡组
-  - 「のんびり日本語教師」文法卡组（已完成汉化）
-  - 《新编日语》文法卡组
-  - 《标准日本语》单词卡组
-  - 《绿宝书》单词卡组
-  - 《红宝书》单词卡组
-  - 「Onomatopoeia・オノマトペ・擬音語・擬態語」单词卡组
+- `MasterOfMasterSword` 的一些文法和单词卡组，请前往 [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 查看详情。
   
-- `uovkm` 的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037) 。
+- `uovkm` 的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037)。
 
-- `菜鸡` 的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f) ，推荐一读。
+- `菜鸡` 的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f) ，推荐花几个小时读一读，能少走几百小时的弯路。
 
-- `Z` 的语言学习论坛： [Campfirium](https://campfirium.info) 。
+- `Z` 的语言学习论坛： [Campfirium](https://campfirium.info)。
 
-- `nclark` 的 JLPT 真题备考网站：https://jlpt.nnde.de 。
+- `nclark` 的 JLPT 真题备考网站：[JLPT Platform](https://jlpt.nnde.de)。
 
-- `raynor` 的《毎日一問日本語》TG 频道，每天早上会发布一道 JLPT 真题：[N1](https://t.me/daily_jlptn1) ｜[N2](https://t.me/daily_jlptn2) ｜[N3](https://t.me/daily_jlptn3) 。
+- `raynor` 的《毎日一問日本語》TG 频道，每天早上会发布一道 JLPT 真题：[N1](https://t.me/daily_jlptn1) ｜[N2](https://t.me/daily_jlptn2) ｜[N3](https://t.me/daily_jlptn3)。
 
 ------
 
