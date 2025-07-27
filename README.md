@@ -4,13 +4,11 @@
 
 - ### **本卡组在 GitHub 和 AnkiWeb 上永久免费更新。闲鱼等平台的付费版本均为盗卖，请勿购买！**
 
-- 如果您希望表示支持，可以购买 iOS 版 AnkiMobile，或向 FSRS 算法作者叶峻峣捐赠（[GitHub Sponsors](https://github.com/sponsors/L-M-Sherlock) ｜ [ko-fi](https://ko-fi.com/jarrettye) ｜ [爱发电](https://afdian.com/a/jarrettye) ）。他为 Anki 排程算法的优化做出了重要贡献。
+- 如果您觉得本卡组对您的日语学习有所帮助，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) **点赞**，或为本仓库点个 **Star**。
 
-- 如果您觉得本卡组对学习有所帮助，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) **点赞**，或者给本仓库点个 **Star**，您的支持将是我持续更新的最大动力！
+  您也可以点此按钮 [![Sponsor](https://img.shields.io/badge/Sponsor-❤-ea4aaa?logo=githubsponsors)](https://github.com/sponsors/5mdld) 进行**捐赠**。您的支持是我持续更新的最大动力！
 
 - 欢迎加入 Telegram Anki 日语交流群：[点此链接加入](https://t.me/+N7bNc8-BpqJjZmQ1)。
-
-- 欢迎加入基于二语习得理论的日语学习 QQ 群：[点此链接加入](https://qm.qq.com/q/Iy7QuEz5WQ)（群号 `830058869`）。
 
 ------
 
@@ -205,34 +203,24 @@
 
 ## 常见问题
 
-> ⚠️ 卡组不保证兼容旧版 Anki 及「类 Anki」应用（如 AnkiApp、AnkiPro 等）。
->
-> ⚠️ 如遇到问题，请先更新到 **[最新版 Anki](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)** 后（最好卸载旧版后重新安装新版，请注意备份），再参考以下内容：
-
-------
-
 - **卡组导入失败／显示异常／同步时报错**
 
-  - 【AnkiDroid】使用「Anki 中国」提供的旧版 AnkiDroid（v2.16.0beta2）会导致此问题。请使用最新版 AnkiDroid。
+  本卡组不保证兼容旧版 Anki 及其他类似应用（如 AnkiApp、AnkiPro 等）。请下载并使用官方最新版 Anki。
 
-  - 【其他平台】请更新 Anki 至最新版本后再次尝试。
+  特别提示：本卡组与「Anki 中国」提供的旧版 AnkiDroid（v2.16.0beta2）不兼容。请使用最新版 AnkiDroid。
 
 ------
 
 - **【AnkiDroid】卡组导入速度慢**
-
   - **已知问题**
-
-    - 当前版本的 AnkiDroid（v2.20.1）在导入大量卡片时，速度可能较慢（耗时数分钟甚至数小时）。
-    - 在文件管理器中点击 `apkg` 文件以跳转到 AnkiDroid 导入时，导入速度异常缓慢（耗时数小时甚至数天）。
-
+  
+    - 在 Android 15 及以上系统中，导入包含大量媒体的卡片时，导入速度明显变慢。
+  
   - **解决方案**
-
-    - 使用 AnkiDroid 内部（右上角菜单）的「导入」功能进行导入。
     
     - 先在其他平台导入卡组，然后同步到 AnkiDroid。
     
-    - 等待 AnkiDroid 官方修复此问题。
+    - 等待 Android 与 AnkiDroid 官方的后续修复。
   
 
 ------
@@ -284,6 +272,13 @@
   请参考前文「[如何使用](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)」中「6. 更新卡组（可选）」最后部分的说明。
 
 ------
+
+- **一些が行浊音（比如「だいがく」中的「が」）的发音听起来有点奇怪**
+
+  请参考：[鼻浊音](https://zh.wikipedia.org/wiki/%E9%BC%BB%E6%BF%81%E9%9F%B3)。
+
+------
+
 ## 高级选项
 
 > 以下内容涉及卡片模板的修改，适合具备一定编程基础知识的用户。
@@ -359,7 +354,7 @@ const dictOptions = {
 
 | 需求                                     | 牌组选项 → 音频          | `playback` 参数 | 正面模板中的 `{{ VocabAudio }}` |
 | ---------------------------------------- | ------------------------ | --------------- | ------------------------------- |
-| 正／背面都自动播放（单词＋例句）         | 关闭「不要自动播放音频」 | `'default'`     | 保留                            |
+| 正／背面都自动播放全部音频               | 关闭「不要自动播放音频」 | `'default'`     | 保留                            |
 | 正面自动播放＋背面仅自动播放单词         | 关闭「不要自动播放音频」 | `'force'`       | 保留                            |
 | 正面手动播放＋背面仅自动播放单词（默认） | 开启「不要自动播放音频」 | `'force'`       | 保留                            |
 | 正面手动播放＋背面手动播放               | 开启「不要自动播放音频」 | `'default'`     | 保留                            |
@@ -607,6 +602,8 @@ tts: {
 
 - `菜鸡` 的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f) ，推荐花几个小时读一读，能少走几百小时的弯路。
 
+  基于二语习得理论的日语学习 QQ 群：[点此链接加入](https://qm.qq.com/q/Iy7QuEz5WQ)（群号 `830058869`）。
+
 - `Z` 的语言学习论坛： [Campfirium](https://campfirium.info)。
 
 - `nclark` 的 JLPT 真题备考网站：[JLPT Platform](https://jlpt.nnde.de)。
@@ -616,6 +613,8 @@ tts: {
 ------
 
 ## 致谢
+
+- 感谢 `siriuxy` 的打赏。
 
 - 感谢 `iPumpkin` 对卡组模板的重构、功能添加和维护。
 
