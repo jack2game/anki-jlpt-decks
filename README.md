@@ -1,8 +1,10 @@
-# 【简体・繁體中文】【egg rolls】JLPT N1～N5 单词 + 补充（含语音、例句）v2
+# 【简体・繁體中文】【egg rolls】JLPT N1～N5 单词 + 补充（含语音、例句）v3
 
 ## 前言
 
 - ### **本卡组在 GitHub 和 AnkiWeb 上永久免费更新。闲鱼等平台的付费版本均为盗卖，请勿购买！**
+
+- ### v3 版本（25.09.03 及以后）与 v2 版本（25.07.27 及以前）相互独立，无法覆盖更新，请参考 [说明](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E4%BB%8E-v2-%E7%89%88%E6%9C%AC250727-%E5%8F%8A%E4%BB%A5%E5%89%8D%E5%8D%87%E7%BA%A7%E5%88%B0-v3-%E7%89%88%E6%9C%AC250903-%E5%8F%8A%E4%BB%A5%E5%90%8E) 进行复习记录迁移。
 
 - 如果您觉得本卡组对您的日语学习有所帮助，请在 [AnkiWeb](https://ankiweb.net/shared/info/832276382) **点赞**，或为本仓库点个 **Star**。
 
@@ -14,9 +16,9 @@
 
 ## 项目介绍
 
-- 本项目是基于 [Anki](https://apps.ankiweb.net/) 制作的日语单词卡组，覆盖 JLPT N1 至 N5 全等级以及部分额外补充词汇，共计约 **14,600 个词条**。每个词条均提供释义、例句以及对应的单词和例句音频，帮助学习者更高效地记忆和理解。
+- 本项目是基于 [Anki](https://apps.ankiweb.net/) 制作的日语单词卡组，覆盖 JLPT N1 至 N5 全等级，共计约 **10,000 个词条**。每个词条均提供释义、例句以及对应的单词和例句音频，帮助学习者更高效地记忆和理解。
 
-- 支援繁體中文，詳細設定方法請參考 [此處說明](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#使用繁體中文)。
+- 支援繁體中文，詳細設定方法請參考 [說明](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#使用繁體中文)。
 
 - 我的其他 Anki 卡组和插件可访问：[AnkiWeb 主页](https://ankiweb.net/shared/by-author/842333142)。
 
@@ -24,7 +26,7 @@
 
 ## 预览图
 
-![预览图](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250311WuXSuX.png)
+![预览图](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250903HrFjWb.png)
 
 ------
 
@@ -35,18 +37,22 @@
 
 ### 单词
 
-- **总单词数**：约 14,600 个。
-  - JLPT N1～N5 单词：约 12,500 个（`25.05.19` 版本新增约 2000 个）。
+- **概要**：基于 2010 年改制后～2024 年 12 月的 JLPT 真题文本，提取并分级了约 10,000 个单词。
   
-  - 补充词汇（非 JLPT）：约 2,100 个，统一归入「N1-补充」。
+- **排序：** 参考 `Order` 字段。
+  - N4 及 N5 单词按照主观判断从易到难进行排序。
+  
+  - N3 及以上单词按照 [JPDB v2.2](https://github.com/Kuuuube/yomitan-dictionaries?tab=readme-ov-file#jpdb-v22-frequency) 的词频升序排序。
   
 - **N3 以上单词的分类**：
 
-  - **必考**：出现频率高且重要的单词。
+  - **高频**：在 JLPT 真题中出现过 3 次以上的单词。
 
-  - **核心**：基础但在常见场景中出现频率相对较低的单词。
+  - **中频**：在 JLPT 真题中出现过 2 次的单词。
+  
+  - **低频**：在 JLPT 真题中出现过 1 次的单词。
 
-> 以上等级和分类仅供参考，如发现明显不符的词汇，欢迎反馈。
+> 以上排序和分类仅供参考，如有问题请反馈。
 
 ------
 
@@ -68,14 +74,14 @@
 
 ### 音频
 
-- **单词音频**：大部分为真人播音员录制。
+- **单词音频**：绝大部分为真人播音员录制。
 
-- **例句音频**：采用 [VOICEPEAK](https://www.ah-soft.com/voice/6nare/index.html) 软件生成的高质量机器语音，已进行人工校对。
+- **例句音频**：采用 [VOICEPEAK](https://www.ah-soft.com/voice/6nare/index.html) 生成的高质量情感机器语音，已进行人工校对。
 
 - **音频按钮说明**：
 
   - **黑白 ▶️**：卡组自带本地音频。
-
+  
   - **紫色 ▶️**：自动生成的在线音频（请不要反馈相关错误）。
 
 ------
@@ -84,15 +90,15 @@
 
 | 标签示例      | 含义与说明                                                                  |
 | --------- | ---------------------------------------------------------------------- |
-| N3必考      | 单词的 JLPT 等级和重要性分类                                                      |
+| N3高频<br />外<br />Onomatopoeia | N3高频：单词的 JLPT 等级和重要度<br />外：外来语<br />Onomatopoeia：拟声拟态词       |
 | ②         | 单词音调标记，参考：[日语声调说明](https://www.jp-lab.com/zh/pitch-accent-explanation) |
-| [他動1]    | 单词词性说明；<br />动词分类：`1` = 五段动词、`2` = 上一段／下一段动词、`3` = カ変／サ変动词             |
+| [他動1]    | 单词词性；<br />动词分类：`1` = 五段动词、`2` = 上一段／下一段动词、`3` = カ変／サ変动词             |
 | [補]      | 补充说明或注意事项                                                              |
 | [例]      | 例句                                                                     |
 | [関]      | 同义词／关联词                                                                |
 | [対]      | 反义词                                                                    |
-| 🔍        | 跳转外部词典或网页查词（支持自定义）                                                     |
-| v25.01.01 | 卡片版本号（即最后一次更新日期）                                                       |
+| 🔍        | 跳转外部词典或网页查词（可自定义）                                                    |
+| v25.01.01 | 卡片版本号（最后一次更新日期）                                                       |
 | 反馈        | 若本地卡组为最新版本，点击后跳转至 GitHub Issues 反馈页面；<br />若本地卡组非最新版本，则跳转至最新版本的下载页面    |
 | 🎉        | 检测到可更新的新版本卡组                                                           |
 
@@ -102,180 +108,216 @@
 
 ## 如何使用
 
-0. **资源推荐**
+### **资源推荐**
 
-  - Anki 官方使用手册：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
-   
-  - 卡组迁移学习记录插件（仅桌面端）：[Transfer Scheduling Info Advanced](https://ankiweb.net/shared/info/1249258442)
-   
-  - 更新卡组时保护自定义字段内容插件（仅桌面端）：[Special Fields](https://ankiweb.net/shared/info/1102281552)
-
-------
-
-1. **安装 Anki**
-
-  - Windows／macOS／Linux：Anki
-
-    [AnkiWeb 官网](https://apps.ankiweb.net/) ｜ [GitHub](https://github.com/ankitects/anki/releases/latest) ｜ [GitHub（中国大陆加速）](https://gh-proxy.com/github.com/ankitects/anki/releases/latest)
-
-  - iOS／iPadOS：AnkiMobile Flashcards
-
-    [App Store](https://apps.apple.com/jp/app/ankimobile-flashcards/id373493387)
-
-    > ⚠️ 需付费，价格约为 24.99美元／168人民币／4000日元／790新台幣／188港幣。
-
-  - Android：AnkiDroid
-
-    [Play Store](https://play.google.com/store/apps/details?id=com.ichi2.anki) ｜ [GitHub](https://github.com/ankidroid/Anki-Android/releases/latest) ｜ [GitHub（中国大陆加速）](https://gh-proxy.com/github.com/ankidroid/Anki-Android/releases/latest)
-
-    > ⚠️ 请勿使用由「Anki 中国」提供的 AnkiDroid（v2.16.0beta2），存在兼容性问题！
+- Anki 官方使用手册：[简体中文](https://open-spaced-repetition.github.io/anki-manual-zh-CN/intro.html) ｜ [English](https://docs.ankiweb.net/)
+  
+- 卡组迁移学习记录插件（仅桌面端）：[Transfer Scheduling Info Advanced](https://ankiweb.net/shared/info/1249258442)
+  
+- 更新卡组时保护自定义字段内容插件（仅桌面端）：[Special Fields](https://ankiweb.net/shared/info/1102281552)
 
 ------
 
-2. **下载卡组**
+### **安装 Anki**
 
-   请前往 [Releases 页面](https://github.com/5mdld/anki-jlpt-decks/releases) 下载最新稳定版（Latest）的 `.apkg` 文件（**注意：不要下载 `zip` 文件**）。也可通过以下链接直接下载：
-   
-   [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg) ｜ [下载地址 2（中国大陆加速）](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/NEW-JLPT.apkg)
+- Windows／macOS／Linux：Anki
+
+  [AnkiWeb 官网](https://apps.ankiweb.net/) ｜ [GitHub](https://github.com/ankitects/anki/releases/latest) ｜ [GitHub（中国大陆加速）](https://gh-proxy.com/github.com/ankitects/anki/releases/latest)
+
+- iOS／iPadOS：AnkiMobile Flashcards
+
+  [App Store](https://apps.apple.com/jp/app/ankimobile-flashcards/id373493387)
+
+  > ⚠️ 需付费，价格约为 24.99美元／168人民币／4000日元／790新台幣／188港幣。
+
+- Android：AnkiDroid
+
+  [Play Store](https://play.google.com/store/apps/details?id=com.ichi2.anki) ｜ [GitHub](https://github.com/ankidroid/Anki-Android/releases/latest) ｜ [GitHub（中国大陆加速）](https://gh-proxy.com/github.com/ankidroid/Anki-Android/releases/latest)
+
+  > ⚠️ 请勿使用由「Anki 中国」提供的 AnkiDroid（v2.16.0beta2），存在兼容性问题！
 
 ------
 
-3. **导入卡组**
+### **下载并导入**
 
-  - 打开 Anki，将下载的 `.apkg` 文件导入。
-   
-  - **首次导入**时，建议将「导入所有牌组预设配置」选项设置为 `打开`（如下图绿框所示），以应用本卡组提供的优化预设（名为「NEW-JLPT」）。
-    
-    > ⚠️ 受限于 Anki 本身的机制，部分预设无法自动导入，请参阅后续的「4. 修改牌组选项」手动调整。
+- 请前往 [Releases 页面](https://github.com/5mdld/anki-jlpt-decks/releases) 下载最新稳定版（Latest）的 `.apkg` 文件（**注意：不要下载 `zip` 文件**）。也可通过以下链接直接下载：
+
+  [下载地址 1](https://github.com/5mdld/anki-jlpt-decks/releases/latest/download/eggrolls-JLPT10k-v3.apkg) ｜ [下载地址 2（中国大陆加速）](https://gh-proxy.com/github.com/5mdld/anki-jlpt-decks/releases/latest/download/eggrolls-JLPT10k-v3.apkg)
+
+
+- 打开 Anki，导入已下载的 `.apkg` 文件。
+  
+- **首次导入**时，建议将「导入所有牌组预设配置」选项设置为 `打开`（如下图绿框所示），以应用本卡组提供的优化预设（名为「eggrolls-JLPT10k-v3」）。
+  
+  > ⚠️ 受限于 Anki 本身的机制，部分预设无法自动导入，请参阅后续的「修改牌组选项」手动调整。
 
 ![导入选项](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250527Mzfbc2.png)
 
 ------
 
-4. **修改牌组选项**
+### **修改牌组选项**
 
-   > 🎬 牌组选项位置视频教程：[Android](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250314Wwzrtj.mp4) ｜ [iOS](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/202503144dcecY.mp4) ｜ [macOS／Windows](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250314s2AMCN.mp4)
+> 🎬 牌组选项位置视频教程：[Android](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250314Wwzrtj.mp4) ｜ [iOS](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/202503144dcecY.mp4) ｜ [macOS／Windows](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250314s2AMCN.mp4)
 
-   请点击 Anki 中牌组旁的 ⚙️ 图标打开牌组选项界面，并参考以下图片进行设置：
+请点击 Anki 中牌组旁的 ⚙️ 图标打开牌组选项界面，并参考以下图片进行设置：
 
 ![deck options](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250314HpoTxy.png)
 
 ------
 
-5. **开启同步（可选）**
+### **开启同步（可选）**
 
-   注册并登录 [AnkiWeb 账号](https://ankiweb.net/account/signup)，即可实现多设备间的学习进度同步和云端备份。
+注册并登录 [AnkiWeb 账号](https://ankiweb.net/account/signup)，即可实现多设备间的学习进度同步和云端备份。
 
 ------
 
-6. **更新卡组（可选）**
+### **更新与数据迁移（可选）**
 
-    > ⚠️ **更新前务必进行备份！**
+⚠️ **操作前请务必进行备份！**
 
-  - 为避免频繁更新干扰学习，如无重大 Bug，本卡组稳定版（Latest）一般每 **1 至 2 个月**发布一次；日常的小幅修正则通过预发布版本（Pre-release）不定期推送。
+#### 更新卡组
 
-  - 更新方法：下载最新的 `.apkg` 文件导入 Anki，**不影响学习进度**。
+<details>
+<summary>点击展开／折叠</summary><br>
 
-  - 导入时，请在 Anki「导入选项」中进行如下设置（如下图红框所示）：
+为避免频繁更新干扰学习，如无重大 Bug，本卡组稳定版（Latest）一般每 **1 至 2 个月**发布一次。
 
-    - 「合并笔记模板」设为 `打开`
-    - 「更新笔记」和「更新笔记模板」均设为 `始终`
+更新方法：下载最新的 `.apkg` 文件导入 Anki，**不影响学习进度**。
+
+导入时，请在 Anki「导入选项」中进行如下设置（如下图红框所示）：
+
+- 「合并笔记模板」设为 `打开`
+
+- 「更新笔记」和「更新笔记模板」均设为 `始终`
 
 ![更新选项](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250527yrnhsY.png)
 
-  - 导入更新卡组会覆盖本地对卡组所做的所有自定义修改（如卡片内容、标签、字段等）。
+导入更新卡组会覆盖本地对卡组所做的所有自定义修改（如卡片内容、标签、字段等）。
 
-    若希望保留自定义修改的内容，请勿直接更新卡组，推荐使用代码仓库中的 `notes.csv` 文件和 `media` 文件夹手动比对并解决冲突后再更新。
+若希望保留自定义修改的内容，请勿直接更新卡组，推荐使用代码仓库中的 `notes.csv` 文件和 `media` 文件夹手动比对并解决冲突后再更新。
 
-  - 由于 Anki 功能限制，子牌组结构调整及已删除的卡片无法自动同步，需手动管理：
+由于 Anki 功能限制，子牌组结构调整及已删除的卡片无法自动同步，需手动管理：
 
-    - **示例 1**：若发现某卡片位于 `N3-必考` 牌组，但标签却为 `N2-核心`，您可将该卡片手动迁移至 `N2-核心` 牌组。
+- **示例 1**：若发现某卡片位于 `N3高频` 牌组，但标签却为 `N2高频`，您可根据标签将该卡片手动迁移正确的牌组。
 
-    - **示例 2**：若已导入了版本为 `v25.01.01` 的卡组，但部分卡片仍标记旧版本或缺少版本标签，请在 Anki 搜索框中输入：
+- **示例 2**：若已导入了版本为 `v25.01.01` 的卡组，但部分卡片仍标记旧版本或缺少版本标签，请在 Anki 搜索框中输入：
 
-    ```
-    deck:NEW-JLPT -tag:NEW-JLPT-v2::v25.01.01
-    ```
+```
+deck:eggrolls-JLPT10k-v3 -tag:eggrolls-JLPT10k-v3::v25.01.01
+```
 
-    搜索到的卡片即为新版本已移除的内容，请自行处理（可以删除卡片或添加 `del` 标签来避免更新检测）。
+搜索到的卡片即为新版本已移除的内容，请自行处理（可以删除卡片或添加 `del` 标签来避免更新检测）。
+
+</details>
+
+------
+
+#### **从 v2 版本（25.07.27 及以前）升级到 v3 版本（25.09.03 及以后）**
+
+v3 版本进行了大量修改，故与 v2 版本相互独立，无法覆盖更新。请参考以下说明迁移复习记录（仅支持桌面端）：
+
+<details>
+<summary>点击展开／折叠</summary><br>
+
+1. 安装 [Transfer Scheduling Info Advanced](https://ankiweb.net/shared/info/1249258442) 插件（代码 `1249258442` ）
+
+![01](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250903DpA1VF.png)
+
+![02](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250903GBtoxN.png)
+
+2. 按图示进行迁移
+
+![03](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250903R44aEt.png)
+
+3. （可选）筛选 v2 版本卡组中和 v3 版本重复的卡片
+
+![04](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250903z8saeX.png)
+
+4. 执行单向同步。在桌面端上传，上传完成后，其他端下载并覆盖现有内容。
+
+![05](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250903V0ATpa.png)
+
+![06](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250903JK7hYq.png)
+
+</details>
 
 ------
 
 ## 常见问题
 
-- **卡组导入失败／显示异常／同步时报错**
+### **卡组导入失败／显示异常／同步时报错**
 
-  本卡组不保证兼容旧版 Anki 及其他类似应用（如 AnkiApp、AnkiPro 等）。请下载并使用官方最新版 Anki。
+本卡组不保证兼容旧版 Anki 及其他类似应用（如 AnkiApp、AnkiPro 等）。请下载并使用官方最新版 Anki。
 
-  特别提示：本卡组与「Anki 中国」提供的旧版 AnkiDroid（v2.16.0beta2）不兼容。请使用最新版 AnkiDroid。
+特别提示：本卡组与「Anki 中国」提供的旧版 AnkiDroid（v2.16.0beta2）不兼容。请使用最新版 AnkiDroid。
 
 ------
 
-- **【AnkiDroid】卡组导入速度慢**
-  - **已知问题**
+### **【AnkiDroid】卡组导入速度慢**
+
+- **已知问题**
+
+  在 Android 15 及以上系统中，导入包含大量媒体的卡片时，导入速度明显变慢。
+
+- **解决方案**
   
-    - 在 Android 15 及以上系统中，导入包含大量媒体的卡片时，导入速度明显变慢。
+  - 先在其他平台导入卡组，然后同步到 AnkiDroid。
   
-  - **解决方案**
-    
-    - 先在其他平台导入卡组，然后同步到 AnkiDroid。
-    
-    - 等待 Android 与 AnkiDroid 官方的后续修复。
-  
+  - 等待 Android 与 AnkiDroid 官方的后续修复。
 
 ------
 
-- **【AnkiDroid】应用内下载的卡组后缀为 `bin`**
+### **【AnkiDroid】应用内下载的卡组后缀为 `bin`**
 
-  请将 AnkiDroid 更新至 v2.20.1 或更高版本后重新下载，或使用其他方式下载。
-
-------
-
-- **单词例句无法发音／字体显示不全／缺少媒体文件／同步慢／同步失败**
-
-  一般来说都是媒体文件未完全同步导致的：
-
-  - 导入卡组并登录 AnkiWeb 后，应用会自动进行媒体文件同步。首次同步需上传／下载大量文件（尤其是音频），耗时可能较长（数十分钟）。
-
-  - 如需在其他设备上使用该卡组，请**先在**已下载卡组的设备上完成上传同步，**再在**目标设备进行下载同步。也可在新设备上手动导入卡组，以加快首次同步速度。
-  
-  - 同步时，请保持 Anki 处于前台并保持屏幕常亮（移动端）；如有需要，可使用网络代理（翻墙）工具来提升同步速度。
+请将 AnkiDroid 更新至 v2.20.1 或更高版本后重新下载，或使用其他方式下载。
 
 ------
 
-- **【Windows】卡片切换有延迟**
+### **单词例句无法发音／字体显示不全／缺少媒体文件／同步慢／同步失败**
 
-  在 Anki 的「设置」 →「显示驱动」中，尝试选择 `Software` 或 `OpenGL`。
+一般来说都是媒体文件未完全同步导致的：
 
-------
+- 导入卡组并登录 AnkiWeb 后，应用会自动进行媒体文件同步。首次同步需上传／下载大量文件（尤其是音频），耗时可能较长（数十分钟）。
 
-- **卡片正面的单词上有假名标注**
+- 如需在其他设备上使用该卡组，请**先在**已下载卡组的设备上完成上传同步，**再在**目标设备进行下载同步。也可在新设备上手动导入卡组，以加快首次同步速度。
 
-  本卡组仅针对「[常用漢字表](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf)」范围外的词汇添加了假名标注，并非所有单词都有，一般情况下无需隐藏；如需隐藏，请参考高级选项中的 [控制正面单词显示模式](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E6%8E%A7%E5%88%B6%E6%AD%A3%E9%9D%A2%E5%8D%95%E8%AF%8D%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F)。
-
-------
-
-- **【AnkiWeb】提示「Daily limit exceeded; please try again tomorrow.」**
-
-  表示同一 IP 在 24 小时内已下载超过 25 个卡组。请切换 IP 地址或等待 24 小时后再试。
+- 同步时，请保持 Anki 处于前台并保持屏幕常亮（移动端）；如有需要，可使用网络代理（翻墙）工具来提升同步速度。
 
 ------
 
-- **【Windows／macOS】卡组的词典跳转与反馈功能失效**
+### **【Windows】卡片切换有延迟**
 
-  Anki 桌面端 25.02.1 版本的安全更新意外破坏了卡组的词典跳转与反馈等功能。请下载使用最新版本的 Anki。
-
-------
-
-- **已经更新到最新版卡组，但部分卡片仍为旧版**
-
-  请参考前文「[如何使用](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)」中「6. 更新卡组（可选）」最后部分的说明。
+在 Anki 的「设置」 →「显示驱动」中，尝试选择 `Software` 或 `OpenGL`。
 
 ------
 
-- **一些が行浊音（比如「だいがく」中的「が」）的发音听起来有点奇怪**
+### **卡片正面的单词上有假名标注**
 
-  请参考：[鼻浊音](https://zh.wikipedia.org/wiki/%E9%BC%BB%E6%BF%81%E9%9F%B3)。
+本卡组仅针对「[常用漢字表](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf)」范围外的词汇添加了假名标注，并非所有单词都有，一般情况下无需隐藏；如需隐藏，请参考高级选项中的 [控制正面单词显示模式](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E6%8E%A7%E5%88%B6%E6%AD%A3%E9%9D%A2%E5%8D%95%E8%AF%8D%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F)。
+
+------
+
+### **【AnkiWeb】提示「Daily limit exceeded; please try again tomorrow.」**
+
+表示同一 IP 在 24 小时内已下载超过 25 个卡组。请切换 IP 地址或等待 24 小时后再试。
+
+------
+
+### **【Windows／macOS】卡组的词典跳转与反馈功能失效**
+
+Anki 桌面端 25.02.1 版本的安全更新意外破坏了卡组的词典跳转与反馈等功能。请下载使用最新版本的 Anki。
+
+------
+
+### **已经更新到最新版卡组，但部分卡片仍为旧版**
+
+请参考前文「[如何使用](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)」中「6. 更新卡组（可选）」最后部分的说明。
+
+------
+
+### **一些が行浊音听起来很奇怪（比如「だいがく」中的「が」听起来像「な」）**
+
+这不是错误，请参考：[鼻浊音](https://zh.wikipedia.org/wiki/%E9%BC%BB%E6%BF%81%E9%9F%B3)。
 
 ------
 
@@ -352,19 +394,21 @@ const dictOptions = {
 <details>
 <summary>点击展开／折叠</summary><br>
 
-| 需求                                     | 牌组选项 → 音频          | `playback` 参数 | 正面模板中的 `{{ VocabAudio }}` |
-| ---------------------------------------- | ------------------------ | --------------- | ------------------------------- |
-| 正／背面都自动播放全部音频               | 关闭「不要自动播放音频」 | `'default'`     | 保留                            |
-| 正面自动播放＋背面仅自动播放单词         | 关闭「不要自动播放音频」 | `'force'`       | 保留                            |
-| 正面手动播放＋背面仅自动播放单词（默认） | 开启「不要自动播放音频」 | `'force'`       | 保留                            |
-| 正面手动播放＋背面手动播放               | 开启「不要自动播放音频」 | `'default'`     | 保留                            |
-| 正面不发音＋背面自动播放（单词＋例句）   | 关闭「不要自动播放音频」 | `'default'`     | **删除** `{{ VocabAudio }}`     |
-| 正面不发音＋背面仅自动播放单词           | 开启「不要自动播放音频」 | `'force'`       | **删除** `{{ VocabAudio }}`     |
-| 正／背面都不发音                         | 开启「不要自动播放音频」 | `'default'`     | **删除** `{{ VocabAudio }}`     |
+| 需求                                     | 牌组选项 → 音频          | `playback` 参数 | 是否补充正面单词发音 |
+| ---------------------------------------- | ------------------------ | --------------- | -------------------- |
+| 正／背面都自动播放全部音频               | 关闭「不要自动播放音频」 | `'default'`     | 是                   |
+| 正面自动播放＋背面仅自动播放单词         | 关闭「不要自动播放音频」 | `'force'`       | 是                   |
+| 正面手动播放＋背面仅自动播放单词 | 开启「不要自动播放音频」 | `'force'`       | 是                   |
+| 正面手动播放＋背面手动播放               | 开启「不要自动播放音频」 | `'default'`     | 是                   |
+| 正面不发音＋背面自动播放（单词＋例句）   | 关闭「不要自动播放音频」 | `'default'`     | 否                   |
+| 正面不发音＋背面仅自动播放单词（**默认**）       | 开启「不要自动播放音频」 | `'force'`       | 否                   |
+| 正／背面都不发音                         | 开启「不要自动播放音频」 | `'default'`     | 否                   |
 
 ```html
 playback: 'force',    // 背面播放设置: 'default' 为使用系统设置；'force' 为强制只播放单词音频
 ```
+
+**补充正面单词发音**：在 v3 版本中，正面单词发音功能被移除。如需恢复，请在正面模板中搜索 `<div class="VocabAudio"></div>`，并替换为 `<div class="VocabAudio">{{VocabAudio}}</div>`。
 
 </details>
 
@@ -451,8 +495,8 @@ tts: {
   hotkey: 'G',        // 播放快捷键，仅支持桌面端
   domain: [
     // 可以添加更多域名，按顺序依次尝试播放
-    'https://anki.0w0.live/',
-    'https://ms-ra-forwarder-for-ifreetime-v9q1.vercel.app/',
+    'TTS Server 1',
+    'TTS Server 2',
   ],
   params: {
     voiceName: 'ja-JP-KeitaNeural,ja-JP-NanamiNeural', // 语音为多个时随机选择一个
@@ -531,14 +575,7 @@ tts: {
   
   1. 下载并安装字体配置文件：[下载链接](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250311py61nT.mobileconfig)
   
-  2. 将字体名称 `UD Digi Kyokasho NK-R` 放在日语的 `font-family` 的首位：
-  
-     ```css
-     :lang(ja) {
-       font-family: 'UD Digi Kyokasho NK-R', 'Source Han Serif JP', 'Source Han Serif CN', serif;
-     }
-     ```
-  3. 取消注释以下代码的 `transform: 0;` 部分：
+  2. 取消注释以下代码的 `transform: 0;` 部分：
      ```css
      /* --- iOS 若安装教科书字体开启以下样式 --- */
      .ios .VocabKanji rt,
@@ -551,7 +588,7 @@ tts: {
 
 - **在 iOS 端使用自定义字体时，Ruby（ふりがな）行与汉字行重叠**
   
-  完全替换卡组自带字体后可能会出现这种情况，请注释掉以下代码中 `transform: translateY(0.6em);` 部分：
+  请注释掉以下代码中 `transform: translateY(0.6em);` 部分：
 
 ```css
 /* --- iOS 思源宋体振假名高度修复 --- */
@@ -600,9 +637,7 @@ tts: {
   
 - `uovkm` 的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037)。
 
-- `菜鸡` 的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f) ，推荐花几个小时读一读，能少走几百小时的弯路。
-
-  基于二语习得理论的日语学习 QQ 群：[点此链接加入](https://qm.qq.com/q/Iy7QuEz5WQ)（群号 `830058869`）。
+- `菜鸡` 的[《基于二语习得理论的日语学习指南》](https://eaa9gdwuyv7.feishu.cn/wiki/YeOSwsG7giLuQxkcDFscUXVZn2f) ，推荐一读。相关 QQ 讨论群：`830058869`。
 
 - `Z` 的语言学习论坛： [Campfirium](https://campfirium.info)。
 
@@ -614,7 +649,7 @@ tts: {
 
 ## 致谢
 
-- 感谢 `siriuxy` 的打赏。
+- 感谢 `siriuxy`、`ShikChen`的打赏。
 
 - 感谢 `iPumpkin` 对卡组模板的重构、功能添加和维护。
 
