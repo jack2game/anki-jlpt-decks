@@ -2,6 +2,35 @@
 
 {{^Alt1}}
 
+<div style="text-align: center;"><span class="timer" id="s2" style="font-size: 16px"></span></div>
+<script>
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Time's Up!";
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+countdown("s2", 0, 4 );//2nd value is the minute, 3rd is the seconds
+</script>
+
 <main id="FrontSide" class="CardSide">
   <div class="Top">
     <span class="Level">{{Tags}}</span>
@@ -11,8 +40,8 @@
   <header class="Question">
   <a target="_blank" class="Search">🔍</a>
   <h1 class="VocabKanji">
-    <span lang="ja">{{furigana:VocabKanji}}</span>
-    <span class="VocabPitch">{{VocabPitch}}</span>
+    <span lang="ja">{{kanji:VocabKanji}}</span>
+    <span class="VocabPitch"></span>
   </h1>
   <div class="VocabAudio"></div>
 </header>
@@ -62,10 +91,10 @@
     const settings = {
       lang: 'zh-Hans',      // 显示语言: 'zh-Hans' 简体中文 | 'zh-Hant' 繁体中文
       dict: {
-        ios: 'moji',        // 在 iOS 使用 MOji 辞書
+        ios: 'monokakido',        // 在 iOS 使用 Monokakido 物書堂
         android: 'moji',    // 在 Android 使用 MOji 辞書
         mac: 'dict',        // 在 macOS 使用系统自带的词典
-        win: 'goldendict',  // 在 Windows 使用 GoldenDict-ng 词典
+        win: 'jisho',  // 在 Windows 使用 Jisho [web]
         other: 'weblio',    // 在其他平台使用 Weblio 国語辞典
       },
       display: 'default',   // 正面单词显示: 'default' 显示汉字和注音假名 | 'kana' 只显示假名 | 'kanji' 只显示汉字
@@ -636,7 +665,7 @@
 
 {{FrontSide}}
 
-<div class="VocabAudio !hidden">{{VocabAudio}}</div>
+<div class="VocabAudio">{{VocabAudio}}</div>
 
 <main id="BackSide" class="CardSide">
   <section class="Answer">
