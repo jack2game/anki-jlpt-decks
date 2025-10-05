@@ -88,7 +88,7 @@ body,
 }
 
 .VocabKanji :lang(ja) {
-  font-family: 'KleeOne LXGW Mono GB', 'YuKyokasho Yoko', 'UD Digi Kyokasho NK-R', 'Source Han Serif JP', serif;
+  font-family: 'KleeOne LXGW Mono GB', 'YuKyokasho Yoko', 'UD Digi Kyokasho NK', 'UD Digi Kyokasho NK-R', 'Source Han Serif JP', serif;
 }
 
 :root {
