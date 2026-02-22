@@ -1,4 +1,4 @@
-# 【简体・繁體中文】【egg rolls】JLPT N1～N5 一万词（含语音、例句）v3
+# 【egg rolls】JLPT N1～N5 一万词 v3【简／繁】【语音＆例句】
 
 <div align="center">
 
@@ -12,7 +12,7 @@
 
 - ### 本卡组在 GitHub 和 AnkiWeb 上永久免费提供。闲鱼等平台的付费版本均为盗卖，请勿购买！
 
-- ### v3 版本（25.09.03 及以后）与 v2 版本（25.07.27 及以前）相互独立，无法覆盖更新，请参考 [说明](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E4%BB%8E-v2-%E7%89%88%E6%9C%AC250727-%E5%8F%8A%E4%BB%A5%E5%89%8D%E5%8D%87%E7%BA%A7%E5%88%B0-v3-%E7%89%88%E6%9C%AC250903-%E5%8F%8A%E4%BB%A5%E5%90%8E) 进行复习记录迁移。
+- ### v3 版本（25.09.03 及以后）与 v2 版本（25.07.27 及以前）相互独立，无法覆盖更新，如需更新请参考 [说明](https://github.com/5mdld/anki-jlpt-decks?tab=readme-ov-file#%E4%BB%8E-v2-%E7%89%88%E6%9C%AC250727-%E5%8F%8A%E4%BB%A5%E5%89%8D%E5%8D%87%E7%BA%A7%E5%88%B0-v3-%E7%89%88%E6%9C%AC250903-%E5%8F%8A%E4%BB%A5%E5%90%8E)。
 
 - 本卡组涵盖 JLPT N1 至 N5 全级别，收录约 **10,000 个词条**，需配合 [Anki](https://apps.ankiweb.net/) 使用。
 
@@ -128,7 +128,7 @@
 
   [App Store](https://apps.apple.com/jp/app/ankimobile-flashcards/id373493387)
 
-  > ⚠️ 需付费，价格约为 24.99美元／168人民币／4000日元／790新台幣／188港幣。
+  > ⚠️ 需付费，价格为 24.99美元／168人民币／4000日元／790新台幣／188港幣。
 
 - Android：AnkiDroid
 
@@ -189,7 +189,7 @@
 
 ![更新选项](https://pub-90b0b2afa26447b8b824c3d05d8e274f.r2.dev/uPic/20250527yrnhsY.png)
 
-导入更新卡组会覆盖本地对卡组所做的所有自定义修改（如卡片内容、标签、字段等）。若希望保留自定义修改的内容，请勿直接更新卡组，推荐使用代码仓库中的 `notes.csv` 文件和 `media` 文件夹手动比对并解决冲突后再更新。
+导入更新卡组会覆盖本地对卡组所做的所有自定义修改（如卡片内容、标签、字段等）。如需保留自定义修改内容，请勿直接更新卡组。建议使用我的 [解包工具](https://github.com/5mdld/anki-apkg-extractor) 提取卡组元数据（或直接使用代码仓库中的文件），手动比对并解决冲突后再更新。
 
 由于 Anki 功能限制，子牌组结构调整及已删除的卡片无法自动同步，需手动管理：
 
@@ -646,7 +646,7 @@ tts: {
 
 ## 友情链接
 
-- `MasterOfMasterSword` 的一些文法和单词卡组，请前往 [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 查看详情。
+- `MasterOfMasterSword` 的许多文法和单词卡组，包括蓝宝书语法卡组等，请前往 [AnkiWeb](https://ankiweb.net/shared/by-author/1681155450) 查看详情。
   
 - `uovkm` 的[《综合日语第三版》第一册～第四册单词卡组](https://ankiweb.net/shared/by-author/516873037)。
 
@@ -654,9 +654,11 @@ tts: {
 
 - `Z` 的语言学习论坛： [Campfirium](https://campfirium.info)。
 
-- `nclark` 的 JLPT 真题备考网站：[JLPT Platform](https://jlpt.nnde.de)。
+- `raynor` 的《毎日一問日本語》Telegram 频道，每天早上会发布一道 JLPT 真题：[N1](https://t.me/daily_jlptn1) ｜[N2](https://t.me/daily_jlptn2) ｜[N3](https://t.me/daily_jlptn3)。
 
-- `raynor` 的《毎日一問日本語》TG 频道，每天早上会发布一道 JLPT 真题：[N1](https://t.me/daily_jlptn1) ｜[N2](https://t.me/daily_jlptn2) ｜[N3](https://t.me/daily_jlptn3)。
+- `chidaoshu` 的 [《おにぎり文法》卡组](https://ankiweb.net/shared/info/1567144169)。
+
+- 叶哥（Jarrett Ye，FSRS开发者）的 [知乎文章备份](https://l-m-sherlock.github.io/ZhiHuArchive/)。
 
 ------
 
@@ -664,7 +666,7 @@ tts: {
 
 - 感谢以下用户的捐赠（匿名捐赠者的名称已作处理）：
    ```
-   siriuxy, ShikChen, R4mble, ddmanlin, r****r, mslxl
+   siriuxy, ShikChen, R4mble, ddmanlin, r****r, mslxl, aknnnnnnn, alsa1755, pStrikeZ
    ```
 
 - 感谢 `iPumpkin` 对卡组模板的重构、功能添加和维护。
